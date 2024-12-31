@@ -1,6 +1,6 @@
 body {
     background-color: #282828;
-    color: #7287fd;
+    color: #fbf1c7;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -8,8 +8,11 @@ body {
 }
 
 header {
-    background: #282828;
-  padding: 1em 0;
+  padding-top: 2em;
+  background: #282828;
+  color: #fbf1c7;
+  padding: 0.5em 0;
+  text-align: left;
 }
 
 nav ul {
@@ -20,25 +23,34 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #d65d0e;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
 }
 
 footer {
     text-align: center;
     background: #282828;
-    color: #7287fd;
+    color: #fbf1c7;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
+a:link {
+  color: #fe8019;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #458588;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b16286;
+  text-decoration: none;
+}
+
+a:active {
+  color: #fe8019;
+  text-decoration: none;
+}
