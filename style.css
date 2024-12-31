@@ -1,40 +1,41 @@
+
 body {
-    background-color: #282828;
-    color: #fbf1c7;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  background-color: #282828;
+  color: #ebdbb2;
+  font-family: "Courier New", Courier, monospace;
+  padding-left: 2em;
+  padding-top: 2em;
 }
 
 header {
   padding-top: 2em;
-  background: #282828;
-  color: #fbf1c7;
+  background-color: #282828;
+  color: #ebdbb2;
   padding: 0.5em 0;
   text-align: left;
 }
 
 nav ul {
-    list-style: none;
-    text-align: left;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
+  display: inline;
 }
 
 footer {
-    text-align: center;
-    background: #282828;
-    color: #fbf1c7;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  background-color: #282828;
+  color: #ebdbb2;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
+/*dont mess this up */
 a:link {
   color: #fe8019;
   text-decoration: none;
