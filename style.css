@@ -9,8 +9,7 @@ body {
 
 header {
     background: #282828;
-    color: #7287fd;
-    padding: 1em 0;
+  padding: 1em 0;
 }
 
 nav ul {
@@ -25,7 +24,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #7287fd;
+    color: #d65d0e;
     text-decoration: none;
 }
 
