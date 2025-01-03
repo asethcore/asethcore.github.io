@@ -17,6 +17,13 @@ p {
   line-height: 1.5; 
 }
 
+.blog-date {
+    color: #666;
+    margin-left: 10px;
+    font-size: 0.8em;
+    cursor: default;
+}
+
 section ul {
   padding: 0;  
   margin: 0;   
