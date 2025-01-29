@@ -18,10 +18,10 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     color: #fe8019;
-    margin-bottom: 30px;
-    text-transform: capitalize;
+    width: 100%;
+    padding: 30px;
 }
 
 h2 {
