@@ -41,7 +41,7 @@ h2 {
     color: #ebdbb2;
 }
 
-blog-content img {
+.blog-content img {
     display: block;
     max-width: 100%;
     height: auto;
