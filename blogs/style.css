@@ -24,12 +24,16 @@ h1 {
     text-transform: capitalize;
 }
 
+h2 {
+  text-align: left;
+  color: #fe8019;
+}
+
 .blog-content {
-    text-align: center;
-    background-color: #282828;
+    text-align: left;
+    background-color: #32302f;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .blog-content p {
