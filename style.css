@@ -2,36 +2,36 @@ body {
   background-color: #282828;
   color: #ebdbb2;
   font-family: "Courier New", Courier, monospace;
-  padding-right: 30em;
-  padding-left: 2em;
-  padding-top: 2em;
+  padding-right: 1em; /* Reduced padding for mobile */
+  padding-left: 1em; /* Reduced padding for mobile */
+  padding-top: 1em; /* Reduced padding for mobile */
 }
 
 .links-aseth {
   display: inline-block;
-  margin-right: 20px; 
+  margin-right: 10px; /* Reduced margin for mobile */
 }
 
 p {
   max-width: 100ch;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 .blog-date {
-    color: #666;
-    margin-left: 10px;
-    font-size: 0.8em;
-    cursor: default;
+  color: #666;
+  margin-left: 5px; /* Reduced margin for mobile */
+  font-size: 0.8em;
+  cursor: default;
 }
 
 section ul {
-  padding: 0;  
-  margin: 0;   
-  list-style: none;  
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 header {
-  padding-top: 2em;
+  padding-top: 1em; /* Reduced padding for mobile */
   background-color: #282828;
   color: #ebdbb2;
   padding: 0.5em 0;
@@ -52,13 +52,12 @@ footer {
   text-align: center;
   background-color: #282828;
   color: #ebdbb2;
-  padding: 10px 0;
+  padding: 5px 0; /* Reduced padding for mobile */
   position: fixed;
   bottom: 0;
   width: 100%;
 }
 
-/*dont mess this up */
 a:link {
   color: #fe8019;
   text-decoration: none;
@@ -78,3 +77,23 @@ a:active {
   color: #fe8019;
   text-decoration: none;
 }
+
+/* Optional: Use media queries for more specific mobile styling */
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0.5em;
+  }
+  
+  header {
+    padding-top: 0.5em;
+  }
+  
+  nav ul li {
+    display: block; /* Stack navigation items vertically on mobile */
+  }
+  
+  footer {
+    padding: 2px 0;
+  }
+}
+
