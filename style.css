@@ -1,5 +1,5 @@
 body {
-  background-color: #282828;
+  background-color: #000000;
   color: #ebdbb2;
   font-family: Arial, sans-serif;
   padding-right: 1em; /* Reduced padding for mobile */
@@ -32,8 +32,8 @@ section ul {
 
 header {
   padding-top: 1em; /* Reduced padding for mobile */
-  background-color: #282828;
-  color: #ebdbb2;
+  background-color: #000000;
+  color: #f7f7f7;
   padding: 0.5em 0;
   text-align: left;
 }
@@ -50,8 +50,8 @@ nav ul li {
 
 footer {
   text-align: center;
-  background-color: #282828;
-  color: #ebdbb2;
+  background-color: #000000;
+  color: #f7f7f7;
   padding: 5px 0; /* Reduced padding for mobile */
   position: fixed;
   bottom: 0;
@@ -59,22 +59,22 @@ footer {
 }
 
 a:link {
-  color: #fe8019;
+  color: #0099cc;
   text-decoration: none;
 }
 
 a:visited {
-  color: #458588;
+  color: #7c3fbb;
   text-decoration: none;
 }
 
 a:hover {
-  color: #b16286;
+  color: #a349c6;
   text-decoration: none;
 }
 
 a:active {
-  color: #fe8019;
+  color: #0099cc;
   text-decoration: none;
 }
 
@@ -83,15 +83,15 @@ a:active {
   body {
     padding: 0.5em;
   }
-  
+
   header {
     padding-top: 0.5em;
   }
-  
+
   nav ul li {
     display: block; /* Stack navigation items vertically on mobile */
   }
-  
+
   footer {
     padding: 2px 0;
   }
