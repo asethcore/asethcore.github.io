@@ -39,6 +39,7 @@ li {
 h2 {
   text-align: left;
   color: #f7f7f7;
+  text-decoration: underline;
 }
 
 .blog-content {
