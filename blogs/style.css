@@ -1,58 +1,90 @@
 /* Reset default browser styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #32302f;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000000;
 }
 
 h1 {
-    text-align: left;
-    color: #fe8019;
-    width: 100%;
-    padding: 30px;
+  text-align: left;
+  color: #f7f7f7;
+  width: 100%;
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+
+nav {
+  padding-left: 30px;
+}
+
+li {
+  text-align: left;
+  display: inline;
+  color: #f7f7f7;
+  width: 100%;
 }
 
 h2 {
   text-align: left;
-  color: #fe8019;
+  color: #f7f7f7;
 }
 
 .blog-content {
-    text-align: left;
-    background-color: #32302f;
-    padding: 30px;
-    border-radius: 10px;
+  text-align: left;
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .blog-content p {
-    margin-bottom: 20px;
-    color: #ebdbb2;
+  margin-bottom: 20px;
+  color: #ebdbb2;
 }
 
 .blog-content img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    text-align: center;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  text-align: center;
+}
+
+a:link {
+  color: #0099cc;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #7c3fbb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a349c6;
+  text-decoration: none;
+}
+
+a:active {
+  color: #0099cc;
+  text-decoration: none;
 }
 
 footer {
-    margin-top: 30px;
-    text-align: center;
-    color: #fbf1c7;
-    font-size: 0.9em;
+  margin-top: 30px;
+  text-align: center;
+  color: #f7f7f7;
+  font-size: 0.9em;
 }
 
