@@ -27,6 +27,7 @@ h1 {
 
 nav {
   padding-left: 30px;
+  align-self: flex-start;
 }
 
 li {
