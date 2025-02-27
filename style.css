@@ -3,7 +3,7 @@ body {
   color: #ebdbb2;
   font-family: Arial, sans-serif;
   padding-right: 1em; /* Reduced padding for mobile */
-  padding-left: 1em; /* Reduced padding for mobile */
+  padding-left: 50px; /* Reduced padding for mobile */
   padding-top: 1em; /* Reduced padding for mobile */
 }
 
