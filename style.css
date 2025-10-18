@@ -1,10 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #000000;
-  color: #f7f7f7;
   font-family: Arial, sans-serif;
-  padding-right: 1em; /* Reduced padding for mobile */
-  padding-left: 50px; /* Reduced padding for mobile */
-  padding-top: 1em; /* Reduced padding for mobile */
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000000;
 }
 
 .links-aseth {
