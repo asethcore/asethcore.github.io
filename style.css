@@ -1,100 +1,98 @@
 body {
-  background-color: #000000;
-  color: #f7f7f7;
-  font-family: Arial, sans-serif;
-  padding-right: 1em; /* Reduced padding for mobile */
-  padding-left: 50px; /* Reduced padding for mobile */
-  padding-top: 1em; /* Reduced padding for mobile */
+    background: #000;
+    color: #fff;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
-.links-aseth {
-  display: inline-block;
-  margin-right: 10px; /* Reduced margin for mobile */
+/* Centered main content, with responsive padding */
+main {
+    padding: 32px 8vw 0 8vw;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* Header (hello there!) styling */
+header h1 {
+    color: #e9e9e9;
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+/* Navigation bar styling */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: #c8b5eb;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #a387d1;
 }
 
 p {
-  max-width: 100ch;
-  line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 38px;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    color: #e5e5e5;
 }
 
-.blog-date {
-  color: #666;
-  margin-left: 5px; /* Reduced margin for mobile */
-  font-size: 0.8em;
-  cursor: default;
+/* "gitstuff" link at the bottom */
+.links-aseth {
+    color: #4bb1f7;
+    font-size: 1.06rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    word-break: break-all;
 }
 
-section ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.links-aseth:hover,
+.links-aseth.clicked {
+    color: #2781b8;
 }
 
-header {
-  padding-top: 1em; /* Reduced padding for mobile */
-  background-color: #000000;
-  color: #f7f7f7;
-  padding-top: 40px;
-  padding-bottom: 8px;
-  text-align: left;
+/* Responsive font and layout adjustments for mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.49rem;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+    main {
+        padding: 16px 6vw 0 6vw;
+        max-width: 99vw;
+    }
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+    nav a {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 1rem;
+        margin-bottom: 26px;
+    }
 }
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  display: inline;
-}
-
-footer {
-  text-align: center;
-  background-color: #000000;
-  color: #f7f7f7;
-  padding: 5px 0; /* Reduced padding for mobile */
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-a:link {
-  color: #0099cc;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #7c3fbb;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #a349c6;
-  text-decoration: none;
-}
-
-a:active {
-  color: #0099cc;
-  text-decoration: none;
-}
-
-/* Optional: Use media queries for more specific mobile styling */
-@media only screen and (max-width: 768px) {
-  body {
-    padding: 0.5em;
-  }
-
-  header {
-    padding-top: 0.5em;
-  }
-
-  nav ul li {
-    display: block; /* Stack navigation items vertically on mobile */
-  }
-
-  footer {
-    padding: 2px 0;
-  }
-}
-
