@@ -106,20 +106,21 @@ footer {
   justify-content: center;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* always 3 columns */
+  gap: 16px; /* space between cards, adjust as needed */
+}
+
 .card2 {
-  width: 220px; /* Or whatever size you want */
-  height: 220px; /* Fixed or responsive */
-  overflow: hidden; /* Ensures image stays within rounded corners */
-  border-radius: 10px;
-  background: #000;
-  position: relative;
+  width: 100%; /* lets card fill grid cell */
+  aspect-ratio: 1/1; /* keeps card square; optional */
+  overflow: hidden;
 }
 
 .card-img {
-  width: 100%; /* Ensures the image fills the card's width */
-  height: 100%; /* Keeps the aspect ratio correct */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill card area, crop if needed */
   display: block;
-  object-fit: cover; /* Removes bottom whitespace */
-  /* border-radius: 8px 8px 0 0; /* Optional: rounds the top corners */
-  /* margin-bottom: 12px; /* Adds some space below the image */
 }
