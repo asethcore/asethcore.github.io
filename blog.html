@@ -1,31 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>>>blogs</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>my blogs</h1>
-    </header>
-    <main>
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a><li>
-                <li style="margin: 0 5px;">/</li>
-                <li><a href="blog.html">blogs</a><li>
-            </ul>
-        </nav>
-        <ul>
-        <li><a href="blogs/blog5.html" style="text-decoration: underline;">bigmouth</a><span class="blog-date">— 18 / 10 / 25</span></li>
-        <li><a href="blogs/blog4.html" style="text-decoration: underline;">samsara</a><span class="blog-date">— 27 / 03 / 25</span></li>
-        <li><a href="blogs/blog3.html" style="text-decoration: underline;">reality shift</a><span class="blog-date">— 26 / 02 / 25</span></li>
-        <li><a href="blogs/blog2.html" style="text-decoration: underline;">chaos cascade</a><span class="blog-date">— 29 / 01/ 25</span></li>
-        <li><a href="blogs/blog1.html" style="text-decoration: underline;">halo, ich bin aseth</a><span class="blog-date">— 03 / 01 / 25</span></li>
-        </ul>
-    </main>
-</body>
+  <head>
+    <style>
+      .mobile-separator {
+        display: none;
+      }
+      @media (max-width: 600px) {
+        .mobile-separator {
+          display: block !important;
+          border: none;
+          border-top: 2px solid #222;
+          width: 110vw;
+          position: relative;
+          left: 100%;
+          right: 100%;
+          margin-left: -50vw;
+          margin-right: -50vw;
+          margin-top: 18px;
+          margin-bottom: 18px;
+        }
+      }
+    </style>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Layout with Stacked Left Column</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 1rem;
+        background-color: black; /* black background */
+        color: white; /* white text */
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 150px 1fr 100px;
+        gap: 10px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* left, center, right columns */
+      .left-col,
+      .center-col,
+      .right-col {
+        padding: 4px 8px;
+      }
+
+      .left-col a,
+      .center-col a {
+        color: inherit; /* inherit white text color */
+        text-decoration: none;
+        display: block;
+      }
+
+      .left-col {
+        font-weight: bold;
+        text-align: left;
+      }
+
+      .center-col {
+        text-align: left;
+      }
+
+      .right-col {
+        text-align: right;
+        color: #ccc; /* lighter gray for contrast */
+        font-size: 0.9em;
+        white-space: nowrap;
+        font-family: monospace;
+      }
+
+      /* Grouped left column on mobile */
+      @media (max-width: 600px) {
+        .container {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto;
+        }
+
+        /* Stack all left-col entries together in a single column spanning both columns */
+        .left-col-group {
+          grid-column: 1 / 3;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+
+        /* Center + Right columns stacked as rows */
+        .center-right-group {
+          grid-column: 1 / 3;
+          display: grid;
+          grid-template-columns: 1fr 100px;
+          gap: 10px;
+        }
+
+        /* Each date below the center content */
+        .right-col {
+          text-align: right;
+          font-size: 0.9em;
+          white-space: nowrap;
+          font-family: monospace;
+          color: #ccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-col-group">
+        <div class="left-col">
+          <a href="index.html"><u>vaeseth</u></a>
+        </div>
+        <div class="left-col">
+          <a href="blog.html"><u>blogs</u></a>
+        </div>
+        <div class="left-col">
+          <a href="about.html"><u>about</u></a>
+        </div>
+      </div>
+
+      <hr class="mobile-separator" style="display: none" />
+
+      <div class="center-right-group">
+        <div class="center-col">
+          <a href="blogs/blog5.html"><u>bigmouth</u></a>
+        </div>
+        <div class="right-col">2025-18-10</div>
+
+        <div class="center-col">
+          <a href="blogs/blog4.html"><u>samsara</u></a>
+        </div>
+        <div class="right-col">2025-03-27</div>
+
+        <div class="center-col">
+          <a href="blogs/blog3.html"><u>reality shift</u></a>
+        </div>
+        <div class="right-col">2025-02-26</div>
+
+        <div class="center-col">
+          <a href="blogs/blog2.html"><u>chaos cascade</u></a>
+        </div>
+        <div class="right-col">2025-01-29</div>
+
+        <div class="center-col">
+          <a href="blogs/blog1.html"><u>halo, ich bin aseth</u></a>
+        </div>
+        <div class="right-col">2025-01-03</div>
+      </div>
+    </div>
+  </body>
 </html>
