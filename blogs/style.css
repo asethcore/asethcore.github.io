@@ -90,3 +90,18 @@ footer {
   font-size: 0.9em;
 }
 
+.card {
+  padding: 2em;
+  border: 1px solid rgb(255 255 255);
+  border-radius: 3px;
+  background-color: #000000;
+  text-align: left;
+  padding: 20px 20px -5px 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
