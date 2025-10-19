@@ -105,3 +105,21 @@ footer {
   gap: 10px;
   justify-content: center;
 }
+
+.card2 {
+  width: 220px; /* Or whatever size you want */
+  height: 220px; /* Fixed or responsive */
+  overflow: hidden; /* Ensures image stays within rounded corners */
+  border-radius: 10px;
+  background: #000;
+  position: relative;
+}
+
+.card-img {
+  width: 100%; /* Ensures the image fills the card's width */
+  height: 100%; /* Keeps the aspect ratio correct */
+  display: block;
+  object-fit: cover; /* Removes bottom whitespace */
+  /* border-radius: 8px 8px 0 0; /* Optional: rounds the top corners */
+  /* margin-bottom: 12px; /* Adds some space below the image */
+}
