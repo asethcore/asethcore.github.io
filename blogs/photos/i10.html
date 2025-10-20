@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>>>red</title>
+    <style>
+      :root {
+        --max: 780px;
+        --accent: #fff;
+        --muted: #aaa;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #fff;
+        margin: 0;
+        padding: 3rem 1rem;
+        background: #000;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+      }
+      header .brand a {
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.06em;
+      }
+      header .brand a:active,
+      header .brand a:focus {
+        text-decoration: underline;
+      }
+      nav a {
+        margin-left: 1rem;
+        text-decoration: none;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      nav a:active,
+      nav a:focus {
+        text-decoration: underline;
+      }
+      .post-title {
+        font-size: 2rem;
+        margin: 0 0 0.2rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
+      }
+      figure {
+        margin: 0;
+      }
+      figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 6px;
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.06);
+      }
+      figcaption {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-top: 0.6rem;
+      }
+      article p {
+        font-size: 1.05rem;
+        margin-top: 1rem;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 2rem 0.8rem;
+        }
+        .post-title {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <a href="../../index.html"><u>vaeseth</u></a>
+        </div>
+        <nav>
+          <a href="../../photo.html"><u>photos</u></a>
+          <a href="../../blog.html"><u>blogs</u></a>
+          <a href="../../about.html"><u>about</u></a>
+        </nav>
+      </header>
+
+      <main>
+        <article>
+          <h1 class="post-title">red revisited</h1>
+          <div class="meta">march 16, 2025</div>
+
+          <figure>
+            <img src="../images/photos/i10.jpg" alt="main" />
+            <figcaption>
+              been there before, but this time it felt new
+            </figcaption>
+          </figure>
+
+          <p>
+            this was from the day me and my friend visited the red fort. it was
+            his first time there, and even though i’d been before, it still felt
+            new. some of the buildings there and even near india gate look like
+            they’d make perfect spots for an art university or something
+            creative like that. also my same friend took this same shot.
+          </p>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
