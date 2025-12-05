@@ -45,7 +45,7 @@ h2 {
 
 .blog-content {
   text-align: left;
-  background-color: #000000;
+  background-color: #212020;
   padding: 30px;
   border-radius: 10px;
 }
@@ -94,7 +94,7 @@ footer {
   padding: 2em;
   border: 1px solid rgb(255 255 255);
   border-radius: 3px;
-  background-color: #000000;
+  background-color: #212020;
   text-align: left;
   padding: 20px 20px -5px 20px;
 }
