@@ -3,23 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>>>seth</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="blogs/style.css" />
+    <title>home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="app.js" defer></script>
   </head>
   <body>
-    <h1>hello there!!</h1>
-    <nav>
-      <li><a href="index.html">vaeseth</a></li>
-      <li style="margin: 0 5px">/</li>
-      <li><a href="blog.html">blogs</a></li>
-      <li style="margin: 0 5px">/</li>
-      <li><a href="photo.html">photos</a></li>
-      <li style="margin: 0 5px">/</li>
-      <li><a href="about.html">about</a></li>
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <span class="logo">vaeseth</span>
+          <button onclick="toggleSidebar()" id="toggle-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="active">
+          <a href="index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+              />
+            </svg>
+            <span>home</span>
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+              />
+            </svg>
+            <span>about</span>
+          </a>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-240v-80h480v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+            <span>notes</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="blogs/blog55.html">bigmouth1</a></li>
+              <li><a href="blogs/blog44.html">samsara2</a></li>
+              <li><a href="blogs/blog33.html">reality shift3</a></li>
+              <li><a href="blogs/blog22.html">chaos cascade4</a></li>
+              <li><a href="blogs/blog11.html">halo5</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-120v-720h720v720H120Zm600-160H240v60h480v-60Zm-480-60h480v-60H240v60Zm0-140h480v-240H240v240Zm0 200v60-60Zm0-60v-60 60Zm0-140v-240 240Zm0 80v-80 80Zm0 120v-60 60Z"
+              />
+            </svg>
+            <span>blogs</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="blogs/blog5.html">bigmouth</a></li>
+              <li><a href="blogs/blog4.html">samsara</a></li>
+              <li><a href="blogs/blog3.html">reality shift</a></li>
+              <li><a href="blogs/blog2.html">chaos cascade</a></li>
+              <li><a href="blogs/blog1.html">halo</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a href="photo.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Z"
+              />
+            </svg>
+            <span>photos</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <article>
-      <section class="blog-content">
+    <main>
+      <div class="container">
+        <h2>hello there!!</h2>
         <p>
           hola, ich bin aseth. just writing, thinking, and letting my thoughts
           flow into somewhat structured and some just wandering words. maybe
@@ -27,102 +146,54 @@
           be passing words. either way, i'm here, trying to make sentences out
           of words and wondering if they form any sense anyhow.
         </p>
-        <li>
-          <a
-            href="blog.html"
-            style="
-              color: white;
-              font-size: 20px;
-              margin-bottom: 15px;
-              display: inline-block;
-            "
-            ><b><u>blogs →</u></b></a
-          >
-          <div class="grid-container">
-            <div class="card">
-              <ul>
-                <li>
-                  <a href="blogs/blog5.html" style="color: white"
-                    ><b><u>bigmouth</u></b></a
-                  >
-                </li>
-              </ul>
-              <p>
-                “entropy notes” explores uncertainty and contradiction as the
-                essence of existence.
-              </p>
-            </div>
-            <div class="card">
-              <ul>
-                <li>
-                  <a href="blogs/blog4.html" style="color: white"
-                    ><b><u>samsara</u></b></a
-                  >
-                </li>
-              </ul>
-              <p>
-                A reflection on life’s uncertainty, identity, and the gap
-                between understanding and truly living.
-              </p>
-            </div>
-            <div class="card">
-              <ul>
-                <li>
-                  <a href="blogs/blog2.html" style="color: white"
-                    ><b><u>chaos cascade</u></b></a
-                  >
-                </li>
-              </ul>
-              <p>
-                A reflection on how small chaos can trigger vast change, urging
-                acceptance over control.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <a
-            href="photo.html"
-            style="
-              color: white;
-              font-size: 20px;
-              margin-top: 25px;
-              margin-bottom: 5px;
-              display: inline-block;
-            "
-            ><b><u>photos →</u></b></a
-          >
-          <div class="image-grid">
-            <div class="card2">
-              <a href="blogs/photos/i1.html">
-                <img
-                  src="blogs/images/photos/i1.jpg"
-                  alt="photo"
-                  class="card-img"
-                />
+      </div>
+      <div class="container">
+        <a
+          href="blog,html"
+          style="
+            text-decoration: none;
+            color: #fff;
+            font-size: 23px;
+            margin-bottom: 15px;
+            display: inline-block;
+          "
+          ><b>blogs→</b></a
+        >
+        <div class="list-container">
+          <ul class="blog-list">
+            <li>
+              <a href="blogs/blog5.html" style="text-decoration: none">
+                <span class="title">bigmouth</span></a
+              >
+              <span class="date">2025-18-10</span>
+            </li>
+            <li>
+              <a href="blogs/blog4.html" style="text-decoration: none">
+                <span class="title">samsara</span>
               </a>
-            </div>
-            <div class="card2">
-              <a href="blogs/photos/i12.html">
-                <img
-                  src="blogs/images/photos/i12.jpg"
-                  alt="photo"
-                  class="card-img"
-                />
+              <span class="date">2025-03-27</span>
+            </li>
+            <li>
+              <a href="blogs/blog3.html" style="text-decoration: none">
+                <span class="title">reality shift</span>
               </a>
-            </div>
-            <div class="card2">
-              <a href="blogs/photos/i14.html">
-                <img
-                  src="blogs/images/photos/i14.jpg"
-                  alt="photo"
-                  class="card-img"
-                />
+              <span class="date">2025-02-26</span>
+            </li>
+            <li>
+              <a href="blogs/blog2.html" style="text-decoration: none">
+                <span class="title">chaos cascade</span>
               </a>
-            </div>
-          </div>
-        </li>
-      </section>
-    </article>
+              <span class="date">2025-01-29</span>
+            </li>
+            <li>
+              <a href="blogs/blog1.html" style="text-decoration: none">
+                <span class="title">halo</span>
+              </a>
+              <span class="date">2025-01-03</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
