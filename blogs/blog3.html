@@ -1,41 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>>>placebo</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>the reality we choose</h1>
-    <nav>
-        <li><a href="../index.html">home</a></li>
-        <li style="margin: 0 5px;">/</li>
-        <li><a href="../blog.html">blogs</a></li>
-        <li style="margin: 0 5px;">/</li>
-        <li><a href="blog3.html">placebo</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>>>reality shift</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="text/javascript" src="../app.js" defer></script>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <span class="logo">vaeseth</span>
+          <button onclick="toggleSidebar()" id="toggle-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a href="../index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+              />
+            </svg>
+            <span>home</span>
+          </a>
+        </li>
+        <li>
+          <a href="../about.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+              />
+            </svg>
+            <span>about</span>
+          </a>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-240v-80h480v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+            <span>notes</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="blogs/blog55.html">bigmouth1</a></li>
+              <li><a href="blogs/blog44.html">samsara2</a></li>
+              <li><a href="blogs/blog33.html">reality shift3</a></li>
+              <li><a href="blogs/blog22.html">chaos cascade4</a></li>
+              <li><a href="blogs/blog11.html">halo5</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-120v-720h720v720H120Zm600-160H240v60h480v-60Zm-480-60h480v-60H240v60Zm0-140h480v-240H240v240Zm0 200v60-60Zm0-60v-60 60Zm0-140v-240 240Zm0 80v-80 80Zm0 120v-60 60Z"
+              />
+            </svg>
+            <span>blogs</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="blog5.html">bigmouth</a></li>
+              <li><a href="blog4.html">samsara</a></li>
+              <li class="active"><a href="blog3.html">reality shift</a></li>
+              <li><a href="blog2.html">chaos cascade</a></li>
+              <li><a href="blog1.html">halo</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a href="../photo.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Z"
+              />
+            </svg>
+            <span>photos</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <article>
-        <section class="blog-content">
-        <p>hello, my invisible folks! hope you're all doing great. anyway, i'm here <i><b>lorem ipsum</b></i>(brain.exe crashed) for a long time, but because the thought just struck me, and i figured it would be better to put it into words while it's fresh.</p>
-        <p>in this one, i wrote about the placebo effect or in general how the brain functions when perceiving reality.</p>
-        <img src="images/placebo/ufo.jpg" alt="light">
-        <h2>reality: a matter of perception</h2>
-        <p>well you know how everyone have their own way of perceiving this so called reality. we all see the same thing(unless you are schizophrenic) but understand it differently that might be because of the pattern that our brain creates in order to process information, connecting dots, making predictions like an ai copilot. this is what makes up the term optimist or a pessimist.</p>
-        <p>keeping this aside, have ye heard of the placebo effect? if not, let me explain. its basically the concept of beliefs replacing reality. point to be noticed that i said replacing not changing; there's a difference. no one can alter the objective reality, but belief can shift one's perspective of it.</p>
-        <p>for example, imagine someone struggling to achieve something. when they fail, they might drop to their knees and pray(not always) if they later succeed, they say, "it happend because god wanted it to." but if they fail again, they may not say, "god wanted me to fail." that's because beliefs often works selectively; we accept what we want to believe in the moment.</p>
-        <h2>how placebo works</h2>
-        <p>let me explain with an example, assume ther are two people one is superstitious and one is not one believes in science and one doesnt, so the overly logical and resonable person will often see things as consequence of different actions on the other hand the other might just classify it as fate (just an example its not really the case both know the consequences) so this is how placebo works beliefs replacing reality.</p>
-        <img src="images/placebo/placebo.jpg" alt="placebo">
-        <p>this is essentially what the placebo effect does. you don't change what actually happend; instead, you shift your perception of it, convincing yourself that your version of reality is the one that matters.</p>
-        <h2>the reality that stays</h2>
-        <p>even tho you can create a placebo for yourself, reality remains unchanged. what has happend cannot be undone, and what is about to happen will not bend to our wishes(murphy's law: "anything that can go wrong, will go wrong"). however, our perception is powerful. it shapes the way we react, make decisions, and even influences our emotions. but at its core, reality doesn't change only the way we choose to see it does. so in case you want to be happy but you dont have anything to be happy about just be delusional.</p>
+    <main>
+      <div class="container">
+        <h2 style="margin-bottom: 15px; color: #0099cc">
+          the reality we choose
+        </h2>
+        <p>feb 26, 2025</p>
+        <p>
+          hello, my invisible folks! hope you're all doing great. anyway, i'm
+          here lorem ipsum(brain.exe crashed) for a long time, but because the
+          thought just struck me, and i figured it would be better to put it
+          into words while it's fresh.
+        </p>
+        <p>
+          in this one, i wrote about the placebo effect or in general how the
+          brain functions when perceiving reality.
+        </p>
+        <img src="images/placebo/ufo.jpg" alt="light" />
+        <h2><u>reality: a matter of perception</u></h2>
+        <p>
+          well you know how everyone have their own way of perceiving this so
+          called reality. we all see the same thing(unless you are
+          schizophrenic) but understand it differently that might be because of
+          the pattern that our brain creates in order to process information,
+          connecting dots, making predictions like an ai copilot. this is what
+          makes up the term optimist or a pessimist.
+        </p>
+        <p>
+          keeping this aside, have ye heard of the placebo effect? if not, let
+          me explain. its basically the concept of beliefs replacing reality.
+          point to be noticed that i said replacing not changing; there's a
+          difference. no one can alter the objective reality, but belief can
+          shift one's perspective of it.
+        </p>
+        <p>
+          for example, imagine someone struggling to achieve something. when
+          they fail, they might drop to their knees and pray(not always) if they
+          later succeed, they say, "it happend because god wanted it to." but if
+          they fail again, they may not say, "god wanted me to fail." that's
+          because beliefs often works selectively; we accept what we want to
+          believe in the moment.
+        </p>
+        <h2><u>how placebo works</u></h2>
+        <p>
+          let me explain with an example, assume ther are two people one is
+          superstitious and one is not one believes in science and one doesnt,
+          so the overly logical and resonable person will often see things as
+          consequence of different actions on the other hand the other might
+          just classify it as fate (just an example its not really the case both
+          know the consequences) so this is how placebo works beliefs replacing
+          reality.
+        </p>
+        <img src="images/placebo/placebo.jpg" alt="placebo" />
+        <p>
+          this is essentially what the placebo effect does. you don't change
+          what actually happend; instead, you shift your perception of it,
+          convincing yourself that your version of reality is the one that
+          matters.
+        </p>
+        <h2><u>the reality that stays</u></h2>
+        <p>
+          even tho you can create a placebo for yourself, reality remains
+          unchanged. what has happend cannot be undone, and what is about to
+          happen will not bend to our wishes(murphy's law: "anything that can go
+          wrong, will go wrong"). however, our perception is powerful. it shapes
+          the way we react, make decisions, and even influences our emotions.
+          but at its core, reality doesn't change only the way we choose to see
+          it does. so in case you want to be happy but you dont have anything to
+          be happy about just be delusional.
+        </p>
         <p>food for thought!</p>
-        </section>
-    </article>
-</body>
-
-<footer>
-        <p1>© 2025 vaeseth's blog.</p1>
-</footer>
+      </div>
+    </main>
+  </body>
+</html>
