@@ -175,6 +175,22 @@ main p {
   }
 }
 
+.card {
+  padding: 0;
+  border: 1px solid #17181b;
+  border-radius: 10px;
+  background-color: #17181b;
+  text-align: center;
+}
+
+.photo-container {
+  display: grid;
+  border: 1px solid #17181b;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  justify-content: center;
+}
+
 .list-container {
   width: 1fr;
 }
