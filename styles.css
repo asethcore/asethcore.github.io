@@ -186,7 +186,7 @@ main p {
 .photo-container {
   display: grid;
   border: 1px solid #17181b;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(1, minmax(300px, 1fr));
   gap: 25px;
   justify-content: center;
 }
