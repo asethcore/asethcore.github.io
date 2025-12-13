@@ -150,6 +150,14 @@ main {
   padding: min(30px, 7%);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+
 main p {
   color: var(--secondary-text-clr);
   margin-top: 5px;
