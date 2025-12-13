@@ -1,44 +1,237 @@
-
 <!DOCTYPE html>
-<hmtl lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>>>l</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>a little about life</h1>
-    <nav>
-        <li><a href="../index.html">home</a></li>
-        <li style="margin: 0 5px;">/</li>
-        <li><a href="../blog.html">blogs</a></li>
-        <li style="margin: 0 5px;">/</li>
-        <li><a href="blog4.html">l</a></li>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>>>samsara</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="text/javascript" src="../app.js" defer></script>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <span class="logo">vaeseth</span>
+          <button onclick="toggleSidebar()" id="toggle-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a href="../index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+              />
+            </svg>
+            <span>home</span>
+          </a>
+        </li>
+        <li>
+          <a href="../about.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+              />
+            </svg>
+            <span>about</span>
+          </a>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-240v-80h480v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+            <span>notes</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="blogs/blog55.html">bigmouth1</a></li>
+              <li><a href="blogs/blog44.html">samsara2</a></li>
+              <li><a href="blogs/blog33.html">reality shift3</a></li>
+              <li><a href="blogs/blog22.html">chaos cascade4</a></li>
+              <li><a href="blogs/blog11.html">halo5</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-120v-720h720v720H120Zm600-160H240v60h480v-60Zm-480-60h480v-60H240v60Zm0-140h480v-240H240v240Zm0 200v60-60Zm0-60v-60 60Zm0-140v-240 240Zm0 80v-80 80Zm0 120v-60 60Z"
+              />
+            </svg>
+            <span>blogs</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="blogs/blog5.html">bigmouth</a></li>
+              <li class="active"><a href="blogs/blog4.html">samsara</a></li>
+              <li><a href="blogs/blog3.html">reality shift</a></li>
+              <li><a href="blogs/blog2.html">chaos cascade</a></li>
+              <li><a href="blogs/blog1.html">halo</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a href="../photo.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Z"
+              />
+            </svg>
+            <span>photos</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <article>
-        <section class="blog-content">
+    <main>
+      <div class="container">
+        <h2 style="margin-bottom: 15px; color: #0099cc">a little about life</h2>
+        <p>mar 27, 2025</p>
         <p>hello, my crystal-clear people! hope everyone is doing great.</p>
-        <p>so today, this fellow saint has come all the way down from the peak of a mountain named wisdom just to tell ye all—actually, share his opinion about life—what i think of it, what i don’t. and maybe a little bullshit from the right and some from the left. this blog might be named life or something, but it’s not just the living concept or something—it’s everything that makes up life.</p>
-        <p>now this blog might feel very random at times, so yep, just letting ye know!</p>
-        <img src="images/l/individual.jpeg" alt="individual">
-        <p>umm… finding the right way to start it… actually, let it be open-started.</p>
-        <p>so, i think i understand life a little—not completely, only a little of it. but if someone asked me, “tell me what this life is about,” i might not be able to tell them. i wouldn’t be able to give a definition of it. and if i were asked whether i’m living my life on the same terms as i understand it, i’d still say no. and i guess it’s the same way with everyone—no one truly lives their life on the same terms they seem to understand it.</p>
-        <p>some beliefs i have: that each of us, at our core, is the same—you, me, everyone, hell, even einstein. we are nothing different. i can do all the same things that you can do and vice versa. the only difference is the way we do it. but where does this difference stem from? i believe it comes from the idea that everyone wants to be different. that is the root of this difference. and maybe that might be the unique thing… maybe. but really, there is nothing unique about it. like, if everyone has this unique thing, doesn’t it become a cliché?</p>
-        <p>people, at their core, are too attached to their beliefs. they don’t want to abandon their belief just for some logic that could take away the comfort that particular belief brings to them. and also, that “people who believe without reason can’t be convinced by giving a reason.”</p>
-        <p>now talking about <i>love</i>, some people preach about it as life is not complete without it. but let me tell you what i think. i dont know if i've ever truly been in love or not. i was definetly attracted to a girl i used to talk to-i still like her-but i'm not sure what qualifies something as "love." so honestly, i dont really know what love actually is. for me, maybe its just deep affection and care towards to someone. when one is in love-if i ever was or still am-one try to stand out, try to be different from the crowd, just for that person to notice, to become someone that person like.</p>
+        <p>
+          so today, this fellow saint has come all the way down from the peak of
+          a mountain named wisdom just to tell ye all, actually, share his
+          opinion about life, what i think of it, what i don’t. and maybe a
+          little bullshit from the right and some from the left. this blog might
+          be named life or something, but it’s not just the living concept or
+          something, it’s everything that makes up life.
+        </p>
+        <p>
+          now this blog might feel very random at times, so yep, just letting ye
+          know!
+        </p>
+        <img src="images/l/individual.jpeg" alt="individual" />
+        <p>
+          umm… finding the right way to start it… actually, let it be
+          open-started.
+        </p>
+        <p>
+          so, i think i understand life a little, not completely, only a little
+          of it. but if someone asked me, “tell me what this life is about,” i
+          might not be able to tell them. i wouldn’t be able to give a
+          definition of it. and if i were asked whether i’m living my life on
+          the same terms as i understand it, i’d still say no. and i guess it’s
+          the same way with everyone, no one truly lives their life on the same
+          terms they seem to understand it.
+        </p>
+        <p>
+          some beliefs i have: that each of us, at our core, is the same, you,
+          me, everyone, hell, even einstein. we are nothing different. i can do
+          all the same things that you can do and vice versa. the only
+          difference is the way we do it. but where does this difference stem
+          from? i believe it comes from the idea that everyone wants to be
+          different. that is the root of this difference. and maybe that might
+          be the unique thing… maybe. but really, there is nothing unique about
+          it. like, if everyone has this unique thing, doesn’t it become a
+          cliché?
+        </p>
+        <p>
+          people, at their core, are too attached to their beliefs. they don’t
+          want to abandon their belief just for some logic that could take away
+          the comfort that particular belief brings to them. and also, that
+          “people who believe without reason can’t be convinced by giving a
+          reason.”
+        </p>
+        <p>
+          now talking about love, some people preach about it as life is not
+          complete without it. but let me tell you what i think. i dont know if
+          i've ever truly been in love or not. i was definetly attracted to a
+          girl i used to talk to-i still like her-but i'm not sure what
+          qualifies something as "love." so honestly, i dont really know what
+          love actually is. for me, maybe its just deep affection and care
+          towards to someone. when one is in love-if i ever was or still am-one
+          try to stand out, try to be different from the crowd, just for that
+          person to notice, to become someone that person like.
+        </p>
         <p>i don't know</p>
-        <p>speaking from the other side, a person who isn't in love usually craves it. i guess everyone wants to be loved-who doesn't? or maybe it's not love itself, but just the assurance that someone is around and cares.</p>
-        <p>as for me, i've kind of grown out of that desire-not completely, but to an extent. what i think is, it doesn't really matter. it's like this: if you never know what love was, you wouldn't long for it. you wouldn't care, or think, or talk about people you've never even met.</p>    
-        <p>i feel (just my opinion) that an experienced life is better than just a good life—an experienced life can be a good life, but a good life doesn’t necessarily mean an experienced one. i’m not saying you should experience everything, but you should experience life as much as you can. its just my opinion.</p>
-        <img src="images/l/1.jpg" alt="good life">
-        <p>see, anyway, i am an absurd guy (oh, the irony), so the meaning of things doesn’t really matter to me. because at the end of life, if i’m not there, then what do meanings matter to me? i’m just a guy looking for peace, looking for chances to be amused by this absurdity of life. and i won’t lie, i’m having quite some time. but in between, i do become an existentialist who kinda gives a shit to some point. but beyond that—who are you, and who am i? it doesn’t really matter.</p>
-        <p>yep, that was all in this empty head. will see you invisible folks later. till then, peace.</p>
-        </section>
-    </article>
-</body>
-
-<footer>
-        <p1>© 2025 vaeseth's blog.</p1>
-</footer>
+        <p>
+          speaking from the other side, a person who isn't in love usually
+          craves it. i guess everyone wants to be loved-who doesn't? or maybe
+          it's not love itself, but just the assurance that someone is around
+          and cares.
+        </p>
+        <p>
+          as for me, i've kind of grown out of that desire-not completely, but
+          to an extent. what i think is, it doesn't really matter. it's like
+          this: if you never know what love was, you wouldn't long for it. you
+          wouldn't care, or think, or talk about people you've never even met.
+        </p>
+        <p>
+          i feel (just my opinion) that an experienced life is better than just
+          a good life, an experienced life can be a good life, but a good life
+          doesn’t necessarily mean an experienced one. i’m not saying you should
+          experience everything, but you should experience life as much as you
+          can. its just my opinion.
+        </p>
+        <img src="images/l/1.jpg" alt="good life" />
+        <p>
+          see, anyway, i am an absurd guy (oh, the irony), so the meaning of
+          things doesn’t really matter to me. because at the end of life, if i’m
+          not there, then what do meanings matter to me? i’m just a guy looking
+          for peace, looking for chances to be amused by this absurdity of life.
+          and i won’t lie, i’m having quite some time. but in between, i do
+          become an existentialist who kinda gives a shit to some point. but
+          beyond that, who are you, and who am i? it doesn’t really matter.
+        </p>
+        <p>
+          yep, that was all in this empty head. will see you invisible folks
+          later. till then, peace.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
