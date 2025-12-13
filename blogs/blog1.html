@@ -1,34 +1,198 @@
 <!DOCTYPE html>
-<hmtl lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>>>hola</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>halo</h1>
-    <nav>
-        <li><a href="../index.html">home</a></li>
-        <li style="margin: 0 5px;">/</li>
-        <li><a href="../blog.html">blogs</a></li>
-        <li style="margin: 0 5px;">/</li>
-        <li><a href="blog1.html">halo</a></li>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>>>halo</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="text/javascript" src="../app.js" defer></script>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <span class="logo">vaeseth</span>
+          <button onclick="toggleSidebar()" id="toggle-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a href="../index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
+              />
+            </svg>
+            <span>home</span>
+          </a>
+        </li>
+        <li>
+          <a href="../about.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+              />
+            </svg>
+            <span>about</span>
+          </a>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-240v-80h480v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+            <span>notes</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="blogs/blog55.html">bigmouth1</a></li>
+              <li><a href="blogs/blog44.html">samsara2</a></li>
+              <li><a href="blogs/blog33.html">reality shift3</a></li>
+              <li><a href="blogs/blog22.html">chaos cascade4</a></li>
+              <li><a href="blogs/blog11.html">halo5</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M120-120v-720h720v720H120Zm600-160H240v60h480v-60Zm-480-60h480v-60H240v60Zm0-140h480v-240H240v240Zm0 200v60-60Zm0-60v-60 60Zm0-140v-240 240Zm0 80v-80 80Zm0 120v-60 60Z"
+              />
+            </svg>
+            <span>blogs</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+            </svg>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li><a href="blog5.html">bigmouth</a></li>
+              <li><a href="blog4.html">samsara</a></li>
+              <li><a href="blog3.html">reality shift</a></li>
+              <li><a href="blog2.html">chaos cascade</a></li>
+              <li class="active"><a href="blog1.html">halo</a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a href="../photo.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+            >
+              <path
+                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Z"
+              />
+            </svg>
+            <span>photos</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-    <article>
-        <section class="blog-content">
-        <p>hello folks, this is aseth, the sole owner of this webpage. to be honest, there's not much here—just some casual talks and a few things i like. truthfully, i have no solid reason for creating this page. the only explanation i give myself, just to justify its existence, is that i simply wanted to create something. or, to put it another way, i wanted to play around with <i>html</i> and <i>css</i>. now, this isn't my first time using <i>html</i> (though it is my first time tinkering with <i>css</i>). i've used <i>html</i> before to build something for someone, but i didn't quite achieve what i was aiming for.</p>
-        <p>anyway, this page exists purely for experimental purposes, so i don’t expect anyone to discover it, let alone read my blogs. i’m not promoting it—no social media posts announcing my latest blog entries—because i’m not a social media guy, at least not anymore. and since it’s just an experimental project, i won’t be flooding it with blogs every week or month(maybe i will). honestly, i’m writing this while listening to <i>bohemian rhapsody<i> by queen—one of my favorites.</p>
-        <p>as for improving the website’s aesthetics, i probably won’t. i prefer things to be simple yet visually comfortable, and in its current state, it delivers what i want (though not so much on phones, so yeah, it’s not perfect). i’m also not the kind of person who enjoys tinkering with every little thing on the internet, so i won’t be making any further changes simply because i don’t feel like it.</p>
-        <p>i have a wide range of interests, yet nothing in particular fascinates me for too long. what truly captivates me is the art of understanding things. when i come across something interesting, i have this urge to dive deep into it, to grasp its essence, and to experience it firsthand. that’s just how my mind works.</p>
-        <img src="images/chaos/Hardcore Plane Porn — Keith Thomson.jpg" alt="plane porn">
-        <p>now, about this website—it took me around five hours to put everything together. hosting it seemed like it would be a challenge, or at least that’s what i expected, but it turned out to be easier than i thought. of course, i had some help along the way. a dear friend of mine.</p>
-        <p>and now, ending all this nonsensical yaddi yadda which no one’s gonna read, i have a final thing to say: i fluffing hate <i>css</i> with all my passion.</p>
-        </section>
-    </article>
-</body>
-
-<footer>
-        <p1>© 2025 vaeseth's blog.</p1>
-</footer>
+    <main>
+      <div class="container">
+        <h2 style="margin-bottom: 15px; color: #0099cc">halo</h2>
+        <p>jan 03, 2025</p>
+        <p>
+          hello folks, this is aseth, the sole owner of this webpage. to be
+          honest, there's not much here, just some casual talks and a few things
+          i like. truthfully, i have no solid reason for creating this page. the
+          only explanation i give myself, just to justify its existence, is that
+          i simply wanted to create something. or, to put it another way, i
+          wanted to play around with html and css. now, this isn't my first time
+          using html (though it is my first time tinkering with css). i've used
+          html before to build something for someone, but i didn't quite achieve
+          what i was aiming for.
+        </p>
+        <p>
+          anyway, this page exists purely for experimental purposes, so i don’t
+          expect anyone to discover it, let alone read my blogs. i’m not
+          promoting it, no social media posts announcing my latest blog entries,
+          because i’m not a social media guy, at least not anymore. and since
+          it’s just an experimental project, i won’t be flooding it with blogs
+          every week or month(maybe i will). honestly, i’m writing this while
+          listening to bohemian rhapsody by queen, one of my favorites.
+        </p>
+        <p>
+          as for improving the website’s aesthetics, i probably won’t. i prefer
+          things to be simple yet visually comfortable, and in its current
+          state, it delivers what i want (though not so much on phones, so yeah,
+          it’s not perfect). i’m also not the kind of person who enjoys
+          tinkering with every little thing on the internet, so i won’t be
+          making any further changes simply because i don’t feel like it.
+        </p>
+        <p>
+          i have a wide range of interests, yet nothing in particular fascinates
+          me for too long. what truly captivates me is the art of understanding
+          things. when i come across something interesting, i have this urge to
+          dive deep into it, to grasp its essence, and to experience it
+          firsthand. that’s just how my mind works.
+        </p>
+        <img
+          src="images/chaos/Hardcore Plane Porn — Keith Thomson.jpg"
+          alt="plane porn"
+        />
+        <p>
+          now, about this website, it took me around five hours to put
+          everything together. hosting it seemed like it would be a challenge,
+          or at least that’s what i expected, but it turned out to be easier
+          than i thought. of course, i had some help along the way. a dear
+          friend of mine.
+        </p>
+        <p>
+          and now, ending all this nonsensical yaddi yadda which no one’s gonna
+          read, i have a final thing to say: i fluffing hate css with all my
+          passion.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
