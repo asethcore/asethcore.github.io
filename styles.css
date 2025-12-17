@@ -30,7 +30,7 @@ body {
   box-sizing: border-box;
   height: 100vh;
   width: 250px;
-  padding: 35px 1em 5px 1em;
+  padding: 60px 1em 5px 1em;
   background-color: #0e1013;
   border-right: 1px solid var(--line-clr);
   position: sticky;
@@ -149,11 +149,6 @@ body {
 main {
   /*padding: min(30px, 7%);*/
   padding: 30px 100px 30px 100px
-}
-
-li {
-  display: inline;
-  font-size: 17px;
 }
 
 img {
