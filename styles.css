@@ -151,6 +151,11 @@ main {
   padding: 30px 100px 30px 100px
 }
 
+li {
+  display: inline;
+  font-size: 17px;
+}
+
 img {
   display: block;
   max-width: 100%;
