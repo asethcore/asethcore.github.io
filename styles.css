@@ -151,6 +151,24 @@ main {
   padding: 30px 100px 30px 100px
 }
 
+.crumbs {
+  list-style: none;
+  display: flex;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
+.crumbs li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #d79921;
+}
+
+.crumbs li a:hover {
+  text-decoration: underline;
+}
+
 img {
   display: block;
   max-width: 100%;
