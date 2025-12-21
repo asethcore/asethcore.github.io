@@ -270,6 +270,10 @@ main p {
     padding: 0;
   }
 
+  .crumbs {
+    padding: 10px 0 0 0;
+  }
+
   #sidebar {
     height: 60px;
     width: 100%;
