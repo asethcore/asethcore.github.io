@@ -107,6 +107,9 @@ body {
   display: grid;
   grid-template-rows: 0fr;
   transition: 300ms ease-in-out;
+  border-left: 1px solid #17181b;
+  margin-left: 20px;
+  padding-left: 20px;
 
   > div {
     overflow: hidden;
@@ -126,7 +129,7 @@ body {
 }
 
 #sidebar .sub-menu a {
-  padding-left: 2em;
+  /*padding-left: 2em;*/
 }
 
 #toggle-btn {
@@ -272,6 +275,11 @@ main p {
 
   .crumbs {
     padding: 10px 0 0 0;
+  }
+
+  #sidebar .sub-menu {
+    margin: 0;
+    padding: 0;
   }
 
   #sidebar {
