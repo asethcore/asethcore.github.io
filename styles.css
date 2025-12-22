@@ -107,7 +107,7 @@ body {
   display: grid;
   grid-template-rows: 0fr;
   transition: 300ms ease-in-out;
-  border-left: 1px solid var(--line-clr);
+  border-left: 1px solid #17181b;
   margin-left: 20px;
   padding-left: 20px;
 
