@@ -172,6 +172,24 @@ main {
   text-decoration: underline;
 }
 
+.foot {
+  list-style: none;
+  display: flex;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
+.foot li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0099cc;
+}
+
+.foot li a:hover {
+  text-decoration: underline;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -195,6 +213,13 @@ main p {
   p {
     margin-top: 1em;
   }
+}
+
+.footer {
+  padding: min(1em, 15%);
+  bottom: 0;
+  border-top: 1px solid var(--line-clr);
+  background-color: #17181b;
 }
 
 .card {
@@ -270,6 +295,10 @@ main p {
 
   .container {
     border: none;
+    padding: 0;
+  }
+
+  .footer {
     padding: 0;
   }
 
