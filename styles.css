@@ -196,6 +196,7 @@ img {
   height: auto;
   text-align: center;
   margin: auto;
+  border-radius: 10px;
 }
 
 main p {
