@@ -151,7 +151,7 @@ body {
 
 main {
   /*padding: min(30px, 7%);*/
-  padding: 30px 100px 30px 100px
+  padding: 30px 200px 30px 200px
 }
 
 .crumbs {
@@ -283,6 +283,12 @@ main p {
 
 .title.special {
   color: #e0e0e0;
+}
+
+@media (min-width: 801px) and (max-width: 1100px) {
+  main {
+    padding: 30px;
+  }
 }
 
 @media (max-width: 800px) {
