@@ -151,7 +151,8 @@ body {
 
 main {
   /*padding: min(30px, 7%);*/
-  padding: 30px 200px 30px 200px
+  padding: 30px 200px 30px 200px;
+  justify-content: center;
 }
 
 .crumbs {
