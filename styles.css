@@ -160,6 +160,7 @@ body {
 .blog {
   display: flex;
   justify-content: center;
+  padding: 30px 60px 30px 60px;
   min-height: 100vh;
 }
 
