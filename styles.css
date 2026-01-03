@@ -301,18 +301,22 @@ main p {
   color: #e0e0e0;
 }
 
-@media (min-width: 801px) and (max-width: 1100px) {
+/*@media (min-width: 801px) and (max-width: 1100px) {
   main {
     padding: 30px;
   }
-}
+}*/
 
 @media (max-width: 800px) {
   body {
     grid-template-columns: 1fr;
   }
 
-  main {
+  .home {
+    padding: 4em 1em 60px 1em;
+  }
+
+  .blog {
     padding: 4em 1em 60px 1em;
   }
 
