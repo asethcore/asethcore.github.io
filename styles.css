@@ -149,7 +149,7 @@ body {
   background-color: var(--hover-clr);
 }
 
-main {
+.home {
   /*padding: min(30px, 7%);*/
   padding: 30px 60px 30px 60px;
   max-width: 900px;
@@ -160,7 +160,6 @@ main {
 .blog {
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
