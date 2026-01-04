@@ -16,6 +16,7 @@
           <li><a href="about.html">about</a></li>
           <li><a href="blog.html">posts</a></li>
           <li><a href="photo.html">photos</a></li>
+          <li id="theme-toggle">light</li>
         </ul>
 
         <h2>about(me)</h2>
@@ -49,6 +50,26 @@
         />
       </div>
     </div>
+    <script>
+      const html = document.documentElement;
+      const toggleItem = document.getElementById("theme-toggle");
+
+      function updateLabel() {
+        if (html.classList.contains("darkmode")) {
+          toggleItem.textContent = "lights in";
+        } else {
+          toggleItem.textContent = "lights out";
+        }
+      }
+
+      toggleItem.addEventListener("click", () => {
+        html.classList.toggle("darkmode");
+        updateLabel();
+      });
+
+      // set initial label on load
+      updateLabel();
+    </script>
   </body>
 </html>
 
