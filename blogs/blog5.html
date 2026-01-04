@@ -16,6 +16,7 @@
           <li><a href="../about.html">about</a></li>
           <li><a href="../blog.html">posts</a></li>
           <li><a href="../photo.html">photos</a></li>
+          <li id="theme-toggle">light</li>
         </ul>
 
         <h2>bigmouth</h2>
@@ -80,5 +81,28 @@
         <img src="images/bigmouth/i1.jpeg" alt="life porn" class="post-image" />
       </div>
     </div>
+    <script>
+      const html = document.documentElement;
+      const toggleItem = document.getElementById("theme-toggle");
+      const STORAGE_KEY = "theme";
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          html.classList.add("darkmode");
+          toggleItem.textContent = "lights out";
+        } else {
+          html.classList.remove("darkmode");
+          toggleItem.textContent = "light";
+        }
+      }
+      const savedTheme = localStorage.getItem(STORAGE_KEY) || "light";
+      applyTheme(savedTheme);
+
+      toggleItem.addEventListener("click", () => {
+        const newTheme = html.classList.contains("darkmode") ? "light" : "dark";
+        localStorage.setItem(STORAGE_KEY, newTheme);
+        applyTheme(newTheme);
+      });
+    </script>
   </body>
 </html>
