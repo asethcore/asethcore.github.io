@@ -53,22 +53,25 @@
     <script>
       const html = document.documentElement;
       const toggleItem = document.getElementById("theme-toggle");
+      const STORAGE_KEY = "theme";
 
-      function updateLabel() {
-        if (html.classList.contains("darkmode")) {
-          toggleItem.textContent = "lights in";
-        } else {
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          html.classList.add("darkmode");
           toggleItem.textContent = "lights out";
+        } else {
+          html.classList.remove("darkmode");
+          toggleItem.textContent = "light";
         }
       }
+      const savedTheme = localStorage.getItem(STORAGE_KEY) || "light";
+      applyTheme(savedTheme);
 
       toggleItem.addEventListener("click", () => {
-        html.classList.toggle("darkmode");
-        updateLabel();
+        const newTheme = html.classList.contains("darkmode") ? "light" : "dark";
+        localStorage.setItem(STORAGE_KEY, newTheme);
+        applyTheme(newTheme);
       });
-
-      // set initial label on load
-      updateLabel();
     </script>
   </body>
 </html>
