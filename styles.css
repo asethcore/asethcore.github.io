@@ -32,7 +32,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 8px 0;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .blog-list li:first-child {
@@ -110,7 +110,7 @@ body {
 }
 
 #content a {
-  color: #0000cc;
+  color: #414447;
   text-decoration: none;
 }
 
