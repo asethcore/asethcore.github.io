@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 html,
 body {
   margin: 0;
   padding: 0;
   background: #f9f7f2;
   color: #000000;
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -101,12 +103,15 @@ body {
 }
 
 #sidebar a {
-  color: #4242ff;
+  color: #333333;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
 }
 
 #sidebar a:hover {
-  text-decoration: underline;
+  color: #000000;
+  border-bottom-color: #000000;
 }
 
 #content a {
