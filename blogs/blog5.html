@@ -1,149 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>>>bigmouth</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="stylesheet" href="../styles.css" />
-    <script type="text/javascript" src="../app.js" defer></script>
+    <title>bigmouth</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav id="sidebar">
-      <ul>
-        <li>
-          <span class="logo">vaeseth</span>
-          <button onclick="toggleSidebar()" id="toggle-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-            >
-              <path
-                d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z"
-              />
-            </svg>
-          </button>
-        </li>
-        <li>
-          <a href="../index.html">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-            >
-              <path
-                d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
-              />
-            </svg>
-            <span>home</span>
-          </a>
-        </li>
-        <li>
-          <a href="../about.html">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-            >
-              <path
-                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
-              />
-            </svg>
-            <span>about</span>
-          </a>
-        </li>
-        <li>
-          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-            >
-              <path
-                d="M120-240v-80h480v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-              />
-            </svg>
-            <span>notes</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-            >
-              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-            </svg>
-          </button>
-          <ul class="sub-menu">
-            <div>
-              <li><a href="#">404</a></li>
-            </div>
-          </ul>
-        </li>
-        <li>
-          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-            >
-              <path
-                d="M120-120v-720h720v720H120Zm600-160H240v60h480v-60Zm-480-60h480v-60H240v60Zm0-140h480v-240H240v240Zm0 200v60-60Zm0-60v-60 60Zm0-140v-240 240Zm0 80v-80 80Zm0 120v-60 60Z"
-              />
-            </svg>
-            <span>blogs</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-            >
-              <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-            </svg>
-          </button>
-          <ul class="sub-menu">
-            <div>
-              <li class="active"><a style="font-weight: bold" href="blog5.html">bigmouth</a></li>
-              <li><a style="font-weight: bold" href="blog4.html">samsara</a></li>
-              <li>
-                <a style="font-weight: bold" href="../blog.html">explora...</a>
-              </li>
-            </div>
-          </ul>
-        </li>
-        <li>
-          <a href="../photo.html">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-            >
-              <path
-                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm40-80h480L570-480 450-320l-90-120-120 160Zm-40 80v-560 560Z"
-              />
-            </svg>
-            <span>photos</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <main class="home">
-      <div class="container">
-        <ul class="crumbs">
-          <li><a href="../index.html">home</a></li>
-          <li style="margin: 0 5px; color: #689d6a">❯</li>
-          <li><a href="../blog.html">blogs</a></li>
-          <li style="margin: 0 5px; color: #689d6a">❯</li>
-          <li><a href="blog5.html">bigmouth</a></li>
+    <div id="page">
+      <div id="sidebar">
+        <h2>navigation</h2>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="blog.html">posts</a></li>
+          <li><a href="photo.html">photos</a></li>
         </ul>
-        <h2 style="color: #0099cc">entropy notes</h2>
-        <p>oct 18, 2025</p>
+
+        <h2>bigmouth</h2>
+        <p>
+          this is me yapping about how i am quite fond of the idea of
+          uncertainty with the reason that i give to myself.
+        </p>
+      </div>
+
+      <div id="content">
+        <h1>entropy notes</h1>
+        <p><strong>last modified on oct 18, 2025</strong></p>
         <p>
           hello folks its me mario(oh, who am i even kidding), so i am aware i
           havent posted anything in like past 4-5 months i guess, i dont count.
@@ -191,18 +75,10 @@
         <p>ask me why and i’ll die…</p>
         <p>
           P.S. I realised my blogs are more often revolving around me like what
-          i think how i think and i am not sure if it should be that way or not
+          i think how i think and i am not sure if it should be that way or not.
         </p>
-        <img src="images/bigmouth/i1.jpeg" alt="life porn" />
+        <img src="images/bigmouth/i1.jpeg" alt="life porn" class="post-image" />
       </div>
-      <div class="footer">
-        <ul class="foot">
-          <li>seth</li>
-          <li style="margin: 0 5px">·</li>
-          <li><a href="https://github.com/asethcore">github</a></li>
-        </ul>
-        <p>made with burger in mind</p>
-      </div>
-    </main>
+    </div>
   </body>
 </html>
