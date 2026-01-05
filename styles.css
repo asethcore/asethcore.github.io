@@ -164,7 +164,10 @@ body {
   }
 
   #page {
-    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 20px;
   }
 }
