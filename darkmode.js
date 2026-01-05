@@ -17,6 +17,6 @@ applyTheme(savedTheme);
 
 toggleItem.addEventListener("click", () => {
   const newTheme = html.classList.contains("darkmode") ? "light" : "dark";
-  localStorage.setItem(STORAGE_KEY, newTheme); // persist choice
+  localStorage.setItem(STORAGE_KEY, newTheme);
   applyTheme(newTheme);
 });
