@@ -27,6 +27,7 @@ body {
 #theme-toggle {
   cursor: pointer;
   color: var(--accent-color);
+  width: fit-content;
 }
 #theme-toggle:hover {
   text-decoration: underline;
