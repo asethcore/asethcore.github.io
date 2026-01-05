@@ -1,6 +1,6 @@
 const html = document.documentElement;
 const toggleItem = document.getElementById("theme-toggle");
-const STORAGE_KEY = "theme"; // 'light' or 'dark'
+const STORAGE_KEY = "theme";
 
 function applyTheme(theme) {
   if (theme === "dark") {
@@ -12,7 +12,6 @@ function applyTheme(theme) {
   }
 }
 
-// read saved theme (or default to light)
 const savedTheme = localStorage.getItem(STORAGE_KEY) || "light";
 applyTheme(savedTheme);
 
