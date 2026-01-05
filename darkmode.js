@@ -5,10 +5,10 @@ const STORAGE_KEY = "theme";
 function applyTheme(theme) {
   if (theme === "dark") {
     html.classList.add("darkmode");
-    toggleItem.textContent = "lights out";
+    toggleItem.textContent = "lights in";
   } else {
     html.classList.remove("darkmode");
-    toggleItem.textContent = "light";
+    toggleItem.textContent = "lights out";
   }
 }
 
