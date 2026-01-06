@@ -109,6 +109,30 @@ body {
   margin: 0 0 15px 0;
 }
 
+.footer {
+  padding-top: min(1em, 15%);
+  bottom: 0;
+  border-top: 1px solid var(--text-color);
+  background-color: var(--base-color);
+}
+
+.foot {
+  list-style: none;
+  display: flex;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
+.foot li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.foot li a:hover {
+  text-decoration: underline;
+}
+
 #sidebar h2 {
   font-size: 16px;
   margin: 0 0 5px 0;
