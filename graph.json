@@ -9,49 +9,49 @@
     {
       "id": "notes",
       "title": "notes",
-      "url": "note.html",
+      "url": "asethcore.github.io/note.html",
       "type": "source"
     },
     {
       "id": "self",
       "title": "self",
-      "url": "self.html",
+      "url": "asethcore.github.io/self.html",
       "type": "source"
     },
     {
       "id": "brain-notes",
       "title": "brain-notes",
-      "url": "brain.html",
+      "url": "asethcore.github.io/brain.html",
       "type": "source"
     },
     {
       "id": "bigmouth",
       "title": "bigmouth",
-      "url": "blogs/blog5.html",
+      "url": "asethcore.github.io/blogs/blog5.html",
       "type": "target"
     },
     {
       "id": "samsara",
       "title": "samsara",
-      "url": "blogs/blog4.html",
+      "url": "asethcore.github.io/blogs/blog4.html",
       "type": "target"
     },
     {
       "id": "reality shift",
       "title": "reality shift",
-      "url": "blogs/blog3.html",
+      "url": "asethcore.github.io/blogs/blog3.html",
       "type": "target"
     },
     {
       "id": "chaos cascade",
       "title": "chaos cascade",
-      "url": "blogs/blog2.html",
+      "url": "asethcore.github.io/blogs/blog2.html",
       "type": "target"
     },
     {
       "id": "halo",
       "title": "halo",
-      "url": "blogs/blog1.html",
+      "url": "asethcore.github.io/blogs/blog1.html",
       "type": "target"
     }
   ],
