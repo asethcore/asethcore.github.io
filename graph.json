@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "id": "posts",
+      "title": "posts",
+      "url": "blog.html",
+      "type": "source"
+    },
+    {
+      "id": "notes",
+      "title": "notes",
+      "url": "note.html",
+      "type": "source"
+    },
+    {
+      "id": "self",
+      "title": "self",
+      "url": "self.html",
+      "type": "source"
+    },
+    {
+      "id": "brain-notes",
+      "title": "brain-notes",
+      "url": "brain.html",
+      "type": "source"
+    },
+    {
+      "id": "bigmouth",
+      "title": "bigmouth",
+      "url": "blogs/blog5.html",
+      "type": "target"
+    },
+    {
+      "id": "samsara",
+      "title": "samsara",
+      "url": "blogs/blog4.html",
+      "type": "target"
+    },
+    {
+      "id": "reality shift",
+      "title": "reality shift",
+      "url": "blogs/blog3.html",
+      "type": "target"
+    },
+    {
+      "id": "chaos cascade",
+      "title": "chaos cascade",
+      "url": "blogs/blog2.html",
+      "type": "target"
+    },
+    {
+      "id": "halo",
+      "title": "halo",
+      "url": "blogs/blog1.html",
+      "type": "target"
+    }
+  ],
+  "links": [
+    { "source": "posts", "target": "self" },
+    { "source": "posts", "target": "notes" },
+    { "source": "posts", "target": "brain-notes" },
+    { "source": "self", "target": "bigmouth" },
+    { "source": "self", "target": "samsara" },
+    { "source": "brain-notes", "target": "reality shift" },
+    { "source": "brain-notes", "target": "chaos cascade" },
+    { "source": "self", "target": "halo" }
+  ]
+}
