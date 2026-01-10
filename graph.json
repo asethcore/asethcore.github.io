@@ -3,13 +3,13 @@
     {
       "id": "posts",
       "title": "posts",
-      "url": "blog.html",
+      "url": "/blog.html",
       "type": "source"
     },
     {
       "id": "notes",
       "title": "notes",
-      "url": "note.html",
+      "url": "/note.html",
       "type": "source"
     },
     {
