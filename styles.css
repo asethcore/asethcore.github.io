@@ -3,6 +3,7 @@
   --text-color: #000000;
   --accent-color: #4242ff;
   --secondary-color: #414447;
+  --line-color: #e0e0e0;
 }
 
 .darkmode {
@@ -10,6 +11,7 @@
   --text-color: #f9f7f2;
   --accent-color: #8989ff;
   --secondary-color: #bebbb8;
+  --line-color: #1e1e1e;
 }
 
 html,
@@ -89,7 +91,7 @@ body {
   position: relative;
   width: 200px;
   height: 200px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--line-color);
   border-radius: 5px;
   overflow: hidden;
   margin: 15px 0 15px 0;
