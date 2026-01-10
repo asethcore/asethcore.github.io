@@ -3,55 +3,55 @@
     {
       "id": "posts",
       "title": "posts",
-      "url": "https://vaeseth.me/blog.html",
+      "url": "blog.html",
       "type": "source"
     },
     {
       "id": "notes",
       "title": "notes",
-      "url": "asethcore.github.io/note.html",
+      "url": "note.html",
       "type": "source"
     },
     {
       "id": "self",
       "title": "self",
-      "url": "asethcore.github.io/self.html",
+      "url": "self.html",
       "type": "source"
     },
     {
       "id": "brain-notes",
       "title": "brain-notes",
-      "url": "asethcore.github.io/brain.html",
+      "url": "brain.html",
       "type": "source"
     },
     {
       "id": "bigmouth",
       "title": "bigmouth",
-      "url": "asethcore.github.io/blogs/blog5.html",
+      "url": "blogs/blog5.html",
       "type": "target"
     },
     {
       "id": "samsara",
       "title": "samsara",
-      "url": "asethcore.github.io/blogs/blog4.html",
+      "url": "blogs/blog4.html",
       "type": "target"
     },
     {
       "id": "reality shift",
       "title": "reality shift",
-      "url": "asethcore.github.io/blogs/blog3.html",
+      "url": "blogs/blog3.html",
       "type": "target"
     },
     {
       "id": "chaos cascade",
       "title": "chaos cascade",
-      "url": "asethcore.github.io/blogs/blog2.html",
+      "url": "blogs/blog2.html",
       "type": "target"
     },
     {
       "id": "halo",
       "title": "halo",
-      "url": "asethcore.github.io/blogs/blog1.html",
+      "url": "blogs/blog1.html",
       "type": "target"
     }
   ],
