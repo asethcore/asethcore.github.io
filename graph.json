@@ -1,10 +1,28 @@
 {
   "nodes": [
     {
+      "id": "home",
+      "title": "home",
+      "url": "/index.html",
+      "type": "source"
+    },
+    {
+      "id": "about",
+      "title": "about",
+      "url": "/about.html",
+      "type": "target"
+    },
+    {
       "id": "posts",
       "title": "posts",
       "url": "/blog.html",
       "type": "source"
+    },
+    {
+      "id": "photos",
+      "title": "photos",
+      "url": "/photo.html",
+      "type": "target"
     },
     {
       "id": "notes",
@@ -56,6 +74,9 @@
     }
   ],
   "links": [
+    { "source": "home", "target": "about" },
+    { "source": "home", "target": "posts" },
+    { "source": "home", "target": "photos" },
     { "source": "posts", "target": "self" },
     { "source": "posts", "target": "notes" },
     { "source": "posts", "target": "brain-notes" },
