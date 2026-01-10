@@ -15,43 +15,43 @@
     {
       "id": "self",
       "title": "self",
-      "url": "self.html",
+      "url": "/self.html",
       "type": "source"
     },
     {
       "id": "brain-notes",
       "title": "brain-notes",
-      "url": "brain.html",
+      "url": "/brain.html",
       "type": "source"
     },
     {
       "id": "bigmouth",
       "title": "bigmouth",
-      "url": "blogs/blog5.html",
+      "url": "/blogs/blog5.html",
       "type": "target"
     },
     {
       "id": "samsara",
       "title": "samsara",
-      "url": "blogs/blog4.html",
+      "url": "/blogs/blog4.html",
       "type": "target"
     },
     {
       "id": "reality shift",
       "title": "reality shift",
-      "url": "blogs/blog3.html",
+      "url": "/blogs/blog3.html",
       "type": "target"
     },
     {
       "id": "chaos cascade",
       "title": "chaos cascade",
-      "url": "blogs/blog2.html",
+      "url": "/blogs/blog2.html",
       "type": "target"
     },
     {
       "id": "halo",
       "title": "halo",
-      "url": "blogs/blog1.html",
+      "url": "/blogs/blog1.html",
       "type": "target"
     }
   ],
