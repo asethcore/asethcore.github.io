@@ -43,6 +43,12 @@
       "type": "source"
     },
     {
+      "id": "smth smth",
+      "title": "smth smth",
+      "url": "/blogs/blog6.html",
+      "type": "target"
+    },
+    {
       "id": "bigmouth",
       "title": "bigmouth",
       "url": "/blogs/blog5.html",
@@ -82,8 +88,10 @@
     { "source": "posts", "target": "brain-notes" },
     { "source": "self", "target": "bigmouth" },
     { "source": "self", "target": "samsara" },
+    { "source": "self", "target": "smth smth" },
     { "source": "brain-notes", "target": "reality shift" },
     { "source": "brain-notes", "target": "chaos cascade" },
+    { "source": "brain-notes", "target": "smth smth" },
     { "source": "self", "target": "halo" }
   ]
 }
