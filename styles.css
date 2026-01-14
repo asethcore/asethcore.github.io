@@ -87,6 +87,11 @@ body {
   padding-top: 10px;
 }
 
+#graph-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
 #graph-container {
   position: relative;
   width: 200px;
@@ -94,7 +99,57 @@ body {
   border: 1px solid var(--line-color);
   border-radius: 5px;
   overflow: hidden;
-  margin: 15px 0 15px 0;
+  margin: 15px 0;
+  background-color: var(--base-color);
+  transition: all 0.3s ease-in-out;
+}
+
+#graph-container.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  z-index: 9999;
+  background-color: var(--base-color);
+  border: 1px solid var(--line-color);
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#graph-expand-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--base-color);
+  border: 1px solid var(--line-color);
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+#graph-container.expanded + #graph-expand-btn {
+  position: fixed;
+  display: none;
+  top: 7%;
+  right: 12%;
+  z-index: 10001;
+  padding: 8px;
+}
+
+#graph-container.expanded + #graph-expand-btn:after {
+  content: "";
 }
 
 #content {
