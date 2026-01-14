@@ -1,35 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("graph-container");
-  if (!container) {
-    console.warn("graph.js: #graph-container not found");
-    return;
-  }
+  const expandBtn = document.getElementById("graph-expand-btn");
 
-  if (typeof ForceGraph === "undefined") {
-    console.error("graph.js: ForceGraph library not loaded");
-    return;
-  }
-
-  const rect = container.getBoundingClientRect();
-  const width = rect.width || 200;
-  const height = rect.height || 200;
+  if (!container || typeof ForceGraph === "undefined") return;
 
   fetch("/graph.json")
-    .then((res) => {
-      if (!res.ok) throw new Error("failed to load graph.json");
-      return res.json();
-    })
+    .then((res) => res.json())
     .then((data) => {
       let hoverNode = null;
       const highlightNodes = new Set();
       const highlightLinks = new Set();
 
       const Graph = ForceGraph()(container)
-        .width(width)
-        .height(height)
+        .width(container.clientWidth)
+        .height(container.clientHeight)
         .graphData(data)
         .nodeRelSize(2.5)
-
         .onNodeHover((node) => {
           highlightNodes.clear();
           highlightLinks.clear();
@@ -54,14 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
           container.style.cursor = node ? "pointer" : null;
         })
-
         .nodeColor((node) => {
           if (hoverNode) {
             if (node === hoverNode) return "#6699cc";
             if (highlightNodes.has(node)) return "#b0b0b0";
             return "rgba(200, 200, 200, 0.2)";
           }
-
           if (node.type === "source") return "#6699cc";
           if (node.type === "target") return "#b0b0b0";
           return "#9ccc65";
@@ -75,15 +59,41 @@ document.addEventListener("DOMContentLoaded", () => {
           return "#555555";
         })
         .linkWidth((link) => (highlightLinks.has(link) ? 2 : 1))
-
         .nodeLabel((node) => node.title || node.id)
         .onNodeClick((node) => {
-          if (node.url) {
-            window.location.href = node.url;
-          }
+          if (node.url) window.location.href = node.url;
         });
+
+      function updateGraphDimensions(w, h) {
+        Graph.width(w);
+        Graph.height(h);
+        Graph.d3Force("center", d3.forceCenter(w / 2, h / 2));
+        Graph.d3ReheatSimulation();
+        Graph.zoomToFit(400, 80);
+      }
+
+      function toggleExpand(e) {
+        e.stopPropagation();
+        container.classList.toggle("expanded");
+
+        setTimeout(() => {
+          updateGraphDimensions(container.clientWidth, container.clientHeight);
+        }, 350);
+      }
+
+      expandBtn.addEventListener("click", toggleExpand);
+
+      document.addEventListener("click", (e) => {
+        if (
+          container.classList.contains("expanded") &&
+          !container.contains(e.target)
+        ) {
+          container.classList.remove("expanded");
+          setTimeout(() => {
+            updateGraphDimensions(200, 200);
+          }, 350);
+        }
+      });
     })
-    .catch((err) => {
-      console.error("graph.js: error loading graph", err);
-    });
+    .catch((err) => console.error("graph.js error:", err));
 });
