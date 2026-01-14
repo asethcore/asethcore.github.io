@@ -20,19 +20,63 @@ document.addEventListener("DOMContentLoaded", () => {
       return res.json();
     })
     .then((data) => {
-      ForceGraph()(container)
+      let hoverNode = null;
+      const highlightNodes = new Set();
+      const highlightLinks = new Set();
+
+      const Graph = ForceGraph()(container)
         .width(width)
         .height(height)
         .graphData(data)
         .nodeRelSize(2.5)
+
+        .onNodeHover((node) => {
+          highlightNodes.clear();
+          highlightLinks.clear();
+
+          if (node) {
+            hoverNode = node;
+            highlightNodes.add(node);
+            data.links.forEach((link) => {
+              if (link.source.id === node.id || link.target.id === node.id) {
+                highlightLinks.add(link);
+                highlightNodes.add(link.source);
+                highlightNodes.add(link.target);
+              }
+            });
+          } else {
+            hoverNode = null;
+          }
+
+          Graph.nodeColor(Graph.nodeColor())
+            .linkColor(Graph.linkColor())
+            .linkWidth(Graph.linkWidth());
+
+          container.style.cursor = node ? "pointer" : null;
+        })
+
         .nodeColor((node) => {
+          if (hoverNode) {
+            if (node === hoverNode) return "#6699cc";
+            if (highlightNodes.has(node)) return "#b0b0b0";
+            return "rgba(200, 200, 200, 0.2)";
+          }
+
           if (node.type === "source") return "#6699cc";
           if (node.type === "target") return "#b0b0b0";
           return "#9ccc65";
         })
-        .linkColor(() => "#555555")
+        .linkColor((link) => {
+          if (hoverNode) {
+            return highlightLinks.has(link)
+              ? "#6699cc"
+              : "rgba(100, 100, 100, 0.1)";
+          }
+          return "#555555";
+        })
+        .linkWidth((link) => (highlightLinks.has(link) ? 2 : 1))
+
         .nodeLabel((node) => node.title || node.id)
-        .nodeAutoColorBy("group")
         .onNodeClick((node) => {
           if (node.url) {
             window.location.href = node.url;
