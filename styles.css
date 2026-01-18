@@ -1,15 +1,15 @@
 :root {
-  --base-color: #f9f7f2;
-  --text-color: #000000;
-  --accent-color: #4242ff;
+  --base-color: #e8d8c9;
+  --text-color: #121312;
+  --accent-color: #4b607f;
   --secondary-color: #414447;
-  --line-color: #e0e0e0;
+  --line-color: #bebbb8;
 }
 
 .darkmode {
-  --base-color: #000000;
-  --text-color: #f9f7f2;
-  --accent-color: #8989ff;
+  --base-color: #121312;
+  --text-color: #e8d8c9;
+  --accent-color: #4b607f;
   --secondary-color: #bebbb8;
   --line-color: #1e1e1e;
 }
