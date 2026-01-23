@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .height(container.clientHeight)
         .graphData(data)
         .nodeRelSize(2.5)
+        .nodeVal((node) => {
+          if (hoverNode && (node === hoverNode || highlightNodes.has(node))) {
+            return 2;
+          }
+          return 1;
+        })
         .onNodeHover((node) => {
           highlightNodes.clear();
           highlightLinks.clear();
