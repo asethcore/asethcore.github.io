@@ -43,6 +43,12 @@
       "type": "source"
     },
     {
+      "id": "wall of shame",
+      "title": "wall of shame",
+      "url": "/blogs/wall.html",
+      "type": "target"
+    },
+    {
       "id": "smth smth",
       "title": "smth smth",
       "url": "/blogs/blog6.html",
@@ -89,6 +95,7 @@
     { "source": "self", "target": "bigmouth" },
     { "source": "self", "target": "samsara" },
     { "source": "self", "target": "smth smth" },
+    { "source": "self", "target": "wall of shame" },
     { "source": "brain-notes", "target": "reality shift" },
     { "source": "brain-notes", "target": "chaos cascade" },
     { "source": "brain-notes", "target": "smth smth" },
