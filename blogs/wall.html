@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>wall</title>
+    <title>smth</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../styles.css" />
     <script type="text/javascript" src="../darkmode.js" defer></script>
@@ -34,7 +34,26 @@
 
         <div id="graph">
           <h2>graph view</h2>
-          <div id="graph-container"></div>
+          <div id="graph-wrapper">
+            <div id="graph-container"></div>
+            <button id="graph-expand-btn" aria-label="Expand Graph">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
