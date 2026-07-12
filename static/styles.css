@@ -42,11 +42,6 @@ body {
   box-sizing: border-box;
 }
 
-.blog-list {
-  /*margin-top: 40px;
-  padding: 24px 32px;*/
-}
-
 .blog-list ul {
   list-style: none;
   margin: 0;
@@ -167,8 +162,10 @@ body {
 }
 
 #content h1 {
+  font-family: Arial, serif;
   font-size: 28px;
   font-weight: bold;
+  line-height: 1.2;
   margin: 0 0 10px 0;
 }
 
@@ -178,19 +175,31 @@ body {
 
 .footer {
   padding-top: min(1em, 15%);
-  bottom: 0;
   border-top: 1px solid var(--text-color);
   background-color: var(--base-color);
+  font-size: 15px;
+  margin-top: 40px;
 }
 
 .foot {
-  list-style: none;
-  display: flex;
-  width: fit-content;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  color: var(--secondary-color);
 }
 
+.foot .sep {
+  margin: 0 8px;
+  color: var(--line-color);
+}
+
+.foot a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.foot a:hover {
+  text-decoration: underline;
+}
 .foot li a {
   text-decoration: none;
   font-weight: bold;
@@ -265,5 +274,5 @@ body {
   #graph {
     display: none;
   }
-}
 
+}

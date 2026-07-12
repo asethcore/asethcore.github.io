@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}posts{% endblock %}
+{% block content %}
+  <h1>posts</h1>
+  {% if section.pages | length > 0 %}
+  <p><strong>last modified on {{ section.pages[0].date | date(format="%b %d, %Y") }}</strong></p>
+  {% endif %}
+  <div class="blog-list">
+    <ul>
+      {% for page in section.pages %}
+      <li>
+        <span class="blog-title"><a href="{{ page.permalink }}">{{ page.title }}</a></span>
+        <span class="blog-date">{{ page.date | date(format="%b %d, %Y") }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
