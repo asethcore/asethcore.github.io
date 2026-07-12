@@ -1,0 +1,278 @@
+:root {
+  --base-color: #e8d8c9;
+  --text-color: #121312;
+  --accent-color: #4b607f;
+  --secondary-color: #414447;
+  --line-color: #bebbb8;
+}
+
+.darkmode {
+  --base-color: #121312;
+  --text-color: #EEEEEE;
+  --accent-color: #4b607f;
+  --secondary-color: #bebbb8;
+  --line-color: #1e1e1e;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--base-color);
+  color: var(--text-color);
+  font-family: Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+#theme-toggle {
+  cursor: pointer;
+  color: var(--accent-color);
+  width: fit-content;
+}
+#theme-toggle:hover {
+  text-decoration: underline;
+}
+
+#page {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.blog-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.blog-list li:first-child {
+  border-top: none;
+}
+
+.blog-title a {
+  color: var(--base-color);
+  text-decoration: none;
+}
+
+.blog-title a:hover {
+  text-decoration: underline;
+}
+
+.blog-date {
+  font-size: 14px;
+}
+
+#sidebar {
+  float: left;
+  width: 260px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+#graph-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+#graph-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--line-color);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 15px 0;
+  background-color: var(--base-color);
+  transition: all 0.3s ease-in-out;
+}
+
+#graph-container.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  z-index: 9999;
+  background-color: var(--base-color);
+  border: 1px solid var(--line-color);
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#graph-expand-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--base-color);
+  border: 1px solid var(--line-color);
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+#graph-container.expanded + #graph-expand-btn {
+  position: fixed;
+  display: none;
+  top: 7%;
+  right: 12%;
+  z-index: 10001;
+  padding: 8px;
+}
+
+#graph-container.expanded + #graph-expand-btn:after {
+  content: "";
+}
+
+#content {
+  margin-left: 260px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.post-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+}
+
+#content h1 {
+  font-family: Arial, serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+}
+
+#content p {
+  margin: 0 0 15px 0;
+}
+
+.footer {
+  padding-top: min(1em, 15%);
+  border-top: 1px solid var(--text-color);
+  background-color: var(--base-color);
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+.foot {
+  margin: 0;
+  padding: 0;
+  color: var(--secondary-color);
+}
+
+.foot .sep {
+  margin: 0 8px;
+  color: var(--line-color);
+}
+
+.foot a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.foot a:hover {
+  text-decoration: underline;
+}
+.foot li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.foot li a:hover {
+  text-decoration: underline;
+}
+
+#sidebar h2 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+#sidebar li {
+  margin: 0 0 4px 0;
+}
+
+#sidebar a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+#sidebar a:hover {
+  text-decoration: underline;
+}
+
+#content a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+#content a:hover {
+  text-decoration: underline;
+}
+
+#page::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 700px) {
+  #sidebar {
+    float: none;
+    width: auto;
+    padding-right: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--text-color);
+    padding-top: 0;
+  }
+
+  #content {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  #page {
+    margin-top: 0;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+  }
+
+  #graph {
+    display: none;
+  }
+
+}

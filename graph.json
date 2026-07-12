@@ -1,0 +1,126 @@
+{
+  "nodes": [
+    {
+      "id": "home",
+      "title": "home",
+      "url": "/",
+      "type": "source"
+    },
+    {
+      "id": "about",
+      "title": "about",
+      "url": "/about/",
+      "type": "target"
+    },
+    {
+      "id": "posts",
+      "title": "posts",
+      "url": "/blog/",
+      "type": "source"
+    },
+    {
+      "id": "photos",
+      "title": "photos",
+      "url": "/photo/",
+      "type": "target"
+    },
+    {
+      "id": "samsara",
+      "title": "samsara",
+      "url": "/blog/samsara/",
+      "type": "target"
+    },
+    {
+      "id": "self",
+      "title": "self",
+      "url": "/tags/self/",
+      "type": "source"
+    },
+    {
+      "id": "bigmouth",
+      "title": "bigmouth",
+      "url": "/blog/bigmouth/",
+      "type": "target"
+    },
+    {
+      "id": "reality shift",
+      "title": "reality shift",
+      "url": "/blog/reality/",
+      "type": "target"
+    },
+    {
+      "id": "brain-notes",
+      "title": "brain-notes",
+      "url": "/tags/brain-notes/",
+      "type": "source"
+    },
+    {
+      "id": "halo",
+      "title": "halo",
+      "url": "/blog/halo/",
+      "type": "target"
+    },
+    {
+      "id": "red light",
+      "title": "red light",
+      "url": "/blog/smth/",
+      "type": "target"
+    },
+    {
+      "id": "chaos cascade",
+      "title": "chaos cascade",
+      "url": "/blog/chaos/",
+      "type": "target"
+    }
+  ],
+  "links": [
+    {
+      "source": "home",
+      "target": "about"
+    },
+    {
+      "source": "home",
+      "target": "posts"
+    },
+    {
+      "source": "home",
+      "target": "photos"
+    },
+    {
+      "source": "posts",
+      "target": "self"
+    },
+    {
+      "source": "self",
+      "target": "samsara"
+    },
+    {
+      "source": "self",
+      "target": "bigmouth"
+    },
+    {
+      "source": "posts",
+      "target": "brain-notes"
+    },
+    {
+      "source": "brain-notes",
+      "target": "reality shift"
+    },
+    {
+      "source": "self",
+      "target": "halo"
+    },
+    {
+      "source": "self",
+      "target": "red light"
+    },
+    {
+      "source": "brain-notes",
+      "target": "red light"
+    },
+    {
+      "source": "brain-notes",
+      "target": "chaos cascade"
+    }
+  ]
+}
