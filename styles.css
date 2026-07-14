@@ -174,39 +174,28 @@ body {
 }
 
 .footer {
-  padding-top: min(1em, 15%);
-  border-top: 1px solid var(--text-color);
-  background-color: var(--base-color);
-  font-size: 15px;
+  position: relative;
   margin-top: 40px;
+  padding: 20px 0 10px 0;
+  border-top: 1px dashed var(--line-color);
+  background-color: var(--base-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.foot {
+.footer-text p {
   margin: 0;
-  padding: 0;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
   color: var(--secondary-color);
+  line-height: 1.4;
 }
 
-.foot .sep {
-  margin: 0 8px;
-  color: var(--line-color);
-}
-
-.foot a {
-  color: var(--secondary-color);
-  text-decoration: none;
-}
-
-.foot a:hover {
-  text-decoration: underline;
-}
-.foot li a {
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.foot li a:hover {
-  text-decoration: underline;
+.footer-gif {
+  width: 60px;
+  height: auto;
+  image-rendering: pixelated;
 }
 
 #sidebar h2 {
