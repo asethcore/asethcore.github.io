@@ -6,4 +6,12 @@
 
   {{ page.content | safe }}
 
+  <div class="footer">
+    <div class="footer-text">
+    <p>© vaeseth | <a href="{{ get_url(path="rss.xml") }}">rss</a></p>
+    <p>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a> and llms</p>
+  </div>
+  <img src="{{ get_url(path="footer-cat.gif") }}" alt="cat" class="footer-gif" />
+  </div>
+
 {% endblock %}
