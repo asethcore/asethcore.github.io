@@ -7,7 +7,83 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://asethcore.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Wed, 14 Jan 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>trip and fell not in the wishing well</title>
+          <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://asethcore.github.io/blog/gmow/</link>
+          <guid>https://asethcore.github.io/blog/gmow/</guid>
+          <description xml:base="https://asethcore.github.io/blog/gmow/">&lt;p&gt;hello pretty peeps! hope everyone is doing good. so, im back like really back not that i figured out something but if this keeps going future me is gonna take some hard hit. but anyways im not here to yap about that(or maybe i am).&lt;&#x2F;p&gt;
+&lt;p&gt;so these past few months more like since last year vacation i fell into this rabbit hole called gaming. i spent quite some unhealthy amount of time gaming away i still am and i will admit it is fun. i am still yet to see the consequences of this addiction but i know what they can be and i am not fool enough to just wait for them. so, yeah i have started a new game red dead redemption 2 after completing the legends of zelda: breath of the wild (amazing game btw)  you can check out the games i have completed &lt;a href=&quot;https:&#x2F;&#x2F;bckl.gg&#x2F;tDaH&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;anyways this site has underwent a little change as well i moved away from writing raw html to &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;zola&lt;&#x2F;a&gt;. for those of ye fellers who dont know what this is its a static site engine, blazing fast (as their site claims) its written in rust or so i was told. anyways my opinion about is in good words.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;.
+├── CNAME
+├── config.toml
+├── content
+│   ├── about.md
+│   ├── blog
+│   ├── _index.md
+│   └── photo.md
+├── public
+│   ├── blogs
+│   ├── CNAME
+│   ├── darkmode.js
+│   ├── favicon.ico
+│   ├── footer-cat.gif
+│   ├── graph.js
+│   ├── graph.json
+│   └── styles.css
+├── scripts
+│   └── generate_graph.py
+├── static
+│   ├── blogs
+│   ├── CNAME
+│   ├── darkmode.js
+│   ├── favicon.ico
+│   ├── footer-cat.gif
+│   ├── graph.js
+│   ├── graph.json
+│   └── styles.css
+└── templates
+    ├── 404.html
+    ├── base.html
+    ├── blog.html
+    ├── index.html
+    ├── page.html
+    ├── post.html
+    └── tags
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;so this is the structure of the folder config.toml is some of zola config that is fun to play around with ig so public folder just pops up when you finally upload your site for the world to see it is created automatically scripts holds a python script which is used to update the graph.json file in the static, static contains is mostly the stuff that you dont really touch unless you are feeling lucky(just kidding) same with templates it contains the different .html structure for different things. inside content&#x2F;blog is where you write blog in .md format.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;+++
+title = &amp;quot;&amp;quot;
+date = 2025-01-01
+template = &amp;quot;post.html&amp;quot;
+
+[taxonomies]
+tags = []
+
+[extra]
+sidebar_heading = &amp;quot;&amp;quot;
+sidebar_text = &amp;quot;&amp;quot;
++++
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;this stays at the very top of the .md file. tags is just the tags i put for my blog and zola automatically creates a index for whatever posts fall under that tag you can play with it in the config.toml i mentioned earlier. extra is well just extra stuff. there is also a little something that i have set up in my .bashrc so i dont have to copy paste this thing on every .md file i create for a blog.&lt;&#x2F;p&gt;
+&lt;pre&gt;&lt;code&gt;tem() {
+  if [ -z &amp;quot;$1&amp;quot; ]; then
+    echo &amp;quot;Error: provide some name.&amp;quot;
+    return 1
+  fi
+
+  cp ~&#x2F;blog-tem.md ~&#x2F;asethcore.github.io&#x2F;content&#x2F;blog&#x2F;&amp;quot;$1.md&amp;quot;
+  python3 ~&#x2F;asethcore.github.io&#x2F;scripts&#x2F;generate_graph.py
+  echo &amp;quot;voila&amp;quot;
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;this was all that i did and i was doing, ig enough for this one. take care yall.&lt;&#x2F;p&gt;
+&lt;p&gt;&quot;dont overthink it&quot; -the voidz&lt;&#x2F;p&gt;
+</description>
+      </item>
       <item>
           <title>red light</title>
           <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>

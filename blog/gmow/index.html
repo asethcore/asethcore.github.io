@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>trip and fell not in the wishing well</title>
+  <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
+  <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
+  <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
+  <script src="https://unpkg.com/force-graph"></script>
+  <script type="text/javascript" src="https://asethcore.github.io/graph.js" defer></script>
+</head>
+<body>
+<div id="page">
+  <div id="sidebar">
+    <h2>navigation</h2>
+    <ul>
+      <li><a href="https://asethcore.github.io/">home</a></li>
+      <li><a href="https://asethcore.github.io/about/">about</a></li>
+      <li><a href="https://asethcore.github.io/blog/">posts</a></li>
+      <li><a href="https://asethcore.github.io/photo/">photos</a></li>
+      <li id="theme-toggle">light</li>
+    </ul>
+
+    
+      <h2>well</h2>
+      <p>about the rabbit hole i fell into and zola.</p>
+    
+
+    <h2>hosted by</h2>
+    <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
+
+    <div id="graph">
+      <h2>graph view</h2>
+      <div id="graph-wrapper">
+        <div id="graph-container"></div>
+        <button id="graph-expand-btn" aria-label="Expand Graph">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    
+  <h1>trip and fell not in the wishing well</h1>
+  <p><strong>last modified on jul 15, 2026</strong></p>
+  
+  <p><a href="https://asethcore.github.io/tags/zola/">#zola</a> <a href="https://asethcore.github.io/tags/yap/">#yap</a> </p>
+  
+
+  <p>hello pretty peeps! hope everyone is doing good. so, im back like really back not that i figured out something but if this keeps going future me is gonna take some hard hit. but anyways im not here to yap about that(or maybe i am).</p>
+<p>so these past few months more like since last year vacation i fell into this rabbit hole called gaming. i spent quite some unhealthy amount of time gaming away i still am and i will admit it is fun. i am still yet to see the consequences of this addiction but i know what they can be and i am not fool enough to just wait for them. so, yeah i have started a new game red dead redemption 2 after completing the legends of zelda: breath of the wild (amazing game btw)  you can check out the games i have completed <a href="https://bckl.gg/tDaH" target="_blank" rel="noopener">here</a>.</p>
+<p>anyways this site has underwent a little change as well i moved away from writing raw html to <a href="https://www.getzola.org/" target="_blank" rel="noopener">zola</a>. for those of ye fellers who dont know what this is its a static site engine, blazing fast (as their site claims) its written in rust or so i was told. anyways my opinion about is in good words.</p>
+<pre><code>.
+├── CNAME
+├── config.toml
+├── content
+│   ├── about.md
+│   ├── blog
+│   ├── _index.md
+│   └── photo.md
+├── public
+│   ├── blogs
+│   ├── CNAME
+│   ├── darkmode.js
+│   ├── favicon.ico
+│   ├── footer-cat.gif
+│   ├── graph.js
+│   ├── graph.json
+│   └── styles.css
+├── scripts
+│   └── generate_graph.py
+├── static
+│   ├── blogs
+│   ├── CNAME
+│   ├── darkmode.js
+│   ├── favicon.ico
+│   ├── footer-cat.gif
+│   ├── graph.js
+│   ├── graph.json
+│   └── styles.css
+└── templates
+    ├── 404.html
+    ├── base.html
+    ├── blog.html
+    ├── index.html
+    ├── page.html
+    ├── post.html
+    └── tags
+</code></pre>
+<p>so this is the structure of the folder config.toml is some of zola config that is fun to play around with ig so public folder just pops up when you finally upload your site for the world to see it is created automatically scripts holds a python script which is used to update the graph.json file in the static, static contains is mostly the stuff that you dont really touch unless you are feeling lucky(just kidding) same with templates it contains the different .html structure for different things. inside content/blog is where you write blog in .md format.</p>
+<pre><code>+++
+title = &quot;&quot;
+date = 2025-01-01
+template = &quot;post.html&quot;
+
+[taxonomies]
+tags = []
+
+[extra]
+sidebar_heading = &quot;&quot;
+sidebar_text = &quot;&quot;
++++
+</code></pre>
+<p>this stays at the very top of the .md file. tags is just the tags i put for my blog and zola automatically creates a index for whatever posts fall under that tag you can play with it in the config.toml i mentioned earlier. extra is well just extra stuff. there is also a little something that i have set up in my .bashrc so i dont have to copy paste this thing on every .md file i create for a blog.</p>
+<pre><code>tem() {
+  if [ -z &quot;$1&quot; ]; then
+    echo &quot;Error: provide some name.&quot;
+    return 1
+  fi
+
+  cp ~/blog-tem.md ~/asethcore.github.io/content/blog/&quot;$1.md&quot;
+  python3 ~/asethcore.github.io/scripts/generate_graph.py
+  echo &quot;voila&quot;
+}
+</code></pre>
+<p>this was all that i did and i was doing, ig enough for this one. take care yall.</p>
+<p>"dont overthink it" -the voidz</p>
+
+
+  <div class="footer">
+    <div class="footer-text">
+    <p>© vaeseth | <a href="https://asethcore.github.io/rss.xml">rss</a></p>
+    <p>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a> and llms</p>
+  </div>
+  <img src="https://asethcore.github.io/footer-cat.gif" alt="cat" class="footer-gif" />
+  </div>
+
+
+  </div>
+</div>
+</body>
+</html>

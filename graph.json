@@ -25,6 +25,18 @@
       "type": "target"
     },
     {
+      "id": "chaos cascade",
+      "title": "chaos cascade",
+      "url": "/blog/chaos/",
+      "type": "target"
+    },
+    {
+      "id": "brain-notes",
+      "title": "brain-notes",
+      "url": "/tags/brain-notes/",
+      "type": "source"
+    },
+    {
       "id": "samsara",
       "title": "samsara",
       "url": "/blog/samsara/",
@@ -37,22 +49,28 @@
       "type": "source"
     },
     {
+      "id": "trip and fell not in the wishing well",
+      "title": "trip and fell not in the wishing well",
+      "url": "/blog/gmow/",
+      "type": "target"
+    },
+    {
+      "id": "zola",
+      "title": "zola",
+      "url": "/tags/zola/",
+      "type": "source"
+    },
+    {
+      "id": "yap",
+      "title": "yap",
+      "url": "/tags/yap/",
+      "type": "source"
+    },
+    {
       "id": "bigmouth",
       "title": "bigmouth",
       "url": "/blog/bigmouth/",
       "type": "target"
-    },
-    {
-      "id": "reality shift",
-      "title": "reality shift",
-      "url": "/blog/reality/",
-      "type": "target"
-    },
-    {
-      "id": "brain-notes",
-      "title": "brain-notes",
-      "url": "/tags/brain-notes/",
-      "type": "source"
     },
     {
       "id": "halo",
@@ -67,9 +85,9 @@
       "type": "target"
     },
     {
-      "id": "chaos cascade",
-      "title": "chaos cascade",
-      "url": "/blog/chaos/",
+      "id": "reality shift",
+      "title": "reality shift",
+      "url": "/blog/reality/",
       "type": "target"
     }
   ],
@@ -88,6 +106,14 @@
     },
     {
       "source": "posts",
+      "target": "brain-notes"
+    },
+    {
+      "source": "brain-notes",
+      "target": "chaos cascade"
+    },
+    {
+      "source": "posts",
       "target": "self"
     },
     {
@@ -95,16 +121,24 @@
       "target": "samsara"
     },
     {
-      "source": "self",
-      "target": "bigmouth"
+      "source": "posts",
+      "target": "zola"
+    },
+    {
+      "source": "zola",
+      "target": "trip and fell not in the wishing well"
     },
     {
       "source": "posts",
-      "target": "brain-notes"
+      "target": "yap"
     },
     {
-      "source": "brain-notes",
-      "target": "reality shift"
+      "source": "yap",
+      "target": "trip and fell not in the wishing well"
+    },
+    {
+      "source": "self",
+      "target": "bigmouth"
     },
     {
       "source": "self",
@@ -120,7 +154,7 @@
     },
     {
       "source": "brain-notes",
-      "target": "chaos cascade"
+      "target": "reality shift"
     }
   ]
 }
