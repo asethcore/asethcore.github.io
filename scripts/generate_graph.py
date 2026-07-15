@@ -3,8 +3,10 @@ import re
 import json
 import glob
 
-CONTENT_DIR = "content"
-OUTPUT_FILE = "static/graph.json"
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+CONTENT_DIR = os.path.join(PROJECT_ROOT, "content")
+OUTPUT_FILE = os.path.join(PROJECT_ROOT, "static", "graph.json")
 
 def parse_front_matter(text):
     match = re.match(r"^\+\+\+\n(.*?)\n\+\+\+", text, re.DOTALL)

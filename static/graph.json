@@ -25,9 +25,9 @@
       "type": "target"
     },
     {
-      "id": "halo",
-      "title": "halo",
-      "url": "/blog/halo/",
+      "id": "bigmouth",
+      "title": "bigmouth",
+      "url": "/blog/bigmouth/",
       "type": "target"
     },
     {
@@ -49,6 +49,12 @@
       "type": "source"
     },
     {
+      "id": "halo",
+      "title": "halo",
+      "url": "/blog/halo/",
+      "type": "target"
+    },
+    {
       "id": "reality shift",
       "title": "reality shift",
       "url": "/blog/reality/",
@@ -61,15 +67,15 @@
       "type": "target"
     },
     {
-      "id": "bigmouth",
-      "title": "bigmouth",
-      "url": "/blog/bigmouth/",
-      "type": "target"
-    },
-    {
       "id": "red light",
       "title": "red light",
       "url": "/blog/smth/",
+      "type": "target"
+    },
+    {
+      "id": "",
+      "title": "",
+      "url": "/blog/gmow/",
       "type": "target"
     }
   ],
@@ -92,7 +98,7 @@
     },
     {
       "source": "self",
-      "target": "halo"
+      "target": "bigmouth"
     },
     {
       "source": "posts",
@@ -103,16 +109,16 @@
       "target": "chaos cascade"
     },
     {
+      "source": "self",
+      "target": "halo"
+    },
+    {
       "source": "brain-notes",
       "target": "reality shift"
     },
     {
       "source": "self",
       "target": "samsara"
-    },
-    {
-      "source": "self",
-      "target": "bigmouth"
     },
     {
       "source": "self",
