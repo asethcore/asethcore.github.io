@@ -36,10 +36,13 @@ body {
 }
 
 #page {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
   box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .blog-list ul {
@@ -74,9 +77,8 @@ body {
 }
 
 #sidebar {
-  float: left;
-  width: 260px;
-  padding-right: 20px;
+  width: 220px;
+  flex-shrink: 0;
   box-sizing: border-box;
   font-size: 15px;
   padding-top: 10px;
@@ -148,8 +150,9 @@ body {
 }
 
 #content {
-  margin-left: 260px;
-  padding-left: 20px;
+  flex: 1;
+  max-width: 700px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -257,33 +260,21 @@ body {
   text-decoration: underline;
 }
 
-#page::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 @media (max-width: 700px) {
   #sidebar {
-    float: none;
     width: auto;
-    padding-right: 0;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--text-color);
     padding-top: 0;
   }
 
   #content {
-    margin-left: 0;
-    padding-left: 0;
+    max-width: none;
+    margin: 0;
   }
 
   #page {
-    margin-top: 0;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
+    flex-direction: column;
   }
 
   #graph {
