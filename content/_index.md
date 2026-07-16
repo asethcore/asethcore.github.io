@@ -11,6 +11,8 @@ buttons = [
   { img = "/blogs/images/buttons/mel.png", url = "https://melqtx.com/", alt = "feller" },
   { img = "/blogs/images/buttons/linux.gif", url = "https://www.kernel.org/", alt = "stuff" },
   { img = "/blogs/images/buttons/nvim.png", url = "https://neovim.io/", alt = "stuff" },
+  { img = "/blogs/images/buttons/zola.png", url = "https://www.getzola.org/", alt = "stuff" },
+  { img = "/blogs/images/buttons/meteorsmp.png", url = "https://www.meteorsmp.com/", alt = "stuff" },
 ]
 +++
 
