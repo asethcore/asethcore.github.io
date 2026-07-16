@@ -29,4 +29,15 @@
     {% endfor %}
   </div>
   {% endif %}
+
+  {% if section.extra.buttons %}
+  <h4 class="button-label">fellers & stuff</h4>
+  <div class="button-row">
+    {% for btn in section.extra.buttons %}
+    <a href="{{ btn.url }}" target="_blank" rel="noopener">
+      <img src="{{ btn.img }}" alt="{{ btn.alt }}" class="webring-button" />
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
 {% endblock %}
