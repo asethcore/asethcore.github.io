@@ -55,7 +55,7 @@
     ├── post.html
     └── tags
 &lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;so this is the structure of the folder config.toml is some of zola config that is fun to play around with ig so public folder just pops up when you finally upload your site for the world to see it is created automatically scripts holds a python script which is used to update the graph.json file in the static, static contains is mostly the stuff that you dont really touch unless you are feeling lucky(just kidding) same with templates it contains the different .html structure for different things. inside content&#x2F;blog is where you write blog in .md format.&lt;&#x2F;p&gt;
+&lt;p&gt;so this is the structure of the folder. config.toml is some of zola config that is fun to play around with ig so, public folder just pops up when you finally upload your site for the world to see. it is created automatically, scripts holds a python script which is used to update the graph.json file in the static, static mostly contains the stuff that you dont really touch unless you are feeling lucky(just kidding), same with templates it contains the different .html structure for different things. inside content&#x2F;blog is where you write blog in .md format.&lt;&#x2F;p&gt;
 &lt;pre&gt;&lt;code&gt;+++
 title = &amp;quot;&amp;quot;
 date = 2025-01-01
@@ -122,20 +122,7 @@ sidebar_text = &amp;quot;&amp;quot;
           <author>Unknown</author>
           <link>https://asethcore.github.io/photo/</link>
           <guid>https://asethcore.github.io/photo/</guid>
-          <description xml:base="https://asethcore.github.io/photo/">&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i1.jpg&quot; alt=&quot;image1&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i2.jpg&quot; alt=&quot;image2&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i3.jpg&quot; alt=&quot;image3&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i4.jpg&quot; alt=&quot;image4&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i5.jpg&quot; alt=&quot;image5&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i6.jpg&quot; alt=&quot;image6&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i7.jpg&quot; alt=&quot;image7&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i9.jpg&quot; alt=&quot;image9&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i10.jpg&quot; alt=&quot;image10&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i11.jpg&quot; alt=&quot;image11&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i12.jpg&quot; alt=&quot;image12&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i13.jpg&quot; alt=&quot;image13&quot; class=&quot;post-image&quot; &#x2F;&gt;
-&lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i14.jpg&quot; alt=&quot;image14&quot; class=&quot;post-image&quot; &#x2F;&gt;
-</description>
+          <description xml:base="https://asethcore.github.io/photo/"></description>
       </item>
       <item>
           <title>bigmouth</title>
