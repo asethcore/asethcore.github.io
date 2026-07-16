@@ -381,4 +381,13 @@ body {
     font-size: 13px;
     color: var(--secondary-color);
   }
+
+  .photo-scroll img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .button-row {
+    gap: 6px;
+  }
 }
