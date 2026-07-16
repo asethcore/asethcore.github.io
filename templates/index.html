@@ -19,4 +19,14 @@
       {% endfor %}
     </ul>
   </div>
+
+  {% set photo_page = get_page(path="photo.md") %}
+  {% if photo_page.extra.images %}
+  <h3><a href="{{ get_url(path="@/photo.md") }}">photos</a></h3>
+  <div class="photo-scroll">
+    {% for img in photo_page.extra.images | slice(end=5) %}
+    <img src="{{ img }}" alt="photo" />
+    {% endfor %}
+  </div>
+  {% endif %}
 {% endblock %}

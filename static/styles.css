@@ -203,6 +203,41 @@ body {
   font-size: 0.9em;
 }
 
+.photo-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.photo-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-scroll img {
+  height: 140px;
+  width: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+#content h3 {
+  font-size: 18px;
+  margin: 25px 0 10px 0;
+}
+
+#content h3 a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#content h3 a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   position: relative;
   margin-top: 40px;

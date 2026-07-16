@@ -6,12 +6,19 @@
 
   {{ page.content | safe }}
 
+  {% if page.extra.images %}
+  <div class="photo-grid">
+    {% for img in page.extra.images %}
+    <img src="{{ img }}" alt="photo" class="post-image" />
+    {% endfor %}
+  </div>
+  {% endif %}
+
   <div class="footer">
     <div class="footer-text">
-    <p>© vaeseth | <a href="{{ get_url(path="rss.xml") }}">rss</a></p>
-    <p>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a> and llms</p>
+      <p>© vaeseth | <a href="{{ get_url(path="rss.xml") }}">rss</a></p>
+      <p>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a> and llms</p>
+    </div>
+    <img src="{{ get_url(path="footer-cat.gif") }}" alt="cat" class="footer-gif" />
   </div>
-  <img src="{{ get_url(path="footer-cat.gif") }}" alt="cat" class="footer-gif" />
-  </div>
-
 {% endblock %}

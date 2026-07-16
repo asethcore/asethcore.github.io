@@ -58,7 +58,7 @@ anyways this site has underwent a little change as well i moved away from writin
     └── tags
 ```
 
-so this is the structure of the folder config.toml is some of zola config that is fun to play around with ig so public folder just pops up when you finally upload your site for the world to see it is created automatically scripts holds a python script which is used to update the graph.json file in the static, static contains is mostly the stuff that you dont really touch unless you are feeling lucky(just kidding) same with templates it contains the different .html structure for different things. inside content/blog is where you write blog in .md format.
+so this is the structure of the folder. config.toml is some of zola config that is fun to play around with ig so, public folder just pops up when you finally upload your site for the world to see. it is created automatically, scripts holds a python script which is used to update the graph.json file in the static, static mostly contains the stuff that you dont really touch unless you are feeling lucky(just kidding), same with templates it contains the different .html structure for different things. inside content/blog is where you write blog in .md format.
 
 ```
 +++
