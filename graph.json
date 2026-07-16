@@ -25,6 +25,18 @@
       "type": "target"
     },
     {
+      "id": "chaos cascade",
+      "title": "chaos cascade",
+      "url": "/blog/chaos/",
+      "type": "target"
+    },
+    {
+      "id": "brain-notes",
+      "title": "brain-notes",
+      "url": "/tags/brain-notes/",
+      "type": "source"
+    },
+    {
       "id": "samsara",
       "title": "samsara",
       "url": "/blog/samsara/",
@@ -35,30 +47,6 @@
       "title": "self",
       "url": "/tags/self/",
       "type": "source"
-    },
-    {
-      "id": "bigmouth",
-      "title": "bigmouth",
-      "url": "/blog/bigmouth/",
-      "type": "target"
-    },
-    {
-      "id": "reality shift",
-      "title": "reality shift",
-      "url": "/blog/reality/",
-      "type": "target"
-    },
-    {
-      "id": "brain-notes",
-      "title": "brain-notes",
-      "url": "/tags/brain-notes/",
-      "type": "source"
-    },
-    {
-      "id": "halo",
-      "title": "halo",
-      "url": "/blog/halo/",
-      "type": "target"
     },
     {
       "id": "trip and fell not in the wishing well",
@@ -79,15 +67,27 @@
       "type": "source"
     },
     {
+      "id": "bigmouth",
+      "title": "bigmouth",
+      "url": "/blog/bigmouth/",
+      "type": "target"
+    },
+    {
+      "id": "halo",
+      "title": "halo",
+      "url": "/blog/halo/",
+      "type": "target"
+    },
+    {
       "id": "red light",
       "title": "red light",
       "url": "/blog/smth/",
       "type": "target"
     },
     {
-      "id": "chaos cascade",
-      "title": "chaos cascade",
-      "url": "/blog/chaos/",
+      "id": "reality shift",
+      "title": "reality shift",
+      "url": "/blog/reality/",
       "type": "target"
     }
   ],
@@ -106,27 +106,19 @@
     },
     {
       "source": "posts",
+      "target": "brain-notes"
+    },
+    {
+      "source": "brain-notes",
+      "target": "chaos cascade"
+    },
+    {
+      "source": "posts",
       "target": "self"
     },
     {
       "source": "self",
       "target": "samsara"
-    },
-    {
-      "source": "self",
-      "target": "bigmouth"
-    },
-    {
-      "source": "posts",
-      "target": "brain-notes"
-    },
-    {
-      "source": "brain-notes",
-      "target": "reality shift"
-    },
-    {
-      "source": "self",
-      "target": "halo"
     },
     {
       "source": "posts",
@@ -146,6 +138,14 @@
     },
     {
       "source": "self",
+      "target": "bigmouth"
+    },
+    {
+      "source": "self",
+      "target": "halo"
+    },
+    {
+      "source": "self",
       "target": "red light"
     },
     {
@@ -154,7 +154,7 @@
     },
     {
       "source": "brain-notes",
-      "target": "chaos cascade"
+      "target": "reality shift"
     }
   ]
 }
