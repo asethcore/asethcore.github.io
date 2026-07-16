@@ -15,6 +15,8 @@ hello pretty peeps! hope everyone is doing good. so, im back like really back no
 
 so these past few months more like since last year vacation i fell into this rabbit hole called gaming. i spent quite some unhealthy amount of time gaming away i still am and i will admit it is fun. i am still yet to see the consequences of this addiction but i know what they can be and i am not fool enough to just wait for them. so, yeah i have started a new game red dead redemption 2 after completing the legends of zelda: breath of the wild (amazing game btw)  you can check out the games i have completed <a href="https://bckl.gg/tDaH" target="_blank" rel="noopener">here</a>.
 
+<img src="/blogs/images/gmow/link.png" alt="what?" class="post-image"/>
+
 anyways this site has underwent a little change as well i moved away from writing raw html to <a href="https://www.getzola.org/" target="_blank" rel="noopener">zola</a>. for those of ye fellers who dont know what this is its a static site engine, blazing fast (as their site claims) its written in rust or so i was told. anyways my opinion about is in good words.
 
 ```
