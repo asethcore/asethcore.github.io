@@ -4,6 +4,7 @@
   --accent-color: #4b607f;
   --secondary-color: #414447;
   --line-color: #bebbb8;
+  --back-color: #ebdbb2;
 }
 
 .darkmode {
@@ -12,6 +13,7 @@
   --accent-color: #4b607f;
   --secondary-color: #bebbb8;
   --line-color: #1e1e1e;
+  --back-color: #282828;
 }
 
 html,
@@ -202,7 +204,7 @@ body {
 }
 
 #content pre {
-  background-color: var(--line-color);  
+  background-color: var(--back-color);  
   border: 1px solid var(--line-color);
   border-radius: 6px;
   padding: 14px 18px;
