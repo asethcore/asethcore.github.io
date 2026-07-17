@@ -25,7 +25,7 @@ i have read two books in these past few months: "what i talk about when i talk a
 
 "vagabond" is a really good one. i liked the story, the philosophy in it, and the idea of it. i will tell you what i made of the story and what i think it was about: every "way" has an error in it or two, and the point is to not try to run away from that error but to overcome it. the error in musashi's way wasn't the path he took—living by the sword—the error was the spiral of killing. whoever is at the top of the spiral is "invincible under the sun," and that is what the error is, because you or anyone else can't be at the top of a spiral. there is no top; it is just killing and killing.
 
-to escape it, you have to throw away the want and the need to be invincible. that's why i think sekishusai said, "invincible… it is merely a word," and tells musashi to see deep within and know how infinite he really is. and that's why the real musashi said, "think lightly of yourself and deeply of the world." there are two quotes from these books that i tie together in an indirect way: "even if you stand naked in front of the mirror, the mirror can't show what is inside you," and "do you see how infinite you are?"
+to escape it, you have to throw away the want and the need to be invincible. that's why i think sekishusai said, "invincible… it is merely a word," and tells musashi to see deep within and know how infinite he really is. there are two quotes from these books that i tie together in an indirect way: "even if you stand naked in front of the mirror, the mirror can't show what is inside you," and "do you see how infinite you are?"
 
 that is all, my dear fellas…
 
