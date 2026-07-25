@@ -37,16 +37,10 @@
       "type": "source"
     },
     {
-      "id": "samsara",
-      "title": "samsara",
-      "url": "/blog/samsara/",
+      "id": "reality shift",
+      "title": "reality shift",
+      "url": "/blog/reality/",
       "type": "target"
-    },
-    {
-      "id": "self",
-      "title": "self",
-      "url": "/tags/self/",
-      "type": "source"
     },
     {
       "id": "trip and fell not in the wishing well",
@@ -73,10 +67,10 @@
       "type": "target"
     },
     {
-      "id": "halo",
-      "title": "halo",
-      "url": "/blog/halo/",
-      "type": "target"
+      "id": "self",
+      "title": "self",
+      "url": "/tags/self/",
+      "type": "source"
     },
     {
       "id": "red light",
@@ -85,9 +79,15 @@
       "type": "target"
     },
     {
-      "id": "reality shift",
-      "title": "reality shift",
-      "url": "/blog/reality/",
+      "id": "samsara",
+      "title": "samsara",
+      "url": "/blog/samsara/",
+      "type": "target"
+    },
+    {
+      "id": "halo",
+      "title": "halo",
+      "url": "/blog/halo/",
       "type": "target"
     }
   ],
@@ -113,12 +113,8 @@
       "target": "chaos cascade"
     },
     {
-      "source": "posts",
-      "target": "self"
-    },
-    {
-      "source": "self",
-      "target": "samsara"
+      "source": "brain-notes",
+      "target": "reality shift"
     },
     {
       "source": "posts",
@@ -137,24 +133,28 @@
       "target": "trip and fell not in the wishing well"
     },
     {
+      "source": "posts",
+      "target": "self"
+    },
+    {
       "source": "self",
       "target": "bigmouth"
     },
     {
       "source": "self",
-      "target": "halo"
+      "target": "red light"
+    },
+    {
+      "source": "brain-notes",
+      "target": "red light"
     },
     {
       "source": "self",
-      "target": "red light"
+      "target": "samsara"
     },
     {
-      "source": "brain-notes",
-      "target": "red light"
-    },
-    {
-      "source": "brain-notes",
-      "target": "reality shift"
+      "source": "self",
+      "target": "halo"
     }
   ]
 }
