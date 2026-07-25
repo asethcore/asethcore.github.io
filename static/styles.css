@@ -322,14 +322,25 @@ body {
   text-decoration: underline;
 }
 
+.shelf-row-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--line-color);
+  pointer-events: none;
+}
+
 .bookshelf {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   gap: 4px;
-  border-bottom: 4px solid var(--line-color);
-  padding-bottom: 0;
+  row-gap: 24px;
+  /*border-bottom: 4px solid var(--line-color);
+  padding-bottom: 0;*/
   margin-bottom: 20px;
+  position: relative;
 }
 
 .bookshelf-preview {
