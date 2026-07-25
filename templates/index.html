@@ -30,6 +30,32 @@
   </div>
   {% endif %}
 
+  {% set library_page = get_page(path="library.md") %}
+  {% if library_page.toc %}
+  <h3><a href="{{ get_url(path="@/books.md") }}">bookshelf</a></h3>
+  <div class="bookshelf bookshelf-preview">
+    {% set palette = [
+        "#5b3a29",
+        "#3a4a5b",
+        "#4a5b3a",
+        "#5b3a4a",
+        "#3a5b56",
+        "#5b4a3a",
+        "#4a3a5b"
+    ] %}
+    {% for h in library_page.toc %}
+    {% set color_index = loop.index0 % 7 %}
+    {% set parts = h.title | split(pat="|") %}
+    <a href="{{ get_url(path="@/library.md") }}#{{ h.id }}" class="book-spine" style="background-color: {{ palette[color_index] }};">
+      <span class="book-title">{{ parts.0 | trim }}</span>
+      {% if parts | length > 1 %}
+      <span class="book-author">{{ parts.1 | trim }}</span>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
   {% if section.extra.buttons %}
   <h4 class="button-label">fellers & stuff</h4>
   <div class="button-row">
@@ -40,4 +66,5 @@
     {% endfor %}
   </div>
   {% endif %}
+
 {% endblock %}

@@ -1,0 +1,13 @@
+<div class="book-review">
+  <h4 class="book-review-title">{{ title }}</h4>
+  {% if rating or pages or genre or finished %}
+  <div class="book-meta">
+    {% if rating %}{% for i in range(end=rating) %}★{% endfor %}{% for i in range(start=rating, end=5) %}☆{% endfor %} · {% endif %}{% if pages %}{{ pages }} pages · {% endif %}{% if genre %}{{ genre }} · {% endif %}{% if finished %}finished {{ finished }}{% endif %}
+  </div>
+  {% endif %}
+  <div class="book-body">
+
+{{ body | markdown(inline=false) | safe }}
+
+  </div>
+</div>
