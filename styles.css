@@ -337,29 +337,26 @@ body {
   align-items: flex-end;
   gap: 4px;
   row-gap: 24px;
-  /*border-bottom: 4px solid var(--line-color);
-  padding-bottom: 0;*/
   margin-bottom: 20px;
   position: relative;
 }
 
 .bookshelf-preview {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 4px;
+  row-gap: 36px;
+  max-height: 180px;
+  position: relative;
+  overflow: hidden;
   padding-bottom: 6px;
-}
-
-.bookshelf-preview::-webkit-scrollbar {
-  display: none;
 }
 
 .book-spine {
   border: 1px solid rgba(255,255,255,.15);
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);  
   -webkit-backdrop-filter: blur(10px);
 
   box-shadow:
@@ -378,8 +375,16 @@ body {
   box-sizing: border-box;
   text-decoration: none;
   /*box-shadow: inset -6px 0 10px rgba(0, 0, 0, 0.3);*/
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   overflow: hidden;
+}
+
+.book-spine:hover {
+  transform: translateY(-14px);
+  box-shadow:
+    inset -6px 0 10px rgba(0,0,0,.18),
+    inset 1px 0 rgba(255,255,255,.08),
+    0 12px 20px rgba(0,0,0,.4);
 }
 
 .book-author {
