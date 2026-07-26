@@ -49,6 +49,24 @@
       "type": "source"
     },
     {
+      "id": "trip and fell not in the wishing well",
+      "title": "trip and fell not in the wishing well",
+      "url": "/blog/gmow/",
+      "type": "target"
+    },
+    {
+      "id": "zola",
+      "title": "zola",
+      "url": "/tags/zola/",
+      "type": "source"
+    },
+    {
+      "id": "yap",
+      "title": "yap",
+      "url": "/tags/yap/",
+      "type": "source"
+    },
+    {
       "id": "halo",
       "title": "halo",
       "url": "/blog/halo/",
@@ -70,12 +88,6 @@
       "id": "red light",
       "title": "red light",
       "url": "/blog/smth/",
-      "type": "target"
-    },
-    {
-      "id": "",
-      "title": "",
-      "url": "/blog/gmow/",
       "type": "target"
     }
   ],
@@ -107,6 +119,22 @@
     {
       "source": "brain-notes",
       "target": "chaos cascade"
+    },
+    {
+      "source": "posts",
+      "target": "zola"
+    },
+    {
+      "source": "zola",
+      "target": "trip and fell not in the wishing well"
+    },
+    {
+      "source": "posts",
+      "target": "yap"
+    },
+    {
+      "source": "yap",
+      "target": "trip and fell not in the wishing well"
     },
     {
       "source": "self",

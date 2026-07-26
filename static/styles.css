@@ -378,7 +378,7 @@ body {
   box-sizing: border-box;
   text-decoration: none;
   /*box-shadow: inset -6px 0 10px rgba(0, 0, 0, 0.3);*/
-  transition: transform 0.15s ease;
+  transition: transform 0.25s ease;
   overflow: hidden;
 }
 
