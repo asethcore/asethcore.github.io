@@ -25,6 +25,18 @@
       "type": "target"
     },
     {
+      "id": "books",
+      "title": "books",
+      "url": "/books/",
+      "type": "target"
+    },
+    {
+      "id": "library",
+      "title": "library",
+      "url": "/library/",
+      "type": "target"
+    },
+    {
       "id": "bigmouth",
       "title": "bigmouth",
       "url": "/blog/bigmouth/",
@@ -103,6 +115,14 @@
     {
       "source": "home",
       "target": "photos"
+    },
+    {
+      "source": "home",
+      "target": "books"
+    },
+    {
+      "source": "books",
+      "target": "library"
     },
     {
       "source": "posts",

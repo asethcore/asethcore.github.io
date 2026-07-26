@@ -31,10 +31,14 @@ nodes.append({"id": "home", "title": "home", "url": "/", "type": "source"})
 nodes.append({"id": "about", "title": "about", "url": "/about/", "type": "target"})
 nodes.append({"id": "posts", "title": "posts", "url": "/blog/", "type": "source"})
 nodes.append({"id": "photos", "title": "photos", "url": "/photo/", "type": "target"})
+nodes.append({"id": "books", "title": "books", "url": "/books/", "type": "target"})
+nodes.append({"id": "library", "title": "library", "url": "/library/", "type": "target"})
 
 links.append({"source": "home", "target": "about"})
 links.append({"source": "home", "target": "posts"})
 links.append({"source": "home", "target": "photos"})
+links.append({"source": "home", "target": "books"})
+links.append({"source": "books", "target": "library"})
 
 for filepath in glob.glob(f"{CONTENT_DIR}/blog/*.md"):
     filename = os.path.basename(filepath)
