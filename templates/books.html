@@ -4,14 +4,13 @@
   <h1>{{ page.title }}</h1>
   {{ page.content | safe }}
 
-  {% set palette = ["#5b3a29", "#3a4a5b", "#4a5b3a", "#5b3a4a", "#3a5b56", "#5b4a3a", "#4a3a5b"] %}
   {% set library_page = get_page(path="library.md") %}
   {% if library_page.toc %}
   <div class="bookshelf">
     {% for h in library_page.toc %}
     {% set color_index = loop.index0 % 7 %}
     {% set parts = h.title | split(pat="|") %}
-    <a href="{{ get_url(path="@/library.md") }}#{{ h.id }}" class="book-spine" style="background-color: {{ palette[color_index] }};">
+    <a href="{{ get_url(path="@/library.md") }}#{{ h.id }}" class="book-spine" style="background-color: var(--book-{{ color_index }});">
       <span class="book-title">{{ parts.0 | trim }}</span>
       {% if parts | length > 1 %}
       <span class="book-author">{{ parts.1 | trim | upper }}</span>
