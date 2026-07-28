@@ -10,6 +10,10 @@ function applyTheme(theme) {
     html.classList.remove("darkmode");
     toggleItem.textContent = "lights out";
   }
+  const syntaxLink = document.getElementById('syntax-theme');
+  if (syntaxLink) {
+    syntaxLink.href = theme === "dark" ? '/giallo-dark.css' : '/giallo-light.css';
+  }
 }
 
 const savedTheme = localStorage.getItem(STORAGE_KEY) || "light";

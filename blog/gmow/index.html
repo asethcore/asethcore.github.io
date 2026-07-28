@@ -4,12 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>trip and fell not in the wishing well</title>
+  <link rel="stylesheet" id="syntax-theme" href="https://asethcore.github.io/giallo-dark.css" />
   <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
   <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
   <script src="https://unpkg.com/force-graph"></script>
   <script type="text/javascript" src="https://asethcore.github.io/graph.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
+  <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
 </head>
 <body>
 <div id="page">
@@ -60,69 +65,66 @@
 <p>so these past few months more like since last year vacation i fell into this rabbit hole called gaming. i spent quite some unhealthy amount of time gaming away i still am and i will admit it is fun. i am still yet to see the consequences of this addiction but i know what they can be and i am not fool enough to just wait for them. so, yeah i have started a new game red dead redemption 2 after completing the legends of zelda: breath of the wild (amazing game btw)  you can check out the games i have completed <a href="https://bckl.gg/tDaH" target="_blank" rel="noopener">here</a>.</p>
 <img src="/blogs/images/gmow/link.png" alt="what?" class="post-image"/>
 <p>anyways this site has underwent a little change as well i moved away from writing raw html to <a href="https://www.getzola.org/" target="_blank" rel="noopener">zola</a>. for those of ye fellers who dont know what this is its a static site engine, blazing fast (as their site claims) its written in rust or so i was told. anyways my opinion about is in good words.</p>
-<pre><code>.
-├── CNAME
-├── config.toml
-├── content
-│   ├── about.md
-│   ├── blog
-│   ├── _index.md
-│   └── photo.md
-├── public
-│   ├── blogs
-│   ├── CNAME
-│   ├── darkmode.js
-│   ├── favicon.ico
-│   ├── footer-cat.gif
-│   ├── graph.js
-│   ├── graph.json
-│   └── styles.css
-├── scripts
-│   └── generate_graph.py
-├── static
-│   ├── blogs
-│   ├── CNAME
-│   ├── darkmode.js
-│   ├── favicon.ico
-│   ├── footer-cat.gif
-│   ├── graph.js
-│   ├── graph.json
-│   └── styles.css
-└── templates
-    ├── 404.html
-    ├── base.html
-    ├── blog.html
-    ├── index.html
-    ├── page.html
-    ├── post.html
-    └── tags
-</code></pre>
+<pre class="giallo z-code"><code data-lang="plain"><span class="giallo-l"><span>.</span></span>
+<span class="giallo-l"><span>├── CNAME</span></span>
+<span class="giallo-l"><span>├── config.toml</span></span>
+<span class="giallo-l"><span>├── content</span></span>
+<span class="giallo-l"><span>│   ├── about.md</span></span>
+<span class="giallo-l"><span>│   ├── blog</span></span>
+<span class="giallo-l"><span>│   ├── _index.md</span></span>
+<span class="giallo-l"><span>│   └── photo.md</span></span>
+<span class="giallo-l"><span>├── public</span></span>
+<span class="giallo-l"><span>│   ├── blogs</span></span>
+<span class="giallo-l"><span>│   ├── CNAME</span></span>
+<span class="giallo-l"><span>│   ├── darkmode.js</span></span>
+<span class="giallo-l"><span>│   ├── favicon.ico</span></span>
+<span class="giallo-l"><span>│   ├── footer-cat.gif</span></span>
+<span class="giallo-l"><span>│   ├── graph.js</span></span>
+<span class="giallo-l"><span>│   ├── graph.json</span></span>
+<span class="giallo-l"><span>│   └── styles.css</span></span>
+<span class="giallo-l"><span>├── scripts</span></span>
+<span class="giallo-l"><span>│   └── generate_graph.py</span></span>
+<span class="giallo-l"><span>├── static</span></span>
+<span class="giallo-l"><span>│   ├── blogs</span></span>
+<span class="giallo-l"><span>│   ├── CNAME</span></span>
+<span class="giallo-l"><span>│   ├── darkmode.js</span></span>
+<span class="giallo-l"><span>│   ├── favicon.ico</span></span>
+<span class="giallo-l"><span>│   ├── footer-cat.gif</span></span>
+<span class="giallo-l"><span>│   ├── graph.js</span></span>
+<span class="giallo-l"><span>│   ├── graph.json</span></span>
+<span class="giallo-l"><span>│   └── styles.css</span></span>
+<span class="giallo-l"><span>└── templates</span></span>
+<span class="giallo-l"><span>    ├── 404.html</span></span>
+<span class="giallo-l"><span>    ├── base.html</span></span>
+<span class="giallo-l"><span>    ├── blog.html</span></span>
+<span class="giallo-l"><span>    ├── index.html</span></span>
+<span class="giallo-l"><span>    ├── page.html</span></span>
+<span class="giallo-l"><span>    ├── post.html</span></span>
+<span class="giallo-l"><span>    └── tags</span></span></code></pre>
 <p>so this is the structure of the folder. config.toml is some of zola config that is fun to play around with ig so, public folder just pops up when you finally upload your site for the world to see. it is created automatically, scripts holds a python script which is used to update the graph.json file in the static, static mostly contains the stuff that you dont really touch unless you are feeling lucky(just kidding), same with templates it contains the different .html structure for different things. inside content/blog is where you write blog in .md format.</p>
-<pre><code>+++
-title = &quot;&quot;
-date = 2025-01-01
-template = &quot;post.html&quot;
-
-[taxonomies]
-tags = []
-
-[extra]
-sidebar_heading = &quot;&quot;
-sidebar_text = &quot;&quot;
-+++
-</code></pre>
+<pre class="giallo z-code"><code data-lang="markdown"><span class="giallo-l"><span class="z-text">+++</span></span>
+<span class="giallo-l"><span class="z-text">title = &quot;&quot;</span></span>
+<span class="giallo-l"><span class="z-text">date = 2025-01-01</span></span>
+<span class="giallo-l"><span class="z-text">template = &quot;post.html&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-link z-title">[</span><span class="z-string z-other z-link z-title z-markdown">taxonomies</span><span class="z-punctuation z-definition z-link z-title">]</span></span>
+<span class="giallo-l"><span class="z-text">tags = []</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-link z-title">[</span><span class="z-string z-other z-link z-title z-markdown">extra</span><span class="z-punctuation z-definition z-link z-title">]</span></span>
+<span class="giallo-l"><span class="z-text">sidebar_heading = &quot;&quot;</span></span>
+<span class="giallo-l"><span class="z-text">sidebar_text = &quot;&quot;</span></span>
+<span class="giallo-l"><span class="z-text">+++</span></span></code></pre>
 <p>this stays at the very top of the .md file. tags is just the tags i put for my blog and zola automatically creates a index for whatever posts fall under that tag you can play with it in the config.toml i mentioned earlier. extra is well just extra stuff. there is also a little something that i have set up in my .bashrc so i dont have to copy paste this thing on every .md file i create for a blog.</p>
-<pre><code>tem() {
-  if [ -z &quot;$1&quot; ]; then
-    echo &quot;Error: provide some name.&quot;
-    return 1
-  fi
-
-  cp ~/blog-tem.md ~/asethcore.github.io/content/blog/&quot;$1.md&quot;
-  python3 ~/asethcore.github.io/scripts/generate_graph.py
-  echo &quot;voila&quot;
-}
-</code></pre>
+<pre class="giallo z-code"><code data-lang="shellscript"><span class="giallo-l"><span class="z-entity z-name z-function">tem</span><span class="z-punctuation">(</span><span class="z-punctuation">)</span><span class="z-punctuation"> {</span></span>
+<span class="giallo-l"><span class="z-keyword">  if</span><span class="z-punctuation"> [</span><span class="z-keyword z-operator"> -z</span><span class="z-punctuation z-definition z-string"> &quot;</span><span class="z-variable z-parameter">$</span><span class="z-variable z-parameter">1</span><span class="z-punctuation z-definition z-string">&quot;</span><span class="z-punctuation"> ]</span><span class="z-punctuation">;</span><span class="z-keyword"> then</span></span>
+<span class="giallo-l"><span class="z-support z-function z-builtin">    echo</span><span class="z-punctuation z-definition z-string"> &quot;</span><span class="z-string">Error: provide some name.</span><span class="z-punctuation z-definition z-string">&quot;</span></span>
+<span class="giallo-l"><span class="z-keyword">    return</span><span class="z-constant z-numeric"> 1</span></span>
+<span class="giallo-l"><span class="z-keyword">  fi</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-entity z-name z-function">  cp</span><span class="z-string"> ~/blog-tem.md</span><span class="z-string"> ~/asethcore.github.io/content/blog/</span><span class="z-punctuation z-definition z-string">&quot;</span><span class="z-variable z-parameter">$</span><span class="z-variable z-parameter">1</span><span class="z-string">.md</span><span class="z-punctuation z-definition z-string">&quot;</span></span>
+<span class="giallo-l"><span class="z-entity z-name z-function">  python3</span><span class="z-string"> ~/asethcore.github.io/scripts/generate_graph.py</span></span>
+<span class="giallo-l"><span class="z-support z-function z-builtin">  echo</span><span class="z-punctuation z-definition z-string"> &quot;</span><span class="z-string">voila</span><span class="z-punctuation z-definition z-string">&quot;</span></span>
+<span class="giallo-l"><span class="z-punctuation">}</span></span></code></pre>
 <p>this was all that i did and i was doing, ig enough for this one. take care yall.</p>
 <p>"dont overthink it" -the voidz</p>
 

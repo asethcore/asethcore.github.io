@@ -18,69 +18,66 @@
 &lt;p&gt;so these past few months more like since last year vacation i fell into this rabbit hole called gaming. i spent quite some unhealthy amount of time gaming away i still am and i will admit it is fun. i am still yet to see the consequences of this addiction but i know what they can be and i am not fool enough to just wait for them. so, yeah i have started a new game red dead redemption 2 after completing the legends of zelda: breath of the wild (amazing game btw)  you can check out the games i have completed &lt;a href=&quot;https:&#x2F;&#x2F;bckl.gg&#x2F;tDaH&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;here&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;img src=&quot;&#x2F;blogs&#x2F;images&#x2F;gmow&#x2F;link.png&quot; alt=&quot;what?&quot; class=&quot;post-image&quot;&#x2F;&gt;
 &lt;p&gt;anyways this site has underwent a little change as well i moved away from writing raw html to &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;zola&lt;&#x2F;a&gt;. for those of ye fellers who dont know what this is its a static site engine, blazing fast (as their site claims) its written in rust or so i was told. anyways my opinion about is in good words.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;.
-├── CNAME
-├── config.toml
-├── content
-│   ├── about.md
-│   ├── blog
-│   ├── _index.md
-│   └── photo.md
-├── public
-│   ├── blogs
-│   ├── CNAME
-│   ├── darkmode.js
-│   ├── favicon.ico
-│   ├── footer-cat.gif
-│   ├── graph.js
-│   ├── graph.json
-│   └── styles.css
-├── scripts
-│   └── generate_graph.py
-├── static
-│   ├── blogs
-│   ├── CNAME
-│   ├── darkmode.js
-│   ├── favicon.ico
-│   ├── footer-cat.gif
-│   ├── graph.js
-│   ├── graph.json
-│   └── styles.css
-└── templates
-    ├── 404.html
-    ├── base.html
-    ├── blog.html
-    ├── index.html
-    ├── page.html
-    ├── post.html
-    └── tags
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── CNAME&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── config.toml&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── content&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── about.md&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── blog&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── _index.md&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   └── photo.md&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── public&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── blogs&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── CNAME&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── darkmode.js&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── favicon.ico&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── footer-cat.gif&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── graph.js&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── graph.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   └── styles.css&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── scripts&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   └── generate_graph.py&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;├── static&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── blogs&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── CNAME&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── darkmode.js&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── favicon.ico&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── footer-cat.gif&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── graph.js&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   ├── graph.json&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;│   └── styles.css&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;└── templates&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ├── 404.html&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ├── base.html&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ├── blog.html&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ├── index.html&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ├── page.html&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ├── post.html&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    └── tags&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;so this is the structure of the folder. config.toml is some of zola config that is fun to play around with ig so, public folder just pops up when you finally upload your site for the world to see. it is created automatically, scripts holds a python script which is used to update the graph.json file in the static, static mostly contains the stuff that you dont really touch unless you are feeling lucky(just kidding), same with templates it contains the different .html structure for different things. inside content&#x2F;blog is where you write blog in .md format.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;+++
-title = &amp;quot;&amp;quot;
-date = 2025-01-01
-template = &amp;quot;post.html&amp;quot;
-
-[taxonomies]
-tags = []
-
-[extra]
-sidebar_heading = &amp;quot;&amp;quot;
-sidebar_text = &amp;quot;&amp;quot;
-+++
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-text&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-text&quot;&gt;title = &amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-text&quot;&gt;date = 2025-01-01&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-text&quot;&gt;template = &amp;quot;post.html&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-link z-title&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-other z-link z-title z-markdown&quot;&gt;taxonomies&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-link z-title&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-text&quot;&gt;tags = []&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-link z-title&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-other z-link z-title z-markdown&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-link z-title&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-text&quot;&gt;sidebar_heading = &amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-text&quot;&gt;sidebar_text = &amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-text&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;this stays at the very top of the .md file. tags is just the tags i put for my blog and zola automatically creates a index for whatever posts fall under that tag you can play with it in the config.toml i mentioned earlier. extra is well just extra stuff. there is also a little something that i have set up in my .bashrc so i dont have to copy paste this thing on every .md file i create for a blog.&lt;&#x2F;p&gt;
-&lt;pre&gt;&lt;code&gt;tem() {
-  if [ -z &amp;quot;$1&amp;quot; ]; then
-    echo &amp;quot;Error: provide some name.&amp;quot;
-    return 1
-  fi
-
-  cp ~&#x2F;blog-tem.md ~&#x2F;asethcore.github.io&#x2F;content&#x2F;blog&#x2F;&amp;quot;$1.md&amp;quot;
-  python3 ~&#x2F;asethcore.github.io&#x2F;scripts&#x2F;generate_graph.py
-  echo &amp;quot;voila&amp;quot;
-}
-&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;tem&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  if&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation&quot;&gt; [&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-operator&quot;&gt; -z&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation&quot;&gt; ]&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation&quot;&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; then&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-support z-function z-builtin&quot;&gt;    echo&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;Error: provide some name.&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;    return&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  fi&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;  cp&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt; ~&#x2F;blog-tem.md&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt; ~&#x2F;asethcore.github.io&#x2F;content&#x2F;blog&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter&quot;&gt;$&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;.md&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;  python3&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt; ~&#x2F;asethcore.github.io&#x2F;scripts&#x2F;generate_graph.py&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-support z-function z-builtin&quot;&gt;  echo&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;voila&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;this was all that i did and i was doing, ig enough for this one. take care yall.&lt;&#x2F;p&gt;
 &lt;p&gt;&quot;dont overthink it&quot; -the voidz&lt;&#x2F;p&gt;
 </description>
