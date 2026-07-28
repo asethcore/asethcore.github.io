@@ -5,6 +5,13 @@
   --secondary-color: #414447;
   --line-color: #bebbb8;
   --back-color: #FBF4EF;
+  --book-0: #785440;
+  --book-1: #56708a;
+  --book-2: #6a7f56;
+  --book-3: #785b6e;
+  --book-4: #557f78;
+  --book-5: #8b694d;
+  --book-6: #685983;
 }
 
 .darkmode {
@@ -14,6 +21,13 @@
   --secondary-color: #bebbb8;
   --line-color: #1e1e1e;
   --back-color: #1e1e1e;
+  --book-0: #5b3a29;
+  --book-1: #3a4a5b;
+  --book-2: #4a5b3a;
+  --book-3: #5b3a4a;
+  --book-4: #3a5b56;
+  --book-5: #5b4a3a;
+  --book-6: #4a3a5b;
 }
 
 .giallo-l {
