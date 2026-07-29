@@ -12,6 +12,7 @@
   --book-4: #557f78;
   --book-5: #8b694d;
   --book-6: #685983;
+  --code-dot: rgba(0, 0, 0, 0.1);
 }
 
 .darkmode {
@@ -28,6 +29,7 @@
   --book-4: #3a5b56;
   --book-5: #5b4a3a;
   --book-6: #4a3a5b;
+  --code-dot: rgba(255, 255, 255, 0.05);
 }
 
 .giallo-l {
@@ -285,6 +287,18 @@ body {
   border-radius: 8px;
   margin-bottom: 15px;
   overflow: hidden;
+
+  background-color: var(--base-color);
+
+    background-image:
+        radial-gradient(circle, var(--code-dot) 1px, transparent 1px);
+
+    background-size: 16px 16px;
+}
+
+.code-block-wrapper pre,
+.code-block-wrapper code {
+    background: transparent !important;
 }
 
 .code-block-wrapper pre {
