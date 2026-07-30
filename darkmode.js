@@ -1,26 +1,40 @@
 const html = document.documentElement;
-const toggleItem = document.getElementById("theme-toggle");
 const STORAGE_KEY = "theme";
 
 function applyTheme(theme) {
-  if (theme === "dark") {
-    html.classList.add("darkmode");
-    toggleItem.textContent = "lights in";
-  } else {
-    html.classList.remove("darkmode");
-    toggleItem.textContent = "lights out";
-  }
-  const syntaxLink = document.getElementById('syntax-theme');
-  if (syntaxLink) {
-    syntaxLink.href = theme === "dark" ? '/giallo-dark.css' : '/giallo-light.css';
-  }
+    const dark = theme === "dark";
+
+    html.classList.toggle("darkmode", dark);
+
+    // Desktop toggle
+    const desktopToggle = document.getElementById("theme-toggle");
+    if (desktopToggle) {
+        desktopToggle.textContent = dark ? "lights in" : "lights out";
+    }
+
+    // Syntax highlighting
+    const syntaxLink = document.getElementById("syntax-theme");
+    if (syntaxLink) {
+        syntaxLink.href = dark
+            ? "/giallo-dark.css"
+            : "/giallo-light.css";
+    }
 }
 
-const savedTheme = localStorage.getItem(STORAGE_KEY) || "light";
-applyTheme(savedTheme);
+function toggleTheme() {
+    const newTheme = html.classList.contains("darkmode")
+        ? "light"
+        : "dark";
 
-toggleItem.addEventListener("click", () => {
-  const newTheme = html.classList.contains("darkmode") ? "light" : "dark";
-  localStorage.setItem(STORAGE_KEY, newTheme);
-  applyTheme(newTheme);
-});
+    localStorage.setItem(STORAGE_KEY, newTheme);
+    applyTheme(newTheme);
+}
+
+// Load saved theme
+applyTheme(localStorage.getItem(STORAGE_KEY) || "light");
+
+// Attach to every theme toggle on the page
+document.querySelectorAll("#theme-toggle, #mobile-theme-toggle")
+    .forEach(toggle => {
+        toggle.addEventListener("click", toggleTheme);
+    });
