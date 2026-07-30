@@ -36,6 +36,15 @@
   --glass-border: rgba(255,255,255,.18);
 }
 
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
 .mobile-nav {
     display: none;
 }
