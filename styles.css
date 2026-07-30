@@ -36,6 +36,10 @@
   --glass-border: rgba(255,255,255,.18);
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     scrollbar-width: none;
     -ms-overflow-style: none;
