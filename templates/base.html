@@ -15,6 +15,7 @@
   <script type="text/javascript" src="{{ get_url(path="graph.js") }}" defer></script>
   <script type="text/javascript" src="{{ get_url(path="shelf.js") }}" defer></script>
   <script type="text/javascript" src="{{ get_url(path="code-blocks.js") }}" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 <div id="page">
@@ -63,5 +64,43 @@
     {% block content %}{% endblock %}
   </div>
 </div>
+
+{% set current = current_path | default(value="/404") %}
+
+<nav class="mobile-nav">
+  <a href="{{ get_url(path='@/_index.md') }}"
+    {% if current == "/" %}class="active"{% endif %}>
+    <i data-lucide="house"></i>
+  </a>
+
+  <a href="{{ get_url(path='@/about.md') }}"
+    {% if current == "/about/" %}class="active"{% endif %}>
+    <i data-lucide="user-round"></i>
+  </a>
+
+  <a href="{{ get_url(path='@/blog/_index.md') }}"
+    {% if current is starting_with("/blog") %}class="active"{% endif %}>
+    <i data-lucide="file-text"></i>
+  </a>
+
+  <a href="{{ get_url(path='@/photo.md') }}"
+    {% if current == "/photo/" %}class="active"{% endif %}>
+    <i data-lucide="camera"></i>
+  </a>
+
+  <a href="{{ get_url(path='@/books.md') }}"
+    {% if current == "/books/" %}class="active"{% endif %}>
+    <i data-lucide="book-open"></i>
+  </a>
+
+  <button id="mobile-theme-toggle">
+    <i data-lucide="sun-moon"></i>
+  </button>
+</nav>
+
+<script>
+  lucide.createIcons();
+</script>
+
 </body>
 </html>
