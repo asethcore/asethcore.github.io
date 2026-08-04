@@ -81,24 +81,6 @@ body {
   line-height: 1.5;
 }
 
-.bitcount-ink-<uniquifier> {
-  font-family: "Bitcount Ink", system-ui;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0,
-    "SZP1" 0,
-    "SZP2" 0,
-    "XPN1" 0,
-    "XPN2" 0,
-    "YPN1" 0,
-    "YPN2" 0;
-}
-
 #theme-toggle {
   cursor: pointer;
   color: var(--accent-color);
@@ -263,9 +245,9 @@ body {
 }
 
 #content h1 {
-  font-family: "Bitcount Ink", sans-serif;
+  font-family: "Arial", serif;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.2;
   margin: 0 0 10px 0;
 }
