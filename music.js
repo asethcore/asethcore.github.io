@@ -1,38 +1,131 @@
+let currentSong = "";
+
 async function updateMusic() {
-    try {
-        const res = await fetch("https://spotify-worker.vaeseth.workers.dev?t=" + Date.now());
-        const music = await res.json();
+  try {
+    const res = await fetch(
+      "https://spotify-worker.vaeseth.workers.dev?t=" + Date.now()
+    );
 
-        const box = document.querySelector(".music-box");
-        const bg = document.querySelector(".music-background");
-        const title = document.querySelector(".music-title");
-        const artist = document.querySelector(".music-artist");
+    const music = await res.json();
 
-        if (!box) return;
+    const box = document.querySelector(".music-box");
+    const bg = document.querySelector(".music-background");
+    const cover = document.querySelector(".music-cover");
+    const title = document.querySelector(".music-title");
+    const titleLink = document.querySelector(".music-title-link");
+    const artist = document.querySelector(".music-artist");
 
-        if (music.playing) {
-            box.classList.add("playing");
+    if (!box) return;
 
-            title.textContent = music.title;
-            artist.textContent = music.artist;
+    if (music.playing) {
+      box.classList.add("playing");
 
-            bg.style.backgroundImage = `url(${music.cover})`;
+      if (music.title !== currentSong) {
+        currentSong = music.title;
 
-            box.onclick = () => window.open(music.spotify_url, "_blank");
-        } else {
-            box.classList.remove("playing");
-
-            title.textContent = "listening";
-            artist.textContent = "to the world around him";
-
-            bg.style.backgroundImage = "";
-
-            box.onclick = null;
+        if (title._stopAnimation) {
+          title._stopAnimation();
         }
-    } catch (err) {
-        console.error(err);
+
+        title.innerHTML = `<span>${music.title}</span>`;
+        animateTitle(title);
+      }
+
+      artist.textContent = music.artist;
+
+      bg.style.backgroundImage = `url(${music.cover})`;
+
+      if (cover) {
+        cover.src = music.cover;
+        cover.style.display = "block";
+      }
+
+      // Only the title opens Spotify
+      if (titleLink) {
+        titleLink.href = music.spotify_url;
+      }
+    } else {
+      currentSong = "";
+
+      if (title._stopAnimation) {
+        title._stopAnimation();
+      }
+
+      box.classList.remove("playing");
+
+      title.textContent = "listening";
+      artist.textContent = "to the world around him";
+
+      bg.style.backgroundImage = "";
+
+      if (cover) {
+        cover.style.display = "none";
+      }
+
+      // Remove Spotify link when nothing is playing
+      if (titleLink) {
+        titleLink.removeAttribute("href");
+      }
     }
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+function animateTitle(el) {
+  const span = el.querySelector("span");
+
+  if (!span) return;
+
+  const distance = span.scrollWidth - el.clientWidth;
+
+  if (distance <= 0) return;
+
+  let running = true;
+
+  el._stopAnimation = () => {
+    running = false;
+  };
+
+  function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  function transition(duration, transform) {
+    return new Promise((resolve) => {
+      span.style.transition = `transform ${duration}s linear`;
+      span.style.transform = transform;
+
+      span.addEventListener("transitionend", resolve, { once: true });
+    });
+  }
+
+  async function loop() {
+    span.style.transition = "none";
+    span.style.transform = "translateX(0)";
+
+    while (running) {
+      // Wait before moving
+      await sleep(2000);
+      if (!running) break;
+
+      // Move left
+      await transition(distance / 35, `translateX(-${distance}px)`);
+
+      if (!running) break;
+
+      // Wait at end
+      await sleep(2000);
+      if (!running) break;
+
+      // Return smoothly
+      await transition(distance / 50, "translateX(0)");
+    }
+  }
+
+  loop();
 }
 
 updateMusic();
 setInterval(updateMusic, 5000);
+
