@@ -1,6 +1,6 @@
 async function updateMusic() {
     try {
-        const res = await fetch("/music.json?t=" + Date.now());
+        const res = await fetch("https://spotify-worker.vaeseth.workers.dev?t=" + Date.now());
         const music = await res.json();
 
         const box = document.querySelector(".music-box");
@@ -35,4 +35,4 @@ async function updateMusic() {
 }
 
 updateMusic();
-setInterval(updateMusic, 2000);
+setInterval(updateMusic, 5000);
