@@ -615,6 +615,95 @@ body {
     margin: 18px 0;
 }
 
+.music-box {
+  position: relative;
+
+  width: 200px;
+  height: 56px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.music-background {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+
+  background-size: cover;
+  background-position: center;
+
+  transform: scale(1.08);
+  filter: blur(8px) saturate(140%) brightness(0.8);
+
+  transition: opacity 0.35s ease;
+}
+
+.music-overlay {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35));
+
+  transition: opacity 0.35s ease;
+}
+
+.music-content {
+  position: relative;
+  z-index: 2;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 15px;
+
+  gap: 2px;
+}
+
+.music-title {
+  margin: 0;
+
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.music-artist {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.05;
+
+  color: var(--text-color);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.music-box.playing .music-background,
+.music-box.playing .music-overlay {
+  opacity: 1;
+}
+
+.music-box.playing .music-title,
+.music-box.playing .music-artist {
+  color: white;
+}
+
 @media (max-width: 700px) {
   #page {
     flex-direction: column;
