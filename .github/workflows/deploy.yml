@@ -22,14 +22,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install spotipy requests python-dotenv
-
-      - run: python3 scripts/music.py
-        env:
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
-
       - run: python3 scripts/generate_graph.py
 
       - run: zola build
