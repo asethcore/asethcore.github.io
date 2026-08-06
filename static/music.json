@@ -1,7 +1,7 @@
 {
-  "playing": false,
-  "title": "listening",
-  "artist": "to the world around him",
-  "cover": "",
-  "spotify_url": ""
+  "playing": true,
+  "title": "Russian Coney Island",
+  "artist": "The Voidz",
+  "cover": "/music-cover.jpg",
+  "spotify_url": "https://open.spotify.com/track/6LKN8NCJfAABDXvsS2cKgl"
 }

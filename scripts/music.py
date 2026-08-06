@@ -10,6 +10,7 @@ load_dotenv()
 
 CLIENT_ID = os.getenv("CLIENT_ID")
 CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+REFRESH_TOKEN = os.getenv("SPOTIFY_REFRESH_TOKEN")
 
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
@@ -17,7 +18,7 @@ sp = spotipy.Spotify(
         client_secret=CLIENT_SECRET,
         redirect_uri="http://127.0.0.1:8888/callback",
         scope="user-read-currently-playing",
-        open_browser=True
+        cache_path=".cache"
     )
 )
 
