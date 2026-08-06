@@ -1,6 +1,5 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-import time
 import json
 import requests
 from pathlib import Path
@@ -23,57 +22,47 @@ sp = spotipy.Spotify(
 )
 
 PROJECT = Path(__file__).resolve().parent.parent
-
 STATIC = PROJECT / "static"
 
 MUSIC_JSON = STATIC / "music.json"
 COVER_FILE = STATIC / "music-cover.jpg"
 
-last_cover = None
+song = sp.current_user_playing_track()
 
-while True:
+if song and song["is_playing"]:
 
-    song = sp.current_user_playing_track()
+    title = song["item"]["name"]
+    artist = ", ".join(a["name"] for a in song["item"]["artists"])
+    cover = song["item"]["album"]["images"][0]["url"]
+    spotify_url = song["item"]["external_urls"]["spotify"]
 
-    if song and song["is_playing"]:
+    print("Downloading album cover...")
 
-        title = song["item"]["name"]
-        artist = ", ".join(a["name"] for a in song["item"]["artists"])
-        cover = song["item"]["album"]["images"][0]["url"]
-        spotify_url = song["item"]["external_urls"]["spotify"]
+    response = requests.get(cover)
+    response.raise_for_status()
 
-        if cover != last_cover:
-            print("Downloading album cover...")
+    with open(COVER_FILE, "wb") as f:
+        f.write(response.content)
 
-            response = requests.get(cover)
-            response.raise_for_status()
+    data = {
+        "playing": True,
+        "title": title,
+        "artist": artist,
+        "cover": "/music-cover.jpg",
+        "spotify_url": spotify_url
+    }
 
-            with open(COVER_FILE, "wb") as f:
-                f.write(response.content)
+else:
 
-            last_cover = cover
+    data = {
+        "playing": False,
+        "title": "listening",
+        "artist": "to the world around him",
+        "cover": "",
+        "spotify_url": ""
+    }
 
-        data = {
-            "playing": True,
-            "title": title,
-            "artist": artist,
-            "cover": "/music-cover.jpg",
-            "spotify_url": spotify_url
-        }
+with open(MUSIC_JSON, "w", encoding="utf-8") as f:
+    json.dump(data, f, indent=2)
 
-    else:
-
-        data = {
-            "playing": False,
-            "title": "listening",
-            "artist": "to the world around him",
-            "cover": "",
-            "spotify_url": ""
-        }
-
-    with open(MUSIC_JSON, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-
-    print(f"♪ {data['title']} — {data['artist']}")
-
-    time.sleep(2)
+print(f"♪ {data['title']} — {data['artist']}")

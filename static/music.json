@@ -1,7 +1,7 @@
 {
-  "playing": true,
-  "title": "Going Shopping",
-  "artist": "The Strokes",
-  "cover": "/music-cover.jpg",
-  "spotify_url": "https://open.spotify.com/track/18bHbpAKgsf8dor8F6qXHF"
+  "playing": false,
+  "title": "listening",
+  "artist": "to the world around him",
+  "cover": "",
+  "spotify_url": ""
 }
