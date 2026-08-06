@@ -1,5 +1,5 @@
 const cors = {
-  "Access-Control-Allow-Origin": "https://asethcore.github.io",
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, OPTIONS",
   "Access-Control-Allow-Headers": "*",
   "Access-Control-Max-Age": "86400",
