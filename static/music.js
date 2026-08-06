@@ -35,4 +35,4 @@ async function updateMusic() {
 }
 
 updateMusic();
-setInterval(updateMusic, 2000);
+setInterval(updateMusic, 30000);
