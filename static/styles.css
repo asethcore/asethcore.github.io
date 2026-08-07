@@ -940,6 +940,12 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 110px;
+  transition: max-width 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.music-box:hover .music-title-wrapper {
+  max-width: none;
 }
 
 .music-title {
