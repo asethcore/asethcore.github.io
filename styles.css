@@ -934,6 +934,7 @@ body {
 
 .music-box:hover .music-text {
   padding-right: 0;
+  top: 0;
 }
 
 .music-title-wrapper {

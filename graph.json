@@ -37,24 +37,6 @@
       "type": "target"
     },
     {
-      "id": "chaos cascade",
-      "title": "chaos cascade",
-      "url": "/blog/chaos/",
-      "type": "target"
-    },
-    {
-      "id": "brain-notes",
-      "title": "brain-notes",
-      "url": "/tags/brain-notes/",
-      "type": "source"
-    },
-    {
-      "id": "reality shift",
-      "title": "reality shift",
-      "url": "/blog/reality/",
-      "type": "target"
-    },
-    {
       "id": "trip and fell not in the wishing well",
       "title": "trip and fell not in the wishing well",
       "url": "/blog/gmow/",
@@ -73,9 +55,9 @@
       "type": "source"
     },
     {
-      "id": "bigmouth",
-      "title": "bigmouth",
-      "url": "/blog/bigmouth/",
+      "id": "halo",
+      "title": "halo",
+      "url": "/blog/halo/",
       "type": "target"
     },
     {
@@ -85,9 +67,27 @@
       "type": "source"
     },
     {
-      "id": "red light",
-      "title": "red light",
-      "url": "/blog/smth/",
+      "id": "chaos cascade",
+      "title": "chaos cascade",
+      "url": "/blog/chaos/",
+      "type": "target"
+    },
+    {
+      "id": "brain-notes",
+      "title": "brain-notes",
+      "url": "/tags/brain-notes/",
+      "type": "source"
+    },
+    {
+      "id": "bigmouth",
+      "title": "bigmouth",
+      "url": "/blog/bigmouth/",
+      "type": "target"
+    },
+    {
+      "id": "reality shift",
+      "title": "reality shift",
+      "url": "/blog/reality/",
       "type": "target"
     },
     {
@@ -97,9 +97,9 @@
       "type": "target"
     },
     {
-      "id": "halo",
-      "title": "halo",
-      "url": "/blog/halo/",
+      "id": "red light",
+      "title": "red light",
+      "url": "/blog/smth/",
       "type": "target"
     }
   ],
@@ -126,18 +126,6 @@
     },
     {
       "source": "posts",
-      "target": "brain-notes"
-    },
-    {
-      "source": "brain-notes",
-      "target": "chaos cascade"
-    },
-    {
-      "source": "brain-notes",
-      "target": "reality shift"
-    },
-    {
-      "source": "posts",
       "target": "zola"
     },
     {
@@ -158,7 +146,27 @@
     },
     {
       "source": "self",
+      "target": "halo"
+    },
+    {
+      "source": "posts",
+      "target": "brain-notes"
+    },
+    {
+      "source": "brain-notes",
+      "target": "chaos cascade"
+    },
+    {
+      "source": "self",
       "target": "bigmouth"
+    },
+    {
+      "source": "brain-notes",
+      "target": "reality shift"
+    },
+    {
+      "source": "self",
+      "target": "samsara"
     },
     {
       "source": "self",
@@ -167,14 +175,6 @@
     {
       "source": "brain-notes",
       "target": "red light"
-    },
-    {
-      "source": "self",
-      "target": "samsara"
-    },
-    {
-      "source": "self",
-      "target": "halo"
     }
   ]
 }
