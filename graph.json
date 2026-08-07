@@ -37,6 +37,36 @@
       "type": "target"
     },
     {
+      "id": "chaos cascade",
+      "title": "chaos cascade",
+      "url": "/blog/chaos/",
+      "type": "target"
+    },
+    {
+      "id": "brain-notes",
+      "title": "brain-notes",
+      "url": "/tags/brain-notes/",
+      "type": "source"
+    },
+    {
+      "id": "wink",
+      "title": "wink",
+      "url": "/blog/wink/",
+      "type": "target"
+    },
+    {
+      "id": "self",
+      "title": "self",
+      "url": "/tags/self/",
+      "type": "source"
+    },
+    {
+      "id": "reality shift",
+      "title": "reality shift",
+      "url": "/blog/reality/",
+      "type": "target"
+    },
+    {
       "id": "trip and fell not in the wishing well",
       "title": "trip and fell not in the wishing well",
       "url": "/blog/gmow/",
@@ -55,39 +85,15 @@
       "type": "source"
     },
     {
-      "id": "halo",
-      "title": "halo",
-      "url": "/blog/halo/",
-      "type": "target"
-    },
-    {
-      "id": "self",
-      "title": "self",
-      "url": "/tags/self/",
-      "type": "source"
-    },
-    {
-      "id": "chaos cascade",
-      "title": "chaos cascade",
-      "url": "/blog/chaos/",
-      "type": "target"
-    },
-    {
-      "id": "brain-notes",
-      "title": "brain-notes",
-      "url": "/tags/brain-notes/",
-      "type": "source"
-    },
-    {
       "id": "bigmouth",
       "title": "bigmouth",
       "url": "/blog/bigmouth/",
       "type": "target"
     },
     {
-      "id": "reality shift",
-      "title": "reality shift",
-      "url": "/blog/reality/",
+      "id": "red light",
+      "title": "red light",
+      "url": "/blog/smth/",
       "type": "target"
     },
     {
@@ -97,15 +103,9 @@
       "type": "target"
     },
     {
-      "id": "wink",
-      "title": "wink",
-      "url": "/blog/wink/",
-      "type": "target"
-    },
-    {
-      "id": "red light",
-      "title": "red light",
-      "url": "/blog/smth/",
+      "id": "halo",
+      "title": "halo",
+      "url": "/blog/halo/",
       "type": "target"
     }
   ],
@@ -132,6 +132,26 @@
     },
     {
       "source": "posts",
+      "target": "brain-notes"
+    },
+    {
+      "source": "brain-notes",
+      "target": "chaos cascade"
+    },
+    {
+      "source": "posts",
+      "target": "self"
+    },
+    {
+      "source": "self",
+      "target": "wink"
+    },
+    {
+      "source": "brain-notes",
+      "target": "reality shift"
+    },
+    {
+      "source": "posts",
       "target": "zola"
     },
     {
@@ -147,28 +167,16 @@
       "target": "trip and fell not in the wishing well"
     },
     {
-      "source": "posts",
-      "target": "self"
-    },
-    {
-      "source": "self",
-      "target": "halo"
-    },
-    {
-      "source": "posts",
-      "target": "brain-notes"
-    },
-    {
-      "source": "brain-notes",
-      "target": "chaos cascade"
-    },
-    {
       "source": "self",
       "target": "bigmouth"
     },
     {
+      "source": "self",
+      "target": "red light"
+    },
+    {
       "source": "brain-notes",
-      "target": "reality shift"
+      "target": "red light"
     },
     {
       "source": "self",
@@ -176,15 +184,7 @@
     },
     {
       "source": "self",
-      "target": "wink"
-    },
-    {
-      "source": "self",
-      "target": "red light"
-    },
-    {
-      "source": "brain-notes",
-      "target": "red light"
+      "target": "halo"
     }
   ]
 }
