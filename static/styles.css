@@ -933,7 +933,7 @@ body {
 }
 
 .music-box:hover .music-text {
-  padding-right: 0;
+  padding-right: 0px;
   top: 0;
 }
 
@@ -971,7 +971,7 @@ body {
   font-size: 16px;
   white-space: normal;
   overflow: visible;
-  padding-right: 0;
+  padding-right: 30px;
 }
 
 .music-title span {
@@ -998,6 +998,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 16px;
 
   transition: font-size 0.45s ease, margin-top 0.45s ease;
 }
@@ -1005,6 +1006,7 @@ body {
 .music-box:hover .music-artist {
   font-size: 12px;
   margin-top: 6px;
+  padding-right: 30px;
 }
 
 .music-title-link {
