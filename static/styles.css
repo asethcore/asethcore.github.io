@@ -1019,7 +1019,6 @@ body {
 }
 
 .music-title-link:hover .music-title {
-  text-decoration: underline;
   opacity: 0.85;
 }
 
