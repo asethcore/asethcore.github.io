@@ -97,6 +97,12 @@
       "type": "target"
     },
     {
+      "id": "wink",
+      "title": "wink",
+      "url": "/blog/wink/",
+      "type": "target"
+    },
+    {
       "id": "red light",
       "title": "red light",
       "url": "/blog/smth/",
@@ -167,6 +173,10 @@
     {
       "source": "self",
       "target": "samsara"
+    },
+    {
+      "source": "self",
+      "target": "wink"
     },
     {
       "source": "self",
