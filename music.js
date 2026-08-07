@@ -37,10 +37,8 @@ async function updateMusic() {
 
       if (cover) {
         cover.src = music.cover;
-        cover.style.display = "block";
       }
 
-      // Only the title opens Spotify
       if (titleLink) {
         titleLink.href = music.spotify_url;
       }
@@ -59,10 +57,9 @@ async function updateMusic() {
       bg.style.backgroundImage = "";
 
       if (cover) {
-        cover.style.display = "none";
+        cover.src = "/blogs/images/cover.jpg";
       }
 
-      // Remove Spotify link when nothing is playing
       if (titleLink) {
         titleLink.removeAttribute("href");
       }
@@ -105,20 +102,16 @@ function animateTitle(el) {
     span.style.transform = "translateX(0)";
 
     while (running) {
-      // Wait before moving
       await sleep(2000);
       if (!running) break;
 
-      // Move left
       await transition(distance / 35, `translateX(-${distance}px)`);
 
       if (!running) break;
 
-      // Wait at end
       await sleep(2000);
       if (!running) break;
 
-      // Return smoothly
       await transition(distance / 50, "translateX(0)");
     }
   }
@@ -128,4 +121,3 @@ function animateTitle(el) {
 
 updateMusic();
 setInterval(updateMusic, 5000);
-
