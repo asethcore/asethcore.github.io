@@ -119,5 +119,28 @@ function animateTitle(el) {
   loop();
 }
 
+(function () {
+  const box = document.querySelector(".music-box");
+  const title = document.querySelector(".music-title");
+
+  if (!box || !title) return;
+
+  box.addEventListener("mouseenter", () => {
+    if (title._stopAnimation) {
+      title._stopAnimation();
+    }
+  });
+
+  box.addEventListener("mouseleave", () => {
+    if (title._stopAnimation) {
+      title._stopAnimation();
+    }
+    setTimeout(() => {
+      animateTitle(title);
+    }, 500);
+  });
+})();
+
 updateMusic();
 setInterval(updateMusic, 5000);
+
