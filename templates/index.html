@@ -24,7 +24,7 @@
   {% if photo_page.extra.images %}
   <h3><a href="{{ get_url(path="@/photo.md") }}">photos</a></h3>
   <div class="photo-scroll">
-    {% for img in photo_page.extra.images | slice(end=10) %}
+    {% for img in photo_page.extra.images | slice(end=8) %}
     <img src="{{ img }}" alt="photo" />
     {% endfor %}
   </div>
