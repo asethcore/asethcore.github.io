@@ -2,29 +2,48 @@ const html = document.documentElement;
 const STORAGE_KEY = "theme";
 
 function applyTheme(theme) {
-    const dark = theme === "dark";
+    const dark = theme === "dark" || theme === "crt";
+    const crt = theme === "crt";
 
+    // Apply theme classes
     html.classList.toggle("darkmode", dark);
+    html.classList.toggle("crt-mode", crt);
 
-    // Desktop toggle
+    // Desktop toggle text
     const desktopToggle = document.getElementById("theme-toggle");
+
     if (desktopToggle) {
-        desktopToggle.textContent = dark ? "lights in" : "lights out";
+        if (theme === "light") {
+            desktopToggle.textContent = "lights out";
+        } else if (theme === "dark") {
+            desktopToggle.textContent = "crt mode";
+        } else {
+            desktopToggle.textContent = "lights in";
+        }
     }
 
     // Syntax highlighting
     const syntaxLink = document.getElementById("syntax-theme");
+
     if (syntaxLink) {
-        syntaxLink.href = dark
-            ? "/giallo-dark.css"
-            : "/giallo-light.css";
+        syntaxLink.href =
+            theme === "light"
+                ? "/giallo-light.css"
+                : "/giallo-dark.css";
     }
 }
 
 function toggleTheme() {
-    const newTheme = html.classList.contains("darkmode")
-        ? "light"
-        : "dark";
+    let currentTheme = localStorage.getItem(STORAGE_KEY) || "light";
+    let newTheme;
+
+    if (currentTheme === "light") {
+        newTheme = "dark";
+    } else if (currentTheme === "dark") {
+        newTheme = "crt";
+    } else {
+        newTheme = "light";
+    }
 
     localStorage.setItem(STORAGE_KEY, newTheme);
     applyTheme(newTheme);
@@ -33,8 +52,9 @@ function toggleTheme() {
 // Load saved theme
 applyTheme(localStorage.getItem(STORAGE_KEY) || "light");
 
-// Attach to every theme toggle on the page
-document.querySelectorAll("#theme-toggle, #mobile-theme-toggle")
+// Attach to every theme toggle
+document
+    .querySelectorAll("#theme-toggle, #mobile-theme-toggle")
     .forEach(toggle => {
         toggle.addEventListener("click", toggleTheme);
     });

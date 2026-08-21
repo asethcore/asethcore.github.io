@@ -38,6 +38,37 @@
 
 /*what the fuck*/
 
+.crt-overlay {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  z-index: 99999;
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.025) 0px,
+      rgba(255, 255, 255, 0.025) 1px,
+      rgba(0, 0, 0, 0.12) 2px,
+      rgba(0, 0, 0, 0.12) 4px
+    );
+
+  animation: crt-flicker 0.12s infinite;
+}
+
+.crt-mode .crt-overlay {
+  display: block;
+}
+
+@keyframes crt-flicker {
+  0%   { opacity: 0.94; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.97; }
+}
+
 * {
     -webkit-tap-highlight-color: transparent;
 }
