@@ -6,9 +6,6 @@ template = "post.html"
 [taxonomies]
 tags = ["self"]
 
-[extra]
-sidebar_heading = "hello there"
-sidebar_text = "if ye are wondering why this page exists well here is the reason and few more things."
 +++
 
 hello folks, this is aseth, the sole owner of this webpage. to be honest, there's not much here, just some casual talks and a few things i like. truthfully, i have no solid reason for creating this page. the only explanation i give myself, just to justify its existence, is that i simply wanted to create something. or, to put it another way, i wanted to play around with html and css. now, this isn't my first time using html (though it is my first time tinkering with css). i've used html before to build something for someone, but i didn't quite achieve what i was aiming for.

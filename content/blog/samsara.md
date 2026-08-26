@@ -6,9 +6,6 @@ template = "post.html"
 [taxonomies]
 tags = ["self"]
 
-[extra]
-sidebar_heading = "samsara"
-sidebar_text = "um in this one i wrote about some certain aspects of life, basically gave my opinions on them and my reasonings and all."
 +++
 
 hello, my crystal-clear people! hope everyone is doing great.

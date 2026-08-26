@@ -6,9 +6,6 @@ template = "post.html"
 [taxonomies]
 tags = ["brain-notes"]
 
-[extra]
-sidebar_heading = "chaos cascade"
-sidebar_text = "this is one of my favourites in this i go through the chaos theory, chaos cascade, and yaa thats it i guess."
 +++
 
 my second attempt at writing a blog, the first one i wrote looked more like some chaos caused by a child. however, i kind of figured it out. everything on paper seems childish, more like some nonsense an old man or a 9-year-old might talk about.

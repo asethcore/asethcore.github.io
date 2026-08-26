@@ -7,9 +7,30 @@
     <title>{% block title %}vaeseth{% endblock %}</title>
 
     <link rel="stylesheet" href="{{ get_url(path="styles.css") }}" />
-    <link rel="stylesheet" href="{{ get_url(path="giallo-light.css") }}" />
+    <link
+      rel="stylesheet"
+      id="syntax-theme"
+      href="{{ get_url(path='giallo-light.css') }}"
+      data-light="{{ get_url(path='giallo-light.css') }}"
+      data-dark="{{ get_url(path='giallo-dark.css') }}"
+    />
     <link rel="icon" type="image/x-icon" href="{{ get_url(path="favicon.ico") }}" />
 
+    <script>
+      (function () {
+        var t = localStorage.getItem("vaeseth-theme");
+        var dark =
+          t === "dark" ||
+          (!t && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        if (dark) {
+          document.documentElement.classList.add("dark");
+          var link = document.getElementById("syntax-theme");
+          if (link) link.href = link.dataset.dark;
+        }
+      })();
+    </script>
+
+    <script type="text/javascript" src="{{ get_url(path="darkmode.js") }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path="music.js") }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path="micros.js") }}" defer></script>
     <script type="text/javascript" src="{{ get_url(path="code-blocks.js") }}" defer></script>

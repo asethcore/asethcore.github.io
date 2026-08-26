@@ -6,9 +6,6 @@ template = "post.html"
 [taxonomies]
 tags = ["brain-notes"]
 
-[extra]
-sidebar_heading = "reality shift"
-sidebar_text = " in this one i go through the definition of placebo effect, how well and strong perspective can be."
 +++
 
 hello, my invisible folks! hope you're all doing great. anyways, this blog has no specific thought process behind it, i just read placebo somewhere (book store) and here i am writing about it.

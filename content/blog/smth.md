@@ -6,9 +6,6 @@ template = "post.html"
 [taxonomies]
 tags = ["self", "brain-notes"]
 
-[extra]
-sidebar_heading = "smth smth"
-sidebar_text = "in this one i have written about multiple things like how i might be afraid of loosing my focus and more."
 +++
 
 yeah, i'm aware that i have been revamping the whole website more than i have been writing content to upload. the whole thing wasn't even done once but twice, and i still keep adding features to it. anyway, the site name has changed to [vaeseth.me](/), and it is temporary; i will change the site name to vaeseth.com(maybe) once this .me domain expires.

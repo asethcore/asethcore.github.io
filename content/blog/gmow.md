@@ -6,9 +6,6 @@ template = "post.html"
 [taxonomies]
 tags = ["zola", "yap"]
 
-[extra]
-sidebar_heading = "well"
-sidebar_text = "about the rabbit hole i fell into and zola."
 +++
 
 hello pretty peeps! hope everyone is doing good. so, im back like really back not that i figured out something but if this keeps going future me is gonna take some hard hit. but anyways im not here to yap about that(or maybe i am).
@@ -69,9 +66,6 @@ template = "post.html"
 [taxonomies]
 tags = []
 
-[extra]
-sidebar_heading = ""
-sidebar_text = ""
 +++
 ```
 

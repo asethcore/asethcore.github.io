@@ -6,9 +6,6 @@ template = "post.html"
 [taxonomies]
 tags = ["self"]
 
-[extra]
-sidebar_heading = "wink"
-sidebar_text = "the title refers to a song from the voidz the blog might not its just yapping into empty space cause i like that as well."
 +++
 
 writing this one before i vanish again in the blue for months to come. idk if this will make it to the blogs but anyways we write and if we dont want it we tear it and throw it away somewhere for words are meant to travel and they do their part in doing so.

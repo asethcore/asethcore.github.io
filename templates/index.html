@@ -13,12 +13,14 @@
           </div>
 
           <div class="panel-body micros">
+            {% if section.extra.micros %}
             {% for micro in section.extra.micros %}
             <article class="micro">
               <span class="micro-date">{{ micro.date }}</span>
               <p>{{ micro.text }}</p>
             </article>
             {% endfor %}
+            {% endif %}
           </div>
         </section>
 
