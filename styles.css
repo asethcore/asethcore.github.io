@@ -49,16 +49,18 @@
 
 * {
   box-sizing: border-box;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
 body {
   margin: 0;
   min-height: 100%;
+  background-color: var(--page-dark);
 }
 
 body {
-  background: var(--body-gradient);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
