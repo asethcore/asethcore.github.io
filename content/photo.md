@@ -1,11 +1,9 @@
 +++
 title = "photos"
 date = 2025-12-13
-template = "page.html"
+template = "photo.html"
 
 [extra]
-sidebar_heading = "photos"
-sidebar_text = "photos umm... yeah these are photos"
 images = [
   "/blogs/images/photos/i1.jpg",
   "/blogs/images/photos/i2.jpg",

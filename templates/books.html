@@ -1,22 +1,23 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }}{% endblock %}
+{% block title %}bookshelf{% endblock %}
 {% block content %}
-  <h1>{{ page.title }}</h1>
-  {{ page.content | safe }}
+      <!-- ================= BOOKSHELF ================= -->
 
-  {% set library_page = get_page(path="library.md") %}
-  {% if library_page.toc %}
-  <div class="bookshelf">
-    {% for h in library_page.toc %}
-    {% set color_index = loop.index0 % 7 %}
-    {% set parts = h.title | split(pat="|") %}
-    <a href="{{ get_url(path="@/library.md") }}#{{ h.id }}" class="book-spine" style="background-color: var(--book-{{ color_index }});">
-      <span class="book-title">{{ parts.0 | trim }}</span>
-      {% if parts | length > 1 %}
-      <span class="book-author">{{ parts.1 | trim | upper }}</span>
-      {% endif %}
-    </a>
-    {% endfor %}
-  </div>
-  {% endif %}
+      <div class="page">
+        <section class="panel bookshelf-page-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>bookshelf</span>
+          </div>
+
+          <div class="panel-body bookshelf">
+            {% for book in page.extra.books %}
+            <a class="book-spine" style="--book-h: {{ book.height }}px;" href="{{ book.url }}">
+              <span class="book-title">{{ book.title }}</span>
+              <span class="book-author">{{ book.author }}</span>
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
 {% endblock %}

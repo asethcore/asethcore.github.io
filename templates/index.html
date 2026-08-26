@@ -1,61 +1,134 @@
 {% extends "base.html" %}
-{% block title %}home{% endblock %}
+{% block title %}vaeseth{% endblock %}
 {% block content %}
-  <img src="{{ get_url(path=section.extra.image) }}" alt="head" class="post-image" />
-  <h1>{{ section.title }}</h1>
-  <p><strong>last modified on {{ section.date | default(value=now()) | date(format="%b %d, %Y") }}</strong></p>
+      <!-- ================= MAIN GRID ================= -->
 
-  {{ section.content | safe }}
+      <div class="dashboard">
+        <!-- MICROS -->
 
-  <h3>recent posts</h3>
-  <div class="blog-list">
-    <ul>
-      {% set blog = get_section(path="blog/_index.md") %}
-      {% for post in blog.pages | slice(end=5) %}
-      <li>
-        <span class="blog-title"><a href="{{ post.permalink }}">{{ post.title }}</a></span>
-        <span class="blog-date">{{ post.date | date(format="%b %d, %Y") }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+        <section class="panel micros-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>micros</span>
+          </div>
 
-  {% set photo_page = get_page(path="photo.md") %}
-  {% if photo_page.extra.images %}
-  <h3><a href="{{ get_url(path="@/photo.md") }}">photos</a></h3>
-  <div class="photo-scroll">
-    {% for img in photo_page.extra.images | slice(end=8) %}
-    <img src="{{ img }}" alt="photo" />
-    {% endfor %}
-  </div>
-  {% endif %}
+          <div class="panel-body micros">
+            {% for micro in section.extra.micros %}
+            <article class="micro">
+              <span class="micro-date">{{ micro.date }}</span>
+              <p>{{ micro.text }}</p>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
 
-  {% set library_page = get_page(path="library.md") %}
-  {% if library_page.toc %}
-  <h3><a href="{{ get_url(path="@/books.md") }}">bookshelf</a></h3>
-  <div class="bookshelf bookshelf-preview">
-    {% for h in library_page.toc %}
-    {% set color_index = loop.index0 % 7 %}
-    {% set parts = h.title | split(pat="|") %}
-<a href="{{ get_url(path="@/library.md") }}#{{ h.id }}" class="book-spine" style="background-color: var(--book-{{ color_index }});">
-      <span class="book-title">{{ parts.0 | trim }}</span>
-      {% if parts | length > 1 %}
-      <span class="book-author">{{ parts.1 | trim }}</span>
-      {% endif %}
-    </a>
-    {% endfor %}
-  </div>
-  {% endif %}
+        <!-- RECENTS -->
 
-  {% if section.extra.buttons %}
-  <h4 class="button-label">fellers & stuff</h4>
-  <div class="button-row">
-    {% for btn in section.extra.buttons %}
-    <a href="{{ btn.url }}" target="_blank" rel="noopener">
-      <img src="{{ btn.img }}" alt="{{ btn.alt }}" class="webring-button" />
-    </a>
-    {% endfor %}
-  </div>
-  {% endif %}
+        <section class="panel recents-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>recents</span>
+          </div>
 
+          <div class="panel-body recent-list">
+            {% set blog = get_section(path="blog/_index.md") %}
+            {% for post in blog.pages %}
+            <a href="{{ post.permalink }}" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>{{ post.title }}</span>
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+
+        <!-- RECENT IMAGES -->
+
+        <section class="panel images-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>recent images</span>
+          </div>
+
+          <div class="panel-body image-list">
+            {% set photo_page = get_page(path="photo.md") %}
+            {% for img in photo_page.extra.images | slice(end=7) %}
+            <a href="{{ img }}" class="image-item">
+              <img src="{{ img }}" alt="photo" />
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+
+        <!-- SPOTIFY -->
+
+        <section class="panel spotify-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>spotify</span>
+          </div>
+
+          <div class="panel-body spotify-body">
+            <div class="music-box">
+              <div class="music-background"></div>
+              <div class="music-overlay"></div>
+
+              <div class="music-content">
+                <img
+                  class="music-cover"
+                  src="{{ get_url(path='blogs/images/cover.jpg') }}"
+                  alt="Album cover"
+                />
+
+                <div class="music-text">
+                  <div class="music-title-wrapper">
+                    <a
+                      class="music-title-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p class="music-title">listening</p>
+                    </a>
+                  </div>
+
+                  <p class="music-artist">to the world around him</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTRO -->
+
+        <section class="panel intro-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>hello</span>
+          </div>
+
+          <div class="panel-body intro">
+            <h1>{{ section.title }}.</h1>
+
+            {{ section.content | safe }}
+          </div>
+        </section>
+
+        <!-- BOOKSHELF -->
+
+        {% set books_page = get_page(path="books.md") %}
+        <section class="panel bookshelf-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span><a href="{{ get_url(path='@/books.md') }}">bookshelf</a></span>
+          </div>
+
+          <div class="panel-body bookshelf">
+            {% for book in books_page.extra.books %}
+            <a class="book-spine" style="--book-h: {{ book.height }}px;" href="{{ book.url }}">
+              <span class="book-title">{{ book.title }}</span>
+              <span class="book-author">{{ book.author }}</span>
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
 {% endblock %}

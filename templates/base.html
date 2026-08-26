@@ -1,155 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}asethcore{% endblock %}</title>
-  <link rel="stylesheet" id="syntax-theme" href="{{ get_url(path="giallo-dark.css") }}" />
-  <link rel="icon" type="image/x-icon" href="{{ get_url(path="favicon.ico") }}" />
-  <link rel="stylesheet" href="{{ get_url(path="styles.css") }}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="{{ get_url(path="darkmode.js") }}" defer></script>
-  <script src="https://unpkg.com/force-graph"></script>
-  <script type="text/javascript" src="{{ get_url(path="graph.js") }}" defer></script>
-  <script type="text/javascript" src="{{ get_url(path="shelf.js") }}" defer></script>
-  <script type="text/javascript" src="{{ get_url(path="code-blocks.js") }}" defer></script>
-  <script type="text/javascript" src="{{ get_url(path="music.js") }}" defer></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
-<div id="page">
-  <div id="sidebar">
-    <h2>navigation</h2>
-    <ul>
-      <li><a href="{{ get_url(path="@/_index.md") }}">home</a></li>
-      <li><a href="{{ get_url(path="@/about.md") }}">about</a></li>
-      <li><a href="{{ get_url(path="@/blog/_index.md") }}">posts</a></li>
-      <li><a href="{{ get_url(path="@/photo.md") }}">photos</a></li>
-      <li><a href="{{ get_url(path="@/books.md") }}">books</a></li>
-      <li id="theme-toggle">light</li>
-    </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {% if page %}
-      <h2>{{ page.extra.sidebar_heading }}</h2>
-      <p>{{ page.extra.sidebar_text }}</p>
-    {% elif section %}
-      <h2>{{ section.extra.sidebar_heading }}</h2>
-      <p>{{ section.extra.sidebar_text }}</p>
-    {% elif term %}
-      <h2>{{ term.name }}</h2>
-      <p>posts filed under {{ term.name }}.</p>
-    {% endif %}
+    <title>{% block title %}vaeseth{% endblock %}</title>
 
-    <h2>hosted by</h2>
-    <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
+    <link rel="stylesheet" href="{{ get_url(path="styles.css") }}" />
+    <link rel="stylesheet" href="{{ get_url(path="giallo-light.css") }}" />
+    <link rel="icon" type="image/x-icon" href="{{ get_url(path="favicon.ico") }}" />
 
-    <div id="graph">
-      <h2>graph view</h2>
-      <div id="graph-wrapper">
-        <div id="graph-container"></div>
-        <button id="graph-expand-btn" aria-label="Expand Graph">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <polyline points="9 21 3 21 3 15"></polyline>
-            <line x1="21" y1="3" x2="14" y2="10"></line>
-            <line x1="3" y1="21" x2="10" y2="14"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <h2>spotify</h2>
-    <div class="music-box">
-      <div class="music-background"></div>
-      <div class="music-overlay"></div>
+    <script type="text/javascript" src="{{ get_url(path="music.js") }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path="micros.js") }}" defer></script>
+    <script type="text/javascript" src="{{ get_url(path="code-blocks.js") }}" defer></script>
+  </head>
 
-      <div class="music-content">
-        <div class="record-stage">
-          <img class="music-cover" src="/blogs/images/cover.jpg" alt="Album cover" />
-          <div class="music-vinyl"></div>
-          <div class="tonearm">
-            <span class="tonearm-pivot"></span>
-            <span class="tonearm-arm"></span>
-            <span class="tonearm-head"></span>
-          </div>
+  <body>
+    <main class="site">
+      <!-- ================= HEADER ================= -->
+
+      {% set current = current_path | default(value="/") %}
+
+      <header class="site-header">
+        <nav class="site-nav">
+          <a href="{{ get_url(path='@/_index.md') }}" {% if current == "/" %}class="active"{% endif %}>home</a>
+          <a href="{{ get_url(path='@/about.md') }}" {% if current == "/about/" %}class="active"{% endif %}>about</a>
+          <a href="{{ get_url(path='@/blog/_index.md') }}" {% if current is starting_with("/blog") %}class="active"{% endif %}>posts</a>
+          <a href="{{ get_url(path='@/photo.md') }}" {% if current == "/photo/" %}class="active"{% endif %}>photos</a>
+          <a href="{{ get_url(path='@/books.md') }}" {% if current == "/books/" %}class="active"{% endif %}>books</a>
+        </nav>
+
+        <div class="site-name"><span>vae</span>seth</div>
+      </header>
+
+      {% block content %}{% endblock %}
+
+      <!-- ================= FOOTER ================= -->
+
+      <footer class="site-footer">
+        <span> © vaeseth </span>
+
+        <div class="footer-links">
+          <a href="{{ get_url(path="rss.xml") }}">rss</a>
+          <span>|</span>
+          <a href="mailto:asethcore@gmail.com">contact</a>
+          <span>|</span>
+          <a href="https://github.com/asethcore" target="_blank" rel="noopener">github</a>
         </div>
-
-        <div class="music-text">
-          <div class="music-title-wrapper">
-            <a
-              class="music-title-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p class="music-title">Listening to</p>
-            </a>
-          </div>
-          <p class="music-artist">the world around him.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="content">
-    {% block content %}{% endblock %}
-  </div>
-</div>
-
-{% set current = current_path | default(value="/404") %}
-
-<div class="mobile-navigation">
-
-  <a
-    class="mobile-nav-home {% if current == "/" %}active{% endif %}"
-    href="{{ get_url(path='@/_index.md') }}"
-  >
-    <i data-lucide="house"></i>
-  </a>
-
-  <nav class="mobile-nav">
-
-    <a
-      href="{{ get_url(path='@/about.md') }}"
-      {% if current == "/about/" %}class="active"{% endif %}
-    >
-      <i data-lucide="user-round"></i>
-    </a>
-
-    <a
-      href="{{ get_url(path='@/blog/_index.md') }}"
-      {% if current is starting_with("/blog") %}class="active"{% endif %}
-    >
-      <i data-lucide="file-text"></i>
-    </a>
-
-    <a
-      href="{{ get_url(path='@/photo.md') }}"
-      {% if current == "/photo/" %}class="active"{% endif %}
-    >
-      <i data-lucide="camera"></i>
-    </a>
-
-    <a
-      href="{{ get_url(path='@/books.md') }}"
-      {% if current == "/books/" %}class="active"{% endif %}
-    >
-      <i data-lucide="book-open"></i>
-    </a>
-
-  </nav>
-
-  <button
-    class="mobile-theme-button"
-    id="mobile-theme-toggle"
-  >
-    <i data-lucide="sun-moon"></i>
-  </button>
-</div>
-
-<script>
-  lucide.createIcons();
-</script>
-
-</body>
+      </footer>
+    </main>
+  </body>
 </html>

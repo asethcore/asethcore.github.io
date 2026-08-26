@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}photos{% endblock %}
+{% block content %}
+      <!-- ================= PHOTOS ================= -->
+
+      <div class="page">
+        <section class="panel photos-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>photos</span>
+          </div>
+
+          <div class="panel-body photo-gallery">
+            {% for img in page.extra.images %}
+            <a href="{{ img }}" class="photo-item">
+              <img src="{{ img }}" alt="photo" />
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+{% endblock %}

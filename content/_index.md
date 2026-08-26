@@ -1,21 +1,23 @@
 +++
-title = "hello peeps"
+title = "vaeseth"
 template = "index.html"
 
 [extra]
-sidebar_heading = "vaeseth"
-sidebar_text = "an object or anything(one) which moves through uncertainty and stands apart by choice"
-image = "blogs/images/l/head.png"
-
-buttons = [
-  { img = "/blogs/images/buttons/mel.png", url = "https://melqtx.com/", alt = "feller" },
-  { img = "/blogs/images/buttons/linux.gif", url = "https://www.kernel.org/", alt = "stuff" },
-  { img = "/blogs/images/buttons/nvim.png", url = "https://neovim.io/", alt = "stuff" },
-  { img = "/blogs/images/buttons/zola.png", url = "https://www.getzola.org/", alt = "stuff" },
-  { img = "/blogs/images/buttons/ghostty.png", url = "https://ghostty.org/", alt = "stuff" },
+micros = [
+  { date = "12:42", text = "trying to understand why everything breaks immediately after i touch it." },
+  { date = "yesterday", text = "rebuilt the website again. this is probably a terrible idea." },
+  { date = "aug 24", text = "discovered another window manager. obviously i have to install it." },
+  { date = "aug 22", text = "the spotify widget now works and honestly that's enough development for today." },
+  { date = "aug 20", text = "my rice survived an update this time. wrote it down so future me has proof." },
+  { date = "aug 18", text = "wrote a script to back up my dotfiles and immediately forgot to run it." },
+  { date = "aug 15", text = "spent an hour configuring a status bar widget that displays the time. worth it." },
+  { date = "aug 12", text = "half the fun of linux is breaking things and then pretending you meant to." },
+  { date = "aug 9", text = "installed gentoo on a usb stick for reasons i can't explain." },
 ]
 +++
 
-i'm seth. i am here to share my unorganised thoughts through this little space that i have got on the internet. all my thoughts or swings that i go through are stored in the [posts](/blog) section. the notes that i make (or will make) are also going to be uploaded in the posts section aswell.
+a small corner of the internet where i put things that would otherwise disappear into the void.
 
-you can learn more about me on on the [about](/about) page and the [photos](/photo) page has the photos that are on my device that are shot by me or my dear friend <a href="https://melqtx.com" target="_blank" rel="noopener">mel</a>.
+writings, photographs, experiments, questionable design decisions and whatever else happens to be occupying my brain.
+
+feel free to look around.

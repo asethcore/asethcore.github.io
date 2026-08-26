@@ -1,6 +1,21 @@
 {% extends "base.html" %}
-{% block title %}not found{% endblock %}
+{% block title %}404{% endblock %}
 {% block content %}
-  <h1>404</h1>
-  <p>nothing here. <a href="{{ get_url(path="/") }}">go home</a>.</p>
+      <div class="page">
+        <section class="panel posts-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>404</span>
+          </div>
+
+          <div class="panel-body intro">
+            <h1>lost.</h1>
+
+            <p>
+              this page doesn't exist.
+              <a href="{{ get_url(path='@/_index.md') }}">go home</a>.
+            </p>
+          </div>
+        </section>
+      </div>
 {% endblock %}

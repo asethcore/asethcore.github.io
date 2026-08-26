@@ -1,10 +1,22 @@
 {% extends "base.html" %}
 {% block title %}tags{% endblock %}
 {% block content %}
-  <h1>tags</h1>
-  <ul>
-    {% for term in terms %}
-    <li><a href="{{ term.permalink }}">{{ term.name }}</a> ({{ term.pages | length }})</li>
-    {% endfor %}
-  </ul>
+      <div class="page">
+        <section class="panel posts-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>tags</span>
+          </div>
+
+          <div class="panel-body posts-list">
+            {% for term in terms %}
+            <a href="{{ term.permalink }}" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>{{ term.name }}</span>
+              <span class="post-date">{{ term.pages | length }} posts</span>
+            </a>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
 {% endblock %}

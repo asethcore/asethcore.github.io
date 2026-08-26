@@ -18,12 +18,6 @@ jobs:
         with:
           tool: zola@0.22.1
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - run: python3 scripts/generate_graph.py
-
       - run: zola build
 
       - uses: peaceiris/actions-gh-pages@v3

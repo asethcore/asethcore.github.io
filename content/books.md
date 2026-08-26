@@ -2,50 +2,57 @@
 title = "bookshelf"
 template = "books.html"
 
-[extra]
-sidebar_heading = "bookshelf"
-sidebar_text = "what i'm reading, what i've read, and what's waiting on the pile."
-
 [[extra.books]]
 title = "the odyssey"
 author = "homer"
-url = "https://example.com/review-fountainhead"
-height = 240
+height = 148
+url = "#"
 
 [[extra.books]]
 title = "vagabond"
 author = "takehiko inoue"
-url = "https://example.com/review-vagabond"
+height = 138
+url = "#"
 
 [[extra.books]]
 title = "what i talk about when i talk about running"
 author = "haruki murakami"
-url = "https://example.com/review-running"
+height = 208
+url = "#"
 
 [[extra.books]]
 title = "kafka on the shore"
 author = "haruki murakami"
-url = "https://example.com/review-fountainhead"
+height = 170
+url = "#"
 
 [[extra.books]]
 title = "the girl on the landing"
 author = "paul torday"
-url = "https://example.com/review-fountainhead"
+height = 182
+url = "#"
 
 [[extra.books]]
 title = "desire"
 author = "haruki murakami"
-url = "https://example.com/review-fountainhead"
+height = 130
+url = "#"
 
 [[extra.books]]
 title = "metamorphosis"
 author = "franz kafka"
-url = "https://example.com/review-fountainhead"
+height = 155
+url = "#"
+
+[[extra.books]]
+title = "homo deus"
+author = "yuval noah harari"
+height = 142
+url = "#"
 
 [[extra.books]]
 title = "norwegian wood"
 author = "haruki murakami"
-url = "https://example.com/review-fountainhead"
+height = 160
+url = "#"
 +++
-
-pull a book off the shelf to see it better.
