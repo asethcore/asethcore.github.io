@@ -32,7 +32,7 @@
 
           <div class="panel-body recent-list">
             {% set blog = get_section(path="blog/_index.md") %}
-            {% for post in blog.pages %}
+            {% for post in blog.pages | slice(end=7) %}
             <a href="{{ post.permalink }}" class="recent-item">
               <span class="recent-arrow">›</span>
               <span>{{ post.title }}</span>
@@ -121,11 +121,11 @@
             <span><a href="{{ get_url(path='@/books.md') }}">bookshelf</a></span>
           </div>
 
-          <div class="panel-body bookshelf">
+          <div class="panel-body bookshelf-preview">
             {% for book in books_page.extra.books %}
             <a class="book-spine" style="--book-h: {{ book.height }}px;" href="{{ book.url }}">
               <span class="book-title">{{ book.title }}</span>
-              <span class="book-author">{{ book.author }}</span>
+              <span class="book-author">{{ book.author | upper }}</span>
             </a>
             {% endfor %}
           </div>

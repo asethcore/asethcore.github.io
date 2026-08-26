@@ -14,7 +14,7 @@
             {% for book in page.extra.books %}
             <a class="book-spine" style="--book-h: {{ book.height }}px;" href="{{ book.url }}">
               <span class="book-title">{{ book.title }}</span>
-              <span class="book-author">{{ book.author }}</span>
+              <span class="book-author">{{ book.author | upper }}</span>
             </a>
             {% endfor %}
           </div>
