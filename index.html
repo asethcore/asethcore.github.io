@@ -1,331 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>home</title>
-  <link rel="stylesheet" id="syntax-theme" href="https://asethcore.github.io/giallo-dark.css" />
-  <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
-  <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
-  <script src="https://unpkg.com/force-graph"></script>
-  <script type="text/javascript" src="https://asethcore.github.io/graph.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
-<div id="page">
-  <div id="sidebar">
-    <h2>navigation</h2>
-    <ul>
-      <li><a href="https://asethcore.github.io/">home</a></li>
-      <li><a href="https://asethcore.github.io/about/">about</a></li>
-      <li><a href="https://asethcore.github.io/blog/">posts</a></li>
-      <li><a href="https://asethcore.github.io/photo/">photos</a></li>
-      <li><a href="https://asethcore.github.io/books/">books</a></li>
-      <li id="theme-toggle">light</li>
-    </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    
-      <h2>vaeseth</h2>
-      <p>an object or anything(one) which moves through uncertainty and stands apart by choice</p>
-    
+    <title>vaeseth</title>
 
-    <h2>hosted by</h2>
-    <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
+    <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
+    <link rel="stylesheet" href="https://asethcore.github.io/giallo-light.css" />
+    <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
 
-    <div id="graph">
-      <h2>graph view</h2>
-      <div id="graph-wrapper">
-        <div id="graph-container"></div>
-        <button id="graph-expand-btn" aria-label="Expand Graph">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <polyline points="9 21 3 21 3 15"></polyline>
-            <line x1="21" y1="3" x2="14" y2="10"></line>
-            <line x1="3" y1="21" x2="10" y2="14"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <h2>spotify</h2>
-    <div class="music-box">
-      <div class="music-background"></div>
-      <div class="music-overlay"></div>
+    <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
+    <script type="text/javascript" src="https://asethcore.github.io/micros.js" defer></script>
+    <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
+  </head>
 
-      <div class="music-content">
-        <div class="record-stage">
-          <img class="music-cover" src="/blogs/images/cover.jpg" alt="Album cover" />
-          <div class="music-vinyl"></div>
-          <div class="tonearm">
-            <span class="tonearm-pivot"></span>
-            <span class="tonearm-arm"></span>
-            <span class="tonearm-head"></span>
+  <body>
+    <main class="site">
+      <!-- ================= HEADER ================= -->
+
+      
+
+      <header class="site-header">
+        <nav class="site-nav">
+          <a href="https://asethcore.github.io/" class="active">home</a>
+          <a href="https://asethcore.github.io/about/" >about</a>
+          <a href="https://asethcore.github.io/blog/" >posts</a>
+          <a href="https://asethcore.github.io/photo/" >photos</a>
+          <a href="https://asethcore.github.io/books/" >books</a>
+        </nav>
+
+        <div class="site-name"><span>vae</span>seth</div>
+      </header>
+
+      
+      <!-- ================= MAIN GRID ================= -->
+
+      <div class="dashboard">
+        <!-- MICROS -->
+
+        <section class="panel micros-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>micros</span>
           </div>
-        </div>
 
-        <div class="music-text">
-          <div class="music-title-wrapper">
-            <a
-              class="music-title-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p class="music-title">Listening to</p>
+          <div class="panel-body micros">
+            
+            <article class="micro">
+              <span class="micro-date">12:42</span>
+              <p>trying to understand why everything breaks immediately after i touch it.</p>
+            </article>
+            
+            <article class="micro">
+              <span class="micro-date">yesterday</span>
+              <p>rebuilt the website again. this is probably a terrible idea.</p>
+            </article>
+            
+            <article class="micro">
+              <span class="micro-date">aug 24</span>
+              <p>discovered another window manager. obviously i have to install it.</p>
+            </article>
+            
+            <article class="micro">
+              <span class="micro-date">aug 22</span>
+              <p>the spotify widget now works and honestly that&#x27;s enough development for today.</p>
+            </article>
+            
+            <article class="micro">
+              <span class="micro-date">aug 20</span>
+              <p>my rice survived an update this time. wrote it down so future me has proof.</p>
+            </article>
+            
+            <article class="micro">
+              <span class="micro-date">aug 18</span>
+              <p>wrote a script to back up my dotfiles and immediately forgot to run it.</p>
+            </article>
+            
+            <article class="micro">
+              <span class="micro-date">aug 15</span>
+              <p>spent an hour configuring a status bar widget that displays the time. worth it.</p>
+            </article>
+            
+            <article class="micro">
+              <span class="micro-date">aug 12</span>
+              <p>half the fun of linux is breaking things and then pretending you meant to.</p>
+            </article>
+            
+            <article class="micro">
+              <span class="micro-date">aug 9</span>
+              <p>installed gentoo on a usb stick for reasons i can&#x27;t explain.</p>
+            </article>
+            
+          </div>
+        </section>
+
+        <!-- RECENTS -->
+
+        <section class="panel recents-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>recents</span>
+          </div>
+
+          <div class="panel-body recent-list">
+            
+            
+            <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;wink&#x2F;" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>wink</span>
             </a>
+            
+            <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;gmow&#x2F;" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>trip and fell not in the wishing well</span>
+            </a>
+            
+            <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;smth&#x2F;" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>red light</span>
+            </a>
+            
+            <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;bigmouth&#x2F;" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>bigmouth</span>
+            </a>
+            
+            <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;samsara&#x2F;" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>samsara</span>
+            </a>
+            
+            <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;reality&#x2F;" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>reality shift</span>
+            </a>
+            
+            <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;chaos&#x2F;" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>chaos cascade</span>
+            </a>
+            
+            <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;halo&#x2F;" class="recent-item">
+              <span class="recent-arrow">›</span>
+              <span>halo</span>
+            </a>
+            
           </div>
-          <p class="music-artist">the world around him.</p>
-        </div>
+        </section>
+
+        <!-- RECENT IMAGES -->
+
+        <section class="panel images-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>recent images</span>
+          </div>
+
+          <div class="panel-body image-list">
+            
+            
+            <a href="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i1.jpg" class="image-item">
+              <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i1.jpg" alt="photo" />
+            </a>
+            
+            <a href="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i2.jpg" class="image-item">
+              <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i2.jpg" alt="photo" />
+            </a>
+            
+            <a href="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i3.jpg" class="image-item">
+              <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i3.jpg" alt="photo" />
+            </a>
+            
+            <a href="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i4.jpg" class="image-item">
+              <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i4.jpg" alt="photo" />
+            </a>
+            
+            <a href="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i5.jpg" class="image-item">
+              <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i5.jpg" alt="photo" />
+            </a>
+            
+            <a href="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i6.jpg" class="image-item">
+              <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i6.jpg" alt="photo" />
+            </a>
+            
+            <a href="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i7.jpg" class="image-item">
+              <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i7.jpg" alt="photo" />
+            </a>
+            
+          </div>
+        </section>
+
+        <!-- SPOTIFY -->
+
+        <section class="panel spotify-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>spotify</span>
+          </div>
+
+          <div class="panel-body spotify-body">
+            <div class="music-box">
+              <div class="music-background"></div>
+              <div class="music-overlay"></div>
+
+              <div class="music-content">
+                <img
+                  class="music-cover"
+                  src="https://asethcore.github.io/blogs/images/cover.jpg"
+                  alt="Album cover"
+                />
+
+                <div class="music-text">
+                  <div class="music-title-wrapper">
+                    <a
+                      class="music-title-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p class="music-title">listening</p>
+                    </a>
+                  </div>
+
+                  <p class="music-artist">to the world around him</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTRO -->
+
+        <section class="panel intro-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>hello</span>
+          </div>
+
+          <div class="panel-body intro">
+            <h1>vaeseth.</h1>
+
+            <p>a small corner of the internet where i put things that would otherwise disappear into the void.</p>
+<p>writings, photographs, experiments, questionable design decisions and whatever else happens to be occupying my brain.</p>
+<p>feel free to look around.</p>
+
+          </div>
+        </section>
+
+        <!-- BOOKSHELF -->
+
+        
+        <section class="panel bookshelf-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span><a href="https://asethcore.github.io/books/">bookshelf</a></span>
+          </div>
+
+          <div class="panel-body bookshelf">
+            
+            <a class="book-spine" style="--book-h: 148px;" href="#">
+              <span class="book-title">the odyssey</span>
+              <span class="book-author">homer</span>
+            </a>
+            
+            <a class="book-spine" style="--book-h: 138px;" href="#">
+              <span class="book-title">vagabond</span>
+              <span class="book-author">takehiko inoue</span>
+            </a>
+            
+            <a class="book-spine" style="--book-h: 208px;" href="#">
+              <span class="book-title">what i talk about when i talk about running</span>
+              <span class="book-author">haruki murakami</span>
+            </a>
+            
+            <a class="book-spine" style="--book-h: 170px;" href="#">
+              <span class="book-title">kafka on the shore</span>
+              <span class="book-author">haruki murakami</span>
+            </a>
+            
+            <a class="book-spine" style="--book-h: 182px;" href="#">
+              <span class="book-title">the girl on the landing</span>
+              <span class="book-author">paul torday</span>
+            </a>
+            
+            <a class="book-spine" style="--book-h: 130px;" href="#">
+              <span class="book-title">desire</span>
+              <span class="book-author">haruki murakami</span>
+            </a>
+            
+            <a class="book-spine" style="--book-h: 155px;" href="#">
+              <span class="book-title">metamorphosis</span>
+              <span class="book-author">franz kafka</span>
+            </a>
+            
+            <a class="book-spine" style="--book-h: 142px;" href="#">
+              <span class="book-title">homo deus</span>
+              <span class="book-author">yuval noah harari</span>
+            </a>
+            
+            <a class="book-spine" style="--book-h: 160px;" href="#">
+              <span class="book-title">norwegian wood</span>
+              <span class="book-author">haruki murakami</span>
+            </a>
+            
+          </div>
+        </section>
       </div>
-    </div>
-  </div>
-
-  <div id="content">
-    
-  <img src="https://asethcore.github.io/blogs/images/l/head.png" alt="head" class="post-image" />
-  <h1>hello peeps</h1>
-  <p><strong>last modified on Aug 26, 2026</strong></p>
-
-  <p>i'm seth. i am here to share my unorganised thoughts through this little space that i have got on the internet. all my thoughts or swings that i go through are stored in the <a href="/blog">posts</a> section. the notes that i make (or will make) are also going to be uploaded in the posts section aswell.</p>
-<p>you can learn more about me on on the <a href="/about">about</a> page and the <a href="/photo">photos</a> page has the photos that are on my device that are shot by me or my dear friend <a href="https://melqtx.com" target="_blank" rel="noopener">mel</a>.</p>
 
 
-  <h3>recent posts</h3>
-  <div class="blog-list">
-    <ul>
-      
-      
-      <li>
-        <span class="blog-title"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;wink&#x2F;">wink</a></span>
-        <span class="blog-date">Aug 20, 2026</span>
-      </li>
-      
-      <li>
-        <span class="blog-title"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;gmow&#x2F;">trip and fell not in the wishing well</a></span>
-        <span class="blog-date">Jul 15, 2026</span>
-      </li>
-      
-      <li>
-        <span class="blog-title"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;smth&#x2F;">red light</a></span>
-        <span class="blog-date">Jan 14, 2026</span>
-      </li>
-      
-      <li>
-        <span class="blog-title"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;bigmouth&#x2F;">bigmouth</a></span>
-        <span class="blog-date">Oct 18, 2025</span>
-      </li>
-      
-      <li>
-        <span class="blog-title"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;samsara&#x2F;">samsara</a></span>
-        <span class="blog-date">Mar 27, 2025</span>
-      </li>
-      
-    </ul>
-  </div>
+      <!-- ================= FOOTER ================= -->
 
-  
-  
-  <h3><a href="https://asethcore.github.io/photo/">photos</a></h3>
-  <div class="photo-scroll">
-    
-    <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i1.jpg" alt="photo" />
-    
-    <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i2.jpg" alt="photo" />
-    
-    <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i3.jpg" alt="photo" />
-    
-    <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i4.jpg" alt="photo" />
-    
-    <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i5.jpg" alt="photo" />
-    
-    <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i6.jpg" alt="photo" />
-    
-    <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i7.jpg" alt="photo" />
-    
-    <img src="&#x2F;blogs&#x2F;images&#x2F;photos&#x2F;i9.jpg" alt="photo" />
-    
-  </div>
-  
+      <footer class="site-footer">
+        <span> © vaeseth </span>
 
-  
-  
-  <h3><a href="https://asethcore.github.io/books/">bookshelf</a></h3>
-  <div class="bookshelf bookshelf-preview">
-    
-    
-    
-<a href="https://asethcore.github.io/library/#the-odyssey" class="book-spine" style="background-color: var(--book-0);">
-      <span class="book-title">The Odyssey</span>
-      
-      <span class="book-author">Homer</span>
-      
-    </a>
-    
-    
-    
-<a href="https://asethcore.github.io/library/#vagabond" class="book-spine" style="background-color: var(--book-1);">
-      <span class="book-title">Vagabond</span>
-      
-      <span class="book-author">Takehiko Inoue</span>
-      
-    </a>
-    
-    
-    
-<a href="https://asethcore.github.io/library/#running" class="book-spine" style="background-color: var(--book-2);">
-      <span class="book-title">What I Talk About When I Talk About Running</span>
-      
-      <span class="book-author">Haruki Murakami</span>
-      
-    </a>
-    
-    
-    
-<a href="https://asethcore.github.io/library/#kafka-on-the-shore" class="book-spine" style="background-color: var(--book-3);">
-      <span class="book-title">Kafka on the Shore</span>
-      
-      <span class="book-author">Haruki Murakami</span>
-      
-    </a>
-    
-    
-    
-<a href="https://asethcore.github.io/library/#the-girl-on-the-landing" class="book-spine" style="background-color: var(--book-4);">
-      <span class="book-title">The Girl on the Landing</span>
-      
-      <span class="book-author">Paul Torday</span>
-      
-    </a>
-    
-    
-    
-<a href="https://asethcore.github.io/library/#desire" class="book-spine" style="background-color: var(--book-5);">
-      <span class="book-title">Desire</span>
-      
-      <span class="book-author">Haruki Murakami</span>
-      
-    </a>
-    
-    
-    
-<a href="https://asethcore.github.io/library/#metamorphosis" class="book-spine" style="background-color: var(--book-6);">
-      <span class="book-title">Metamorphosis</span>
-      
-      <span class="book-author">Franz Kafka</span>
-      
-    </a>
-    
-    
-    
-<a href="https://asethcore.github.io/library/#homo-deus" class="book-spine" style="background-color: var(--book-0);">
-      <span class="book-title">Homo Deus</span>
-      
-      <span class="book-author">Yuval Noah Harari</span>
-      
-    </a>
-    
-    
-    
-<a href="https://asethcore.github.io/library/#norwegian-wood" class="book-spine" style="background-color: var(--book-1);">
-      <span class="book-title">Norwegian Wood</span>
-      
-      <span class="book-author">Haruki Murakami</span>
-      
-    </a>
-    
-  </div>
-  
-
-  
-  <h4 class="button-label">fellers & stuff</h4>
-  <div class="button-row">
-    
-    <a href="https:&#x2F;&#x2F;melqtx.com&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;mel.png" alt="feller" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;www.kernel.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;linux.gif" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;neovim.io&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;nvim.png" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;zola.png" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;ghostty.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;ghostty.png" alt="stuff" class="webring-button" />
-    </a>
-    
-  </div>
-  
-
-
-  </div>
-</div>
-
-
-
-<div class="mobile-navigation">
-
-  <a
-    class="mobile-nav-home active"
-    href="https://asethcore.github.io/"
-  >
-    <i data-lucide="house"></i>
-  </a>
-
-  <nav class="mobile-nav">
-
-    <a
-      href="https://asethcore.github.io/about/"
-      
-    >
-      <i data-lucide="user-round"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/blog/"
-      
-    >
-      <i data-lucide="file-text"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/photo/"
-      
-    >
-      <i data-lucide="camera"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/books/"
-      
-    >
-      <i data-lucide="book-open"></i>
-    </a>
-
-  </nav>
-
-  <button
-    class="mobile-theme-button"
-    id="mobile-theme-toggle"
-  >
-    <i data-lucide="sun-moon"></i>
-  </button>
-</div>
-
-<script>
-  lucide.createIcons();
-</script>
-
-</body>
+        <div class="footer-links">
+          <a href="https://asethcore.github.io/rss.xml">rss</a>
+          <span>|</span>
+          <a href="mailto:asethcore@gmail.com">contact</a>
+          <span>|</span>
+          <a href="https://github.com/asethcore" target="_blank" rel="noopener">github</a>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>

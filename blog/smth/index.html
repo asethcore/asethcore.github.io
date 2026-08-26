@@ -1,99 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>red light</title>
-  <link rel="stylesheet" id="syntax-theme" href="https://asethcore.github.io/giallo-dark.css" />
-  <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
-  <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
-  <script src="https://unpkg.com/force-graph"></script>
-  <script type="text/javascript" src="https://asethcore.github.io/graph.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
-<div id="page">
-  <div id="sidebar">
-    <h2>navigation</h2>
-    <ul>
-      <li><a href="https://asethcore.github.io/">home</a></li>
-      <li><a href="https://asethcore.github.io/about/">about</a></li>
-      <li><a href="https://asethcore.github.io/blog/">posts</a></li>
-      <li><a href="https://asethcore.github.io/photo/">photos</a></li>
-      <li><a href="https://asethcore.github.io/books/">books</a></li>
-      <li id="theme-toggle">light</li>
-    </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    
-      <h2>smth smth</h2>
-      <p>in this one i have written about multiple things like how i might be afraid of loosing my focus and more.</p>
-    
+    <title>red light</title>
 
-    <h2>hosted by</h2>
-    <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
+    <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
+    <link rel="stylesheet" href="https://asethcore.github.io/giallo-light.css" />
+    <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
 
-    <div id="graph">
-      <h2>graph view</h2>
-      <div id="graph-wrapper">
-        <div id="graph-container"></div>
-        <button id="graph-expand-btn" aria-label="Expand Graph">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <polyline points="9 21 3 21 3 15"></polyline>
-            <line x1="21" y1="3" x2="14" y2="10"></line>
-            <line x1="3" y1="21" x2="10" y2="14"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <h2>spotify</h2>
-    <div class="music-box">
-      <div class="music-background"></div>
-      <div class="music-overlay"></div>
+    <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
+    <script type="text/javascript" src="https://asethcore.github.io/micros.js" defer></script>
+    <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
+  </head>
 
-      <div class="music-content">
-        <div class="record-stage">
-          <img class="music-cover" src="/blogs/images/cover.jpg" alt="Album cover" />
-          <div class="music-vinyl"></div>
-          <div class="tonearm">
-            <span class="tonearm-pivot"></span>
-            <span class="tonearm-arm"></span>
-            <span class="tonearm-head"></span>
+  <body>
+    <main class="site">
+      <!-- ================= HEADER ================= -->
+
+      
+
+      <header class="site-header">
+        <nav class="site-nav">
+          <a href="https://asethcore.github.io/" >home</a>
+          <a href="https://asethcore.github.io/about/" >about</a>
+          <a href="https://asethcore.github.io/blog/" class="active">posts</a>
+          <a href="https://asethcore.github.io/photo/" >photos</a>
+          <a href="https://asethcore.github.io/books/" >books</a>
+        </nav>
+
+        <div class="site-name"><span>vae</span>seth</div>
+      </header>
+
+      
+      <!-- ================= POST ================= -->
+
+      <div class="page">
+        <article class="panel post-panel">
+          <div class="panel-header">
+            <span class="panel-icon">◉</span>
+            <span>jan 14, 2026</span>
           </div>
-        </div>
 
-        <div class="music-text">
-          <div class="music-title-wrapper">
-            <a
-              class="music-title-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p class="music-title">Listening to</p>
-            </a>
-          </div>
-          <p class="music-artist">the world around him.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="panel-body post-body">
+            <h1>red light</h1>
 
-  <div id="content">
-    
-  <h1>red light</h1>
-  <p><strong>last modified on jan 14, 2026</strong></p>
-  
-  <p><a href="https://asethcore.github.io/tags/self/">#self</a> <a href="https://asethcore.github.io/tags/brain-notes/">#brain-notes</a> </p>
-  
-
-  <p>yeah, i'm aware that i have been revamping the whole website more than i have been writing content to upload. the whole thing wasn't even done once but twice, and i still keep adding features to it. anyway, the site name has changed to <a href="/">vaeseth.me</a>, and it is temporary; i will change the site name to vaeseth.com(maybe) once this .me domain expires.</p>
+            <p>yeah, i'm aware that i have been revamping the whole website more than i have been writing content to upload. the whole thing wasn't even done once but twice, and i still keep adding features to it. anyway, the site name has changed to <a href="/">vaeseth.me</a>, and it is temporary; i will change the site name to vaeseth.com(maybe) once this .me domain expires.</p>
 <p>anyway, one more year has passed and a new year has come upon us. i will turn 20 this year. i don't know how much different it will be than the time when i turned 17 or 18 or 19. why i think this is because nothing really changed in all those years except my ways. it's not that i feel more overwhelmed or underwhelmed. i have failed in doing some things so many times that now i don't try to not fail, but i try to not fail as often as i usually do.</p>
 <p>in the past few weeks, i was getting close to knowing what my fears are—everyone should do this much more often. i realized that the fear i have is that someday i will lose my way and be something different. i am not afraid of losing kindness, because i know that isn't happening. what i mean by "lose my way" is that i will lose the focus of what i am shaping myself into. but why do i want to shape myself into something i am not? well, that itself is the answer. in addition to that, i think that i will like myself more if i become that, and i will be more kind.</p>
 <p>this thing that i am trying to shape myself into is not the traits of a person i idolize. as a matter of fact, i don't idolize anyone—partly because i don't know anyone completely enough to feel the urge to become like them, and partly because i think everyone is unique to themselves. i think trying to be "normal" to ourselves is what should be unique to ourselves (i am not saying rob a store if it feels normal to you or kill someone, if somehow that makes any sense). anyway, i have planned out some things that i want to learn, both for my interest and so that i can make myself a living.</p>
@@ -105,101 +58,24 @@
 <p>“do it for the people that have died for your sake, an entire generation that has nothing to say…” — the strokes</p>
 <img src="/blogs/images/red light/we.jpeg" alt="and we have barely even scratched the surface" class="post-image" />
 
-
-  
-  
-  <h4 class="button-label">fellers & stuff</h4>
-  <div class="button-row">
-    
-    <a href="https:&#x2F;&#x2F;melqtx.com&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;mel.png" alt="feller" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;www.kernel.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;linux.gif" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;neovim.io&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;nvim.png" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;zola.png" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;ghostty.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;ghostty.png" alt="stuff" class="webring-button" />
-    </a>
-    
-  </div>
-  
-
-  <div class="footer">
-    <div class="footer-text">
-    <p>© vaeseth | <a href="https://asethcore.github.io/rss.xml">rss</a></p>
-    <p>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a> and llms</p>
-  </div>
-  <img src="https://asethcore.github.io/footer-cat.gif" alt="cat" class="footer-gif" />
-  </div>
+          </div>
+        </article>
+      </div>
 
 
-  </div>
-</div>
+      <!-- ================= FOOTER ================= -->
 
+      <footer class="site-footer">
+        <span> © vaeseth </span>
 
-
-<div class="mobile-navigation">
-
-  <a
-    class="mobile-nav-home "
-    href="https://asethcore.github.io/"
-  >
-    <i data-lucide="house"></i>
-  </a>
-
-  <nav class="mobile-nav">
-
-    <a
-      href="https://asethcore.github.io/about/"
-      
-    >
-      <i data-lucide="user-round"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/blog/"
-      class="active"
-    >
-      <i data-lucide="file-text"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/photo/"
-      
-    >
-      <i data-lucide="camera"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/books/"
-      
-    >
-      <i data-lucide="book-open"></i>
-    </a>
-
-  </nav>
-
-  <button
-    class="mobile-theme-button"
-    id="mobile-theme-toggle"
-  >
-    <i data-lucide="sun-moon"></i>
-  </button>
-</div>
-
-<script>
-  lucide.createIcons();
-</script>
-
-</body>
+        <div class="footer-links">
+          <a href="https://asethcore.github.io/rss.xml">rss</a>
+          <span>|</span>
+          <a href="mailto:asethcore@gmail.com">contact</a>
+          <span>|</span>
+          <a href="https://github.com/asethcore" target="_blank" rel="noopener">github</a>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
