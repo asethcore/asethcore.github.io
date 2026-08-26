@@ -44,6 +44,7 @@
   --row-hover: rgba(255, 255, 255, 0.4);
   --music-overlay: rgba(230, 230, 226, 0.62);
   --footer-bg: rgba(220, 220, 217, 0.5);
+  --link: #4b607f;
 }
 
 * {
@@ -594,6 +595,25 @@ body {
   color: var(--text-body);
 }
 
+.intro a,
+.intro a:visited,
+.micro p a,
+.micro p a:visited,
+.about-body a,
+.about-body a:visited {
+  color: var(--link);
+
+  text-decoration: underline;
+
+  text-underline-offset: 2px;
+}
+
+.intro a:hover,
+.micro p a:hover,
+.about-body a:hover {
+  color: var(--text-strong);
+}
+
 /* ================= POSTS ================= */
 
 .page {
@@ -1119,8 +1139,9 @@ body {
   color: var(--text-body);
 }
 
-.post-body a {
-  color: var(--text-strong);
+.post-body a,
+.post-body a:visited {
+  color: var(--link);
 }
 
 .post-body h2,
@@ -1329,6 +1350,7 @@ body {
   --row-hover: rgba(255, 255, 255, 0.08);
   --music-overlay: rgba(18, 20, 22, 0.7);
   --footer-bg: rgba(24, 27, 29, 0.6);
+  --link: #8fb4d8;
 }
 
 /* dark mode: darker book spines + readable text */

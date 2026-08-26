@@ -1,6 +1,6 @@
 +++
 title = "wink"
-date = 2026-08-20
+date = 2026-08-07
 template = "post.html"
 
 [taxonomies]

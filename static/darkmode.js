@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!toggle) return;
 
   toggle.style.cursor = "pointer";
-  toggle.title = "toggle dark mode";
 
   toggle.addEventListener("click", () => {
     applyTheme(!currentDark());
