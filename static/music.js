@@ -88,31 +88,32 @@ function animateTitle(el) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  function transition(duration, transform) {
+  function move(ms, transform) {
     return new Promise((resolve) => {
-      span.style.transition = `transform ${duration}s linear`;
+      span.style.transition = `transform ${ms}ms linear`;
       span.style.transform = transform;
-
-      span.addEventListener("transitionend", resolve, { once: true });
+      void span.offsetWidth;
+      setTimeout(resolve, ms + 60);
     });
   }
 
   async function loop() {
     span.style.transition = "none";
     span.style.transform = "translateX(0)";
+    void span.offsetWidth;
 
     while (running) {
       await sleep(2000);
       if (!running) break;
 
-      await transition(distance / 35, `translateX(-${distance}px)`);
+      await move((distance / 35) * 1000, `translateX(-${distance}px)`);
 
       if (!running) break;
 
       await sleep(2000);
       if (!running) break;
 
-      await transition(distance / 50, "translateX(0)");
+      await move((distance / 50) * 1000, "translateX(0)");
     }
   }
 
