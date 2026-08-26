@@ -1386,3 +1386,45 @@ body {
 .dark .book-author {
   color: #e8e8e5;
 }
+
+/* ================= LIGHTBOX ================= */
+
+.lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 90vw;
+
+  max-height: 90vh;
+
+  outline: 1px solid rgba(255, 255, 255, 0.25);
+
+  outline-offset: 14px;
+
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.6);
+}
