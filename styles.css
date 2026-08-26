@@ -14,6 +14,8 @@
   --accent: #6d7474;
 
   --header-gradient: linear-gradient(to bottom, #eeeeeb, #d9d9d6);
+
+  --line-color: #bebbb8;
 }
 
 * {
@@ -276,7 +278,7 @@ body {
 }
 
 .recents-panel .recent-item {
-  height: 24px;
+  height: 28px;
 }
 
 .recent-item {
@@ -662,19 +664,58 @@ body {
 .bookshelf {
   display: flex;
 
+  flex-wrap: wrap;
+
   align-items: flex-end;
 
-  gap: 6px;
+  gap: 4px;
 
-  overflow-x: auto;
+  row-gap: 24px;
+
+  margin-bottom: 20px;
 
   padding: 16px 12px 4px;
+
+  position: relative;
+}
+
+.bookshelf-preview {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: flex-end;
+
+  gap: 4px;
+
+  row-gap: 36px;
+
+  max-height: 245px;
+
+  padding: 16px 12px 14px;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
 .bookshelf-page-panel {
   max-width: 900px;
 
   margin: 0 auto;
+}
+
+.shelf-row-line {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background: var(--line-color);
+
+  pointer-events: none;
 }
 
 .book-spine {
@@ -789,16 +830,6 @@ body {
   white-space: nowrap;
 
   min-height: 0;
-}
-
-.bookshelf-note {
-  padding: 0 14px 12px;
-
-  margin: 0;
-
-  font-size: 11px;
-
-  color: #7a8181;
 }
 
 /* ================= ABOUT ================= */
@@ -951,15 +982,23 @@ body {
   .site-header {
     height: 58px;
 
-    padding: 0 16px;
+    padding: 0 10px;
   }
 
   .site-nav {
-    gap: 14px;
+    gap: 8px;
+  }
+
+  .site-nav a {
+    font-size: 10px;
+
+    letter-spacing: 0.3px;
+
+    padding: 5px 0;
   }
 
   .site-name {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .dashboard {
@@ -987,10 +1026,6 @@ body {
     font-size: 24px;
   }
 
-  .book-spine {
-    flex: 0 0 42px;
-  }
-
   .image-list {
     height: auto;
 
@@ -1008,13 +1043,13 @@ body {
   .image-item {
     flex: 0 0 auto;
 
-    width: 240px;
+    width: clamp(150px, 62vw, 240px);
 
     margin: 0;
   }
 
   .image-item img {
-    height: 140px;
+    height: clamp(88px, 36vw, 140px);
   }
 
   .photo-gallery {
