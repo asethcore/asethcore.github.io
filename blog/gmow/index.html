@@ -7,9 +7,30 @@
     <title>trip and fell not in the wishing well</title>
 
     <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
-    <link rel="stylesheet" href="https://asethcore.github.io/giallo-light.css" />
+    <link
+      rel="stylesheet"
+      id="syntax-theme"
+      href="https://asethcore.github.io/giallo-light.css"
+      data-light="https://asethcore.github.io/giallo-light.css"
+      data-dark="https://asethcore.github.io/giallo-dark.css"
+    />
     <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
 
+    <script>
+      (function () {
+        var t = localStorage.getItem("vaeseth-theme");
+        var dark =
+          t === "dark" ||
+          (!t && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        if (dark) {
+          document.documentElement.classList.add("dark");
+          var link = document.getElementById("syntax-theme");
+          if (link) link.href = link.dataset.dark;
+        }
+      })();
+    </script>
+
+    <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/micros.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
@@ -96,9 +117,6 @@
 <span class="giallo-l"><span class="z-punctuation z-definition z-link z-title">[</span><span class="z-string z-other z-link z-title z-markdown">taxonomies</span><span class="z-punctuation z-definition z-link z-title">]</span></span>
 <span class="giallo-l"><span class="z-text">tags = []</span></span>
 <span class="giallo-l"></span>
-<span class="giallo-l"><span class="z-punctuation z-definition z-link z-title">[</span><span class="z-string z-other z-link z-title z-markdown">extra</span><span class="z-punctuation z-definition z-link z-title">]</span></span>
-<span class="giallo-l"><span class="z-text">sidebar_heading = &quot;&quot;</span></span>
-<span class="giallo-l"><span class="z-text">sidebar_text = &quot;&quot;</span></span>
 <span class="giallo-l"><span class="z-text">+++</span></span></code></pre>
 <p>this stays at the very top of the .md file. tags is just the tags i put for my blog and zola automatically creates a index for whatever posts fall under that tag you can play with it in the config.toml i mentioned earlier. extra is well just extra stuff. there is also a little something that i have set up in my .bashrc so i dont have to copy paste this thing on every .md file i create for a blog.</p>
 <pre class="giallo z-code"><code data-lang="shellscript"><span class="giallo-l"><span class="z-entity z-name z-function">tem</span><span class="z-punctuation">(</span><span class="z-punctuation">)</span><span class="z-punctuation"> {</span></span>

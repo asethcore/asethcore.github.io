@@ -7,9 +7,30 @@
     <title>vaeseth</title>
 
     <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
-    <link rel="stylesheet" href="https://asethcore.github.io/giallo-light.css" />
+    <link
+      rel="stylesheet"
+      id="syntax-theme"
+      href="https://asethcore.github.io/giallo-light.css"
+      data-light="https://asethcore.github.io/giallo-light.css"
+      data-dark="https://asethcore.github.io/giallo-dark.css"
+    />
     <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
 
+    <script>
+      (function () {
+        var t = localStorage.getItem("vaeseth-theme");
+        var dark =
+          t === "dark" ||
+          (!t && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        if (dark) {
+          document.documentElement.classList.add("dark");
+          var link = document.getElementById("syntax-theme");
+          if (link) link.href = link.dataset.dark;
+        }
+      })();
+    </script>
+
+    <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/micros.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
@@ -47,51 +68,6 @@
           </div>
 
           <div class="panel-body micros">
-            
-            <article class="micro">
-              <span class="micro-date">12:42</span>
-              <p>trying to understand why everything breaks immediately after i touch it.</p>
-            </article>
-            
-            <article class="micro">
-              <span class="micro-date">yesterday</span>
-              <p>rebuilt the website again. this is probably a terrible idea.</p>
-            </article>
-            
-            <article class="micro">
-              <span class="micro-date">aug 24</span>
-              <p>discovered another window manager. obviously i have to install it.</p>
-            </article>
-            
-            <article class="micro">
-              <span class="micro-date">aug 22</span>
-              <p>the spotify widget now works and honestly that&#x27;s enough development for today.</p>
-            </article>
-            
-            <article class="micro">
-              <span class="micro-date">aug 20</span>
-              <p>my rice survived an update this time. wrote it down so future me has proof.</p>
-            </article>
-            
-            <article class="micro">
-              <span class="micro-date">aug 18</span>
-              <p>wrote a script to back up my dotfiles and immediately forgot to run it.</p>
-            </article>
-            
-            <article class="micro">
-              <span class="micro-date">aug 15</span>
-              <p>spent an hour configuring a status bar widget that displays the time. worth it.</p>
-            </article>
-            
-            <article class="micro">
-              <span class="micro-date">aug 12</span>
-              <p>half the fun of linux is breaking things and then pretending you meant to.</p>
-            </article>
-            
-            <article class="micro">
-              <span class="micro-date">aug 9</span>
-              <p>installed gentoo on a usb stick for reasons i can&#x27;t explain.</p>
-            </article>
             
           </div>
         </section>
@@ -237,7 +213,7 @@
             <h1>vaeseth.</h1>
 
             <p>a small corner of the internet where i put things that would otherwise disappear into the void.</p>
-<p>writings, photographs, experiments, questionable design decisions and whatever else happens to be occupying my brain.</p>
+<p>writings, photographs, experiments, questionable design decisions and whatever else happens to be occupying my brain. thee photographs section holds photos that are either shot by me or my dear friend <a rel="external" href="https://melqtx.com">mel</a>.</p>
 <p>feel free to look around.</p>
 
           </div>

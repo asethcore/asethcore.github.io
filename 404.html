@@ -7,9 +7,30 @@
     <title>404</title>
 
     <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
-    <link rel="stylesheet" href="https://asethcore.github.io/giallo-light.css" />
+    <link
+      rel="stylesheet"
+      id="syntax-theme"
+      href="https://asethcore.github.io/giallo-light.css"
+      data-light="https://asethcore.github.io/giallo-light.css"
+      data-dark="https://asethcore.github.io/giallo-dark.css"
+    />
     <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
 
+    <script>
+      (function () {
+        var t = localStorage.getItem("vaeseth-theme");
+        var dark =
+          t === "dark" ||
+          (!t && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        if (dark) {
+          document.documentElement.classList.add("dark");
+          var link = document.getElementById("syntax-theme");
+          if (link) link.href = link.dataset.dark;
+        }
+      })();
+    </script>
+
+    <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/micros.js" defer></script>
     <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
