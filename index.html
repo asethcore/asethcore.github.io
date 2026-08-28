@@ -173,24 +173,26 @@
           </div>
 
           <div class="panel-body spotify-body">
-            <div class="music-box">
+            <div class="music-box cassette">
               <div class="music-background"></div>
               <div class="music-overlay"></div>
 
-              <div class="music-content">
-                <div class="record-stage">
-                  <img
-                    class="music-cover"
-                    src="https://asethcore.github.io/blogs/images/cover.jpg"
-                    alt="Album cover"
-                  />
-                  <div class="music-vinyl"></div>
-                  <div class="tonearm">
-                    <span class="tonearm-pivot"></span>
-                    <span class="tonearm-arm"></span>
-                    <span class="tonearm-head"></span>
-                  </div>
+              <div class="cassette-window">
+                <div class="cassette-reel cassette-reel-left">
+                  <span class="cassette-spindle"></span>
                 </div>
+                <div class="cassette-tape"></div>
+                <div class="cassette-reel cassette-reel-right">
+                  <span class="cassette-spindle"></span>
+                </div>
+              </div>
+
+              <div class="music-content">
+                <img
+                  class="music-cover"
+                  src="https://asethcore.github.io/blogs/images/cover.jpg"
+                  alt="Album cover"
+                />
 
                 <div class="music-text">
                   <div class="music-title-wrapper">
@@ -204,7 +206,23 @@
                   </div>
 
                   <p class="music-artist">to the world around him</p>
+
+                  <div class="music-progress">
+                    <div class="music-progress-track">
+                      <div class="music-progress-fill"></div>
+                      <div class="music-progress-line"></div>
+                      <span class="music-progress-head"></span>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <div class="cassette-bottom">
+                <span class="cassette-screw" style="left: 12px;"></span>
+                <span class="cassette-screw" style="left: calc(50% - 27% - 6px);"></span>
+                <span class="cassette-notch"></span>
+                <span class="cassette-screw" style="right: calc(50% - 27% - 6px);"></span>
+                <span class="cassette-screw" style="right: 12px;"></span>
               </div>
             </div>
           </div>
