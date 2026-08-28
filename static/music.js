@@ -40,49 +40,6 @@ function stopProgressTicker() {
   }
 }
 
-function renderList(container, items, emptyText) {
-  const el = document.querySelector(container);
-  if (!el) return;
-  el.innerHTML = "";
-
-  if (!items || items.length === 0) {
-    const p = document.createElement("p");
-    p.className = "empty";
-    p.textContent = emptyText;
-    el.appendChild(p);
-    return;
-  }
-
-  for (const item of items) {
-    const row = document.createElement("a");
-    row.className = "queue-item";
-    row.href = item.spotify_url || "#";
-    row.target = "_blank";
-    row.rel = "noopener noreferrer";
-
-    const img = document.createElement("img");
-    img.src = item.cover;
-    img.alt = "";
-
-    const text = document.createElement("div");
-    text.className = "queue-text";
-
-    const t = document.createElement("p");
-    t.className = "queue-title";
-    t.textContent = item.title;
-
-    const a = document.createElement("p");
-    a.className = "queue-artist";
-    a.textContent = item.artist;
-
-    text.appendChild(t);
-    text.appendChild(a);
-    row.appendChild(img);
-    row.appendChild(text);
-    el.appendChild(row);
-  }
-}
-
 async function updateMusic() {
   try {
     const res = await fetch(
@@ -157,13 +114,6 @@ async function updateMusic() {
       currentDuration = 0;
       renderProgress();
     }
-
-    renderList(".music-queue", music.queue, "nothing queued");
-    renderList(
-      ".music-recent",
-      music.recently_played,
-      "nothing played recently"
-    );
   } catch (err) {
     console.error(err);
   }
@@ -243,5 +193,5 @@ function animateTitle(el) {
 })();
 
 updateMusic();
-setInterval(updateMusic, 5000);
+setInterval(updateMusic, 2000);
 
