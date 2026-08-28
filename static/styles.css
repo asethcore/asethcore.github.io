@@ -818,14 +818,16 @@ body {
 
   top: 50%;
 
-  left: 16%;
-  right: 16%;
+  left: 60px;
+  right: 60px;
 
   height: 22px;
 
   margin-top: -11px;
 
   z-index: 0;
+
+  border-radius: 4px;
 
   background: linear-gradient(180deg, #d0d0cc, #b2b2ae);
 
@@ -1485,6 +1487,14 @@ body {
 }
 
 /* ================= MOBILE ================= */
+
+@media (min-width: 450px) and (max-width: 850px) {
+  .music-box.cassette {
+    width: min(380px, 100%);
+
+    margin: 0 auto;
+  }
+}
 
 @media (max-width: 850px) {
   .music-content {
