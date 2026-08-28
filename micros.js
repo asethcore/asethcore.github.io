@@ -1,39 +1,11 @@
 const MICROS_URL = "https://micros.vaeseth.workers.dev";
 
-const MONTHS = [
-	"jan",
-	"feb",
-	"mar",
-	"apr",
-	"may",
-	"jun",
-	"jul",
-	"aug",
-	"sep",
-	"oct",
-	"nov",
-	"dec",
-];
-
 function formatTime(iso) {
 	const t = new Date(iso);
 	if (isNaN(t)) return iso;
 
-	const now = new Date();
-	const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-	const day = new Date(t.getFullYear(), t.getMonth(), t.getDate());
-	const days = Math.round((today - day) / 86400000);
-
-	if (days === 0) {
-		return t
-			.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false })
-			.replace(/^24:/, "00:");
-	}
-	if (days === 1) return "yesterday";
-
-	const label = `${MONTHS[t.getMonth()]} ${t.getDate()}`;
-	if (t.getFullYear() === now.getFullYear()) return label;
-	return `${label}, ${t.getFullYear()}`;
+	const pad = (n) => String(n).padStart(2, "0");
+	return `${t.getFullYear()}-${pad(t.getMonth() + 1)}-${pad(t.getDate())} ${pad(t.getHours())}:${pad(t.getMinutes())}`;
 }
 
 async function loadMicros() {
