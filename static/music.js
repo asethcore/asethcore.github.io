@@ -1,4 +1,87 @@
 let currentSong = "";
+let currentProgress = 0;
+let currentDuration = 0;
+let progressAnimId = null;
+let lastTickTime = 0;
+
+function renderProgress() {
+  const track = document.querySelector(".music-progress-track");
+  if (!track) return;
+
+  const pct =
+    currentDuration > 0 ? (currentProgress / currentDuration) * 100 : 0;
+  track.style.setProperty(
+    "--progress",
+    `${Math.min(100, Math.max(0, pct))}%`
+  );
+}
+
+function startProgressTicker() {
+  stopProgressTicker();
+  lastTickTime = performance.now();
+
+  function loop(now) {
+    if (currentDuration > 0) {
+      currentProgress += now - lastTickTime;
+      lastTickTime = now;
+      if (currentProgress >= currentDuration) currentProgress = currentDuration;
+      renderProgress();
+    }
+    progressAnimId = requestAnimationFrame(loop);
+  }
+
+  progressAnimId = requestAnimationFrame(loop);
+}
+
+function stopProgressTicker() {
+  if (progressAnimId) {
+    cancelAnimationFrame(progressAnimId);
+    progressAnimId = null;
+  }
+}
+
+function renderList(container, items, emptyText) {
+  const el = document.querySelector(container);
+  if (!el) return;
+  el.innerHTML = "";
+
+  if (!items || items.length === 0) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = emptyText;
+    el.appendChild(p);
+    return;
+  }
+
+  for (const item of items) {
+    const row = document.createElement("a");
+    row.className = "queue-item";
+    row.href = item.spotify_url || "#";
+    row.target = "_blank";
+    row.rel = "noopener noreferrer";
+
+    const img = document.createElement("img");
+    img.src = item.cover;
+    img.alt = "";
+
+    const text = document.createElement("div");
+    text.className = "queue-text";
+
+    const t = document.createElement("p");
+    t.className = "queue-title";
+    t.textContent = item.title;
+
+    const a = document.createElement("p");
+    a.className = "queue-artist";
+    a.textContent = item.artist;
+
+    text.appendChild(t);
+    text.appendChild(a);
+    row.appendChild(img);
+    row.appendChild(text);
+    el.appendChild(row);
+  }
+}
 
 async function updateMusic() {
   try {
@@ -42,6 +125,11 @@ async function updateMusic() {
       if (titleLink) {
         titleLink.href = music.spotify_url;
       }
+
+      currentProgress = music.progress_ms || 0;
+      currentDuration = music.duration_ms || 0;
+      renderProgress();
+      startProgressTicker();
     } else {
       currentSong = "";
 
@@ -63,7 +151,19 @@ async function updateMusic() {
       if (titleLink) {
         titleLink.removeAttribute("href");
       }
+
+      stopProgressTicker();
+      currentProgress = 0;
+      currentDuration = 0;
+      renderProgress();
     }
+
+    renderList(".music-queue", music.queue, "nothing queued");
+    renderList(
+      ".music-recent",
+      music.recently_played,
+      "nothing played recently"
+    );
   } catch (err) {
     console.error(err);
   }

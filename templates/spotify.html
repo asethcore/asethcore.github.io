@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}spotify{% endblock %}
+{% block content %}
+      <!-- ================= SPOTIFY ================= -->
+
+      <div class="page">
+        <section class="panel spotify-page-panel">
+          <div class="panel-header">
+            <span class="panel-icon" aria-hidden="true"></span>
+            <span>now playing</span>
+          </div>
+
+          <div class="panel-body spotify-page-body">
+            <div class="music-box">
+              <div class="music-background"></div>
+              <div class="music-overlay"></div>
+
+              <div class="music-content">
+                <img
+                  class="music-cover"
+                  src="{{ get_url(path='blogs/images/cover.jpg') }}"
+                  alt="Album cover"
+                />
+
+                <div class="music-text">
+                  <div class="music-title-wrapper">
+                    <a
+                      class="music-title-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p class="music-title">listening</p>
+                    </a>
+                  </div>
+
+                  <p class="music-artist">to the world around him</p>
+
+                  <div class="music-progress">
+                    <div class="music-progress-track">
+                      <div class="music-progress-fill"></div>
+                      <div class="music-progress-line"></div>
+                      <span class="music-progress-head"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel queue-panel">
+          <div class="panel-header">
+            <span class="panel-icon" aria-hidden="true"></span>
+            <span>queue</span>
+          </div>
+
+          <div class="panel-body">
+            <div class="music-queue"></div>
+          </div>
+        </section>
+
+        <section class="panel recent-panel">
+          <div class="panel-header">
+            <span class="panel-icon" aria-hidden="true"></span>
+            <span>recently played</span>
+          </div>
+
+          <div class="panel-body">
+            <div class="music-recent"></div>
+          </div>
+        </section>
+      </div>
+{% endblock %}
