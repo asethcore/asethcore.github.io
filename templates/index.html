@@ -36,7 +36,7 @@
             {% set blog = get_section(path="blog/_index.md") %}
             {% for post in blog.pages | slice(end=7) %}
             <a href="{{ post.permalink }}" class="recent-item">
-              <span class="recent-arrow">›</span>
+              <span class="recent-arrow" aria-hidden="true"></span>
               <span>{{ post.title }}</span>
             </a>
             {% endfor %}

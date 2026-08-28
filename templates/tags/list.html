@@ -11,7 +11,7 @@
           <div class="panel-body posts-list">
             {% for term in terms %}
             <a href="{{ term.permalink }}" class="recent-item">
-              <span class="recent-arrow">›</span>
+              <span class="recent-arrow" aria-hidden="true"></span>
               <span>{{ term.name }}</span>
               <span class="post-date">{{ term.pages | length }} posts</span>
             </a>
