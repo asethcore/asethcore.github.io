@@ -180,19 +180,19 @@
           </div>
 
           <div class="panel-body spotify-body">
-            <div class="music-box cassette">
+            <div class="music-box cassette playing">
               <div class="music-background"></div>
               <div class="music-overlay"></div>
 
-                <div class="cassette-window">
-                  <div class="cassette-reel cassette-reel-left">
-                    <span class="cassette-spindle"></span>
-                  </div>
-                  <div class="cassette-tape">ステレオ</div>
-                  <div class="cassette-reel cassette-reel-right">
-                    <span class="cassette-spindle"></span>
-                  </div>
+              <div class="cassette-window">
+                <div class="cassette-tape"></div>
+                <div class="cassette-reel cassette-reel-left">
+                  <span class="cassette-spindle"></span>
                 </div>
+                <div class="cassette-reel cassette-reel-right">
+                  <span class="cassette-spindle"></span>
+                </div>
+              </div>
 
               <div class="music-content">
                 <img
@@ -201,7 +201,9 @@
                   alt="Album cover"
                 />
 
-                <div class="music-text">
+                <div class="cassette-label">
+                  <span class="cassette-side-tag">Side A</span>
+
                   <div class="music-title-wrapper">
                     <a
                       class="music-title-link"
@@ -217,7 +219,6 @@
                   <div class="music-progress">
                     <div class="music-progress-track">
                       <div class="music-progress-fill"></div>
-                      <div class="music-progress-line"></div>
                       <span class="music-progress-head"></span>
                     </div>
                   </div>
@@ -225,13 +226,10 @@
               </div>
 
               <div class="cassette-bottom">
-                <span class="cassette-screw" style="left: 12px;"></span>
-                <span class="cassette-screw" style="left: calc(50% - 27% - 6px);"></span>
+                <span class="cassette-screw" style="left: 10px;"></span>
                 <span class="cassette-notch"></span>
-                <span class="cassette-screw" style="right: calc(50% - 27% - 6px);"></span>
-                <span class="cassette-screw" style="right: 12px;"></span>
+                <span class="cassette-screw" style="right: 10px;"></span>
               </div>
-
             </div>
           </div>
         </section>
