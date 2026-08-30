@@ -7,19 +7,17 @@ let lastTickTime = 0;
 function renderProgress() {
   const track = document.querySelector(".music-progress-track");
   if (!track) return;
-
   const pct =
     currentDuration > 0 ? (currentProgress / currentDuration) * 100 : 0;
-  track.style.setProperty(
-    "--progress",
-    `${Math.min(100, Math.max(0, pct))}%`
-  );
+  const clamped = Math.min(100, Math.max(0, pct));
+  track.style.setProperty("--progress", `${clamped}%`);
+  const head = track.querySelector(".music-progress-head");
+  if (head) head.style.opacity = clamped > 0 ? "1" : "0";
 }
 
 function startProgressTicker() {
   stopProgressTicker();
   lastTickTime = performance.now();
-
   function loop(now) {
     if (currentDuration > 0) {
       currentProgress += now - lastTickTime;
@@ -29,7 +27,6 @@ function startProgressTicker() {
     }
     progressAnimId = requestAnimationFrame(loop);
   }
-
   progressAnimId = requestAnimationFrame(loop);
 }
 
@@ -45,7 +42,6 @@ async function updateMusic() {
     const res = await fetch(
       "https://spotify-worker.vaeseth.workers.dev?t=" + Date.now()
     );
-
     const music = await res.json();
 
     const box = document.querySelector(".music-box");
@@ -55,33 +51,24 @@ async function updateMusic() {
     const titleLink = document.querySelector(".music-title-link");
     const artist = document.querySelector(".music-artist");
 
-    if (!box) return;
+    if (!box || !title || !artist) return;
 
     if (music.playing) {
       box.classList.add("playing");
 
       if (music.title !== currentSong) {
         currentSong = music.title;
-
         if (title._stopAnimation) {
           title._stopAnimation();
         }
-
         title.innerHTML = `<span>${music.title}</span>`;
         animateTitle(title);
       }
 
       artist.textContent = music.artist;
-
-      bg.style.backgroundImage = `url(${music.cover})`;
-
-      if (cover) {
-        cover.src = music.cover;
-      }
-
-      if (titleLink) {
-        titleLink.href = music.spotify_url;
-      }
+      if (bg) bg.style.backgroundImage = `url(${music.cover})`;
+      if (cover) cover.src = music.cover;
+      if (titleLink) titleLink.href = music.spotify_url;
 
       currentProgress = music.progress_ms || 0;
       currentDuration = music.duration_ms || 0;
@@ -89,25 +76,15 @@ async function updateMusic() {
       startProgressTicker();
     } else {
       currentSong = "";
-
       if (title._stopAnimation) {
         title._stopAnimation();
       }
-
       box.classList.remove("playing");
-
       title.textContent = "listening";
       artist.textContent = "to the world around him";
-
-      bg.style.backgroundImage = "";
-
-      if (cover) {
-        cover.src = "/blogs/images/cover.jpg";
-      }
-
-      if (titleLink) {
-        titleLink.removeAttribute("href");
-      }
+      if (bg) bg.style.backgroundImage = "";
+      if (cover) cover.src = "/blogs/images/cover.jpg";
+      if (titleLink) titleLink.removeAttribute("href");
 
       stopProgressTicker();
       currentProgress = 0;
@@ -121,15 +98,11 @@ async function updateMusic() {
 
 function animateTitle(el) {
   const span = el.querySelector("span");
-
   if (!span) return;
-
   const distance = span.scrollWidth - el.clientWidth;
-
   if (distance <= 0) return;
 
   let running = true;
-
   el._stopAnimation = () => {
     running = false;
   };
@@ -151,18 +124,13 @@ function animateTitle(el) {
     span.style.transition = "none";
     span.style.transform = "translateX(0)";
     void span.offsetWidth;
-
     while (running) {
       await sleep(2000);
       if (!running) break;
-
       await move((distance / 35) * 1000, `translateX(-${distance}px)`);
-
       if (!running) break;
-
       await sleep(2000);
       if (!running) break;
-
       await move((distance / 50) * 1000, "translateX(0)");
     }
   }
@@ -173,7 +141,6 @@ function animateTitle(el) {
 (function () {
   const box = document.querySelector(".music-box");
   const title = document.querySelector(".music-title");
-
   if (!box || !title) return;
 
   box.addEventListener("mouseenter", () => {
@@ -181,7 +148,6 @@ function animateTitle(el) {
       title._stopAnimation();
     }
   });
-
   box.addEventListener("mouseleave", () => {
     if (title._stopAnimation) {
       title._stopAnimation();
@@ -194,4 +160,3 @@ function animateTitle(el) {
 
 updateMusic();
 setInterval(updateMusic, 2000);
-
