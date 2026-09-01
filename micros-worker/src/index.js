@@ -95,11 +95,30 @@ export default {
 					return json({ type: 4, data: { content: "empty micro", flags: 64 } });
 				}
 
+				const reply = { type: 4, data: { content: `✅ ${text.slice(0, 200)}`, flags: 64 } };
+
+				const lastToken = await env.MICROS_KV.get("last_interaction").catch(() => null);
+				if (body.token && body.token === lastToken) {
+					return json(reply);
+				}
+
 				const micros = await readMicros(env.MICROS_KV);
+				const newest = micros[0];
+				if (
+					newest &&
+					newest.text === text &&
+					Date.now() - new Date(newest.time).getTime() < 10000
+				) {
+					return json(reply);
+				}
+
 				micros.unshift({ text: text.slice(0, MAX_TEXT), time: new Date().toISOString() });
 				await env.MICROS_KV.put(KEY, JSON.stringify(micros.slice(0, MAX_MICROS)));
+				if (body.token) {
+					await env.MICROS_KV.put("last_interaction", body.token);
+				}
 
-				return json({ type: 4, data: { content: `✅ ${text.slice(0, 200)}`, flags: 64 } });
+				return json(reply);
 			}
 
 			return json({ type: 4, data: { content: "unsupported interaction", flags: 64 } });
