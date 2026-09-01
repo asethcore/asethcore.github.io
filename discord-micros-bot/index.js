@@ -24,7 +24,6 @@ client.once("clientReady", () => {
 });
 
 client.on("messageCreate", async (message) => {
-	console.log(`message from ${message.author.tag} in channel ${message.channelId} (target ${CHANNEL_ID})`);
 	if (message.author.bot) return;
 	if (message.channelId !== CHANNEL_ID) return;
 
@@ -47,8 +46,40 @@ client.on("messageCreate", async (message) => {
 			console.error("worker error:", res.status, await res.text());
 		}
 	} catch (err) {
-		console.error(err);
+		console.error("submit error:", err);
 	}
 });
 
-client.login(TOKEN);
+client.on("error", (err) => {
+	console.error("discord client error:", err?.message || err);
+});
+
+client.on("shardError", (err) => {
+	console.error("discord shard error:", err?.message || err);
+});
+
+process.on("unhandledRejection", (err) => {
+	console.error("unhandledRejection:", err?.message || err);
+});
+
+process.on("uncaughtException", (err) => {
+	console.error("uncaughtException:", err?.message || err);
+});
+
+async function loginWithRetry(attempts = 5) {
+	for (let i = 1; i <= attempts; i++) {
+		try {
+			await client.login(TOKEN);
+			return;
+		} catch (err) {
+			console.error(`login attempt ${i}/${attempts} failed:`, err?.message || err);
+			if (i === attempts) {
+				console.error("giving up — restarting");
+				process.exit(1);
+			}
+			await new Promise((r) => setTimeout(r, 5000 * i));
+		}
+	}
+}
+
+loginWithRetry();
