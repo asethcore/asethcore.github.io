@@ -433,6 +433,61 @@ body {
   text-decoration: underline;
 }
 
+/* ================= MICROS ================= */
+
+.micros {
+  max-height: 310px;
+  overflow-y: auto;
+  padding: 0;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-color) transparent;
+}
+
+.micros::-webkit-scrollbar {
+  width: 6px;
+}
+
+.micros::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.micros::-webkit-scrollbar-thumb {
+  background: var(--line-color);
+  border-radius: 999px;
+}
+
+.micro {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
+  padding: 7px 0;
+
+  border-bottom: 1px solid var(--line-color);
+}
+
+.micro:last-child {
+  border-bottom: none;
+}
+
+.micro-date {
+  display: block;
+  flex-shrink: 0;
+
+  margin: 0;
+
+  font-size: 10px;
+  color: var(--secondary-color);
+}
+
+.micro p {
+  margin: 0;
+
+  line-height: 1.35;
+  color: var(--text-color);
+}
+
 .shelf-row-line {
   position: absolute;
   left: 0;
