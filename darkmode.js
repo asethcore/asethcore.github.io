@@ -1,39 +1,40 @@
-const THEME_KEY = "vaeseth-theme";
+const html = document.documentElement;
+const STORAGE_KEY = "theme";
 
-function currentDark() {
-  return document.documentElement.classList.contains("dark");
+function applyTheme(theme) {
+    const dark = theme === "dark";
+
+    html.classList.toggle("darkmode", dark);
+
+    // Desktop toggle
+    const desktopToggle = document.getElementById("theme-toggle");
+    if (desktopToggle) {
+        desktopToggle.textContent = dark ? "lights in" : "lights out";
+    }
+
+    // Syntax highlighting
+    const syntaxLink = document.getElementById("syntax-theme");
+    if (syntaxLink) {
+        syntaxLink.href = dark
+            ? "/giallo-dark.css"
+            : "/giallo-light.css";
+    }
 }
 
-function applyTheme(dark) {
-  document.documentElement.classList.toggle("dark", dark);
+function toggleTheme() {
+    const newTheme = html.classList.contains("darkmode")
+        ? "light"
+        : "dark";
 
-  const link = document.getElementById("syntax-theme");
-  if (link) {
-    link.href = dark ? link.dataset.dark : link.dataset.light;
-  }
-
-  try {
-    localStorage.setItem(THEME_KEY, dark ? "dark" : "light");
-  } catch (e) {}
+    localStorage.setItem(STORAGE_KEY, newTheme);
+    applyTheme(newTheme);
 }
 
-function initTheme() {
-  const saved = localStorage.getItem(THEME_KEY);
-  const dark = saved
-    ? saved === "dark"
-    : window.matchMedia("(prefers-color-scheme: dark)").matches;
-  document.documentElement.classList.toggle("dark", dark);
-}
+// Load saved theme
+applyTheme(localStorage.getItem(STORAGE_KEY) || "light");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".site-name");
-  if (!toggle) return;
-
-  toggle.style.cursor = "pointer";
-
-  toggle.addEventListener("click", () => {
-    applyTheme(!currentDark());
-  });
-});
-
-initTheme();
+// Attach to every theme toggle on the page
+document.querySelectorAll("#theme-toggle, #mobile-theme-toggle")
+    .forEach(toggle => {
+        toggle.addEventListener("click", toggleTheme);
+    });
