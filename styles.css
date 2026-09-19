@@ -1308,6 +1308,17 @@ body {
 }
 
 /* reading ledger (books page) */
+.graph-tooltip {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+}
+
+.post-tags {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+}
+
+/* reading ledger (books page) */
 .reading-ledger {
   max-width: 720px;
 }

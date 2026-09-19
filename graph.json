@@ -43,12 +43,6 @@
       "type": "target"
     },
     {
-      "id": "self",
-      "title": "self",
-      "url": "/tags/self/",
-      "type": "source"
-    },
-    {
       "id": "wink",
       "title": "wink",
       "url": "/blog/wink/",
@@ -67,28 +61,10 @@
       "type": "target"
     },
     {
-      "id": "zola",
-      "title": "zola",
-      "url": "/tags/zola/",
-      "type": "source"
-    },
-    {
-      "id": "yap",
-      "title": "yap",
-      "url": "/tags/yap/",
-      "type": "source"
-    },
-    {
       "id": "chaos cascade",
       "title": "chaos cascade",
       "url": "/blog/chaos/",
       "type": "target"
-    },
-    {
-      "id": "brain-notes",
-      "title": "brain-notes",
-      "url": "/tags/brain-notes/",
-      "type": "source"
     },
     {
       "id": "reality shift",
@@ -138,62 +114,38 @@
     },
     {
       "source": "posts",
-      "target": "self"
-    },
-    {
-      "source": "self",
       "target": "samsara"
     },
     {
-      "source": "self",
+      "source": "posts",
       "target": "wink"
     },
     {
-      "source": "self",
+      "source": "posts",
       "target": "bigmouth"
     },
     {
       "source": "posts",
-      "target": "zola"
-    },
-    {
-      "source": "zola",
       "target": "trip and fell not in the wishing well"
     },
     {
       "source": "posts",
-      "target": "yap"
-    },
-    {
-      "source": "yap",
-      "target": "trip and fell not in the wishing well"
-    },
-    {
-      "source": "posts",
-      "target": "brain-notes"
-    },
-    {
-      "source": "brain-notes",
       "target": "chaos cascade"
     },
     {
-      "source": "brain-notes",
+      "source": "posts",
       "target": "reality shift"
     },
     {
-      "source": "self",
+      "source": "posts",
       "target": "red light"
     },
     {
-      "source": "brain-notes",
-      "target": "red light"
-    },
-    {
-      "source": "self",
+      "source": "posts",
       "target": "halo"
     },
     {
-      "source": "self",
+      "source": "posts",
       "target": "heavy metal"
     }
   ]
