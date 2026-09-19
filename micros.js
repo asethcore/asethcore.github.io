@@ -20,7 +20,10 @@ async function loadMicros() {
 		console.error(err);
 	}
 
-	if (!Array.isArray(micros) || micros.length === 0) return;
+	if (!Array.isArray(micros) || micros.length === 0) {
+		list.innerHTML = '<p class="micros-loading">couldnt fetch micros rn, check back later</p>';
+		return;
+	}
 
 	list.innerHTML = "";
 	for (const micro of micros) {
