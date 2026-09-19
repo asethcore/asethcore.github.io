@@ -5,7 +5,7 @@
   <p><strong>last modified on {{ page.date | date(format="%b %d, %Y") | lower }}</strong></p>
   {% if page.taxonomies.tags %}
   {% set blog = get_section(path="blog/_index.md") %}
-  <p>{% for tag in page.taxonomies.tags %}<a href="{{ blog.permalink }}#{{ tag }}-title">#{{ tag }}</a> {% endfor %}</p>
+  <p class="post-tags">{% for tag in page.taxonomies.tags %}<a href="{{ blog.permalink }}#{{ tag }}-title">#{{ tag }}</a> {% endfor %}</p>
   {% endif %}
 
   {{ page.content | safe }}
