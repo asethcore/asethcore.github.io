@@ -12,6 +12,7 @@ feed_filenames = ["rss.xml"]
 
 [[taxonomies]]
 name = "tags"
+render = false
 
 [markdown]
 
