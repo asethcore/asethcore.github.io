@@ -6,12 +6,6 @@ function applyTheme(theme) {
 
     html.classList.toggle("darkmode", dark);
 
-    // Desktop toggle
-    const desktopToggle = document.getElementById("theme-toggle");
-    if (desktopToggle) {
-        desktopToggle.textContent = dark ? "lights in" : "lights out";
-    }
-
     // Syntax highlighting
     const syntaxLink = document.getElementById("syntax-theme");
     if (syntaxLink) {

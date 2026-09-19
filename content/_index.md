@@ -5,7 +5,7 @@ template = "index.html"
 [extra]
 sidebar_heading = "vaeseth"
 sidebar_text = "an object or anything(one) which moves through uncertainty and stands apart by choice"
-image = "blogs/images/l/head.png"
+image = "blogs/images/l/head.jpg"
 
 buttons = [
   { img = "/blogs/images/buttons/mel.png", url = "https://melqtx.com/", alt = "feller" },

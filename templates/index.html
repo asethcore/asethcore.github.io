@@ -1,17 +1,10 @@
 {% extends "base.html" %}
 {% block title %}home{% endblock %}
 {% block content %}
-  <img src="{{ get_url(path=section.extra.image) }}" alt="head" class="post-image" />
   <h1>{{ section.title }}</h1>
   <p><strong>last modified on {{ section.date | default(value=now()) | date(format="%b %d, %Y") }}</strong></p>
 
   {{ section.content | safe }}
-
-  <h3>micros</h3>
-
-  <div class="micros">
-    <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
-  </div>
 
   <h3>recent posts</h3>
   <div class="blog-list">

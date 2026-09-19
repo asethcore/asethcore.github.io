@@ -1,14 +1,44 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
-  <h1>{{ page.title }}</h1>
-  <p><strong>last modified on {{ page.date | date(format="%b %d, %Y") | lower }}</strong></p>
-  {% if page.taxonomies.tags %}
-  {% set blog = get_section(path="blog/_index.md") %}
-  <p class="post-tags">{% for tag in page.taxonomies.tags %}<a href="{{ blog.permalink }}#{{ tag }}-title">#{{ tag }}</a> {% endfor %}</p>
-  {% endif %}
+  <header class="post-head">
+    <h1>{{ page.title }}</h1>
+    <p><strong>last modified on {{ page.date | date(format="%b %d, %Y") | lower }}</strong></p>
+    {% if page.taxonomies.tags %}
+    {% set blog = get_section(path="blog/_index.md") %}
+    <p class="post-tags">{% for tag in page.taxonomies.tags %}<a href="{{ blog.permalink }}#{{ tag }}-title">#{{ tag }}</a> {% endfor %}</p>
+    {% endif %}
+  </header>
 
   {{ page.content | safe }}
+
+  {% set blog = get_section(path="blog/_index.md") %}
+  {% set_global newer = false %}
+  {% set_global older = false %}
+  {% set_global prev_page = false %}
+  {% set_global capture_older = false %}
+  {% for p in blog.pages %}
+    {% if capture_older %}
+      {% set_global older = p %}
+      {% set_global capture_older = false %}
+    {% endif %}
+    {% if p.permalink == page.permalink %}
+      {% set_global newer = prev_page %}
+      {% set_global capture_older = true %}
+    {% endif %}
+    {% set_global prev_page = p %}
+  {% endfor %}
+  {% if newer or older %}
+  <nav class="post-nav" aria-label="more posts">
+    <div class="post-nav-side">
+      {% if older %}<span class="post-nav-label">← previous</span><a class="post-nav-title" href="{{ older.permalink }}" rel="prev">{{ older.title }}</a>{% endif %}
+    </div>
+    <a class="post-nav-all" href="{{ blog.permalink }}">all posts</a>
+    <div class="post-nav-side post-nav-side-next">
+      {% if newer %}<span class="post-nav-label">next →</span><a class="post-nav-title" href="{{ newer.permalink }}" rel="next">{{ newer.title }}</a>{% endif %}
+    </div>
+  </nav>
+  {% endif %}
 
   {% set home = get_section(path="_index.md") %}
   {% if home.extra.buttons %}

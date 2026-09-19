@@ -36,6 +36,15 @@
   --glass-border: rgba(255,255,255,.18);
 }
 
+/* smooth theme switching */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
 /*what the fuck*/
 
 * {
@@ -127,73 +136,13 @@ body {
   width: 220px;
   flex-shrink: 0;
   box-sizing: border-box;
+  font-size: 13px;
+  /* align rail top with the content title / homepage image below the topbar */
+  padding-top: 48px;
+}
+
+#sidebar .music-box {
   font-size: 15px;
-  padding-top: 10px;
-}
-
-#graph-wrapper {
-  position: relative;
-  width: fit-content;
-}
-
-#graph-container {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border: 1px solid var(--line-color);
-  border-radius: 5px;
-  overflow: hidden;
-  margin: 15px 0;
-  background-color: var(--base-color);
-  transition: all 0.3s ease-in-out;
-}
-
-#graph-container.expanded {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw;
-  height: 80vh;
-  z-index: 9999;
-  background-color: var(--base-color);
-  border: 1px solid var(--line-color);
-  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
-  margin: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#graph-expand-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--base-color);
-  border: 1px solid var(--line-color);
-  border-radius: 4px;
-  padding: 4px;
-  cursor: pointer;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  color: var(--text-color);
-  transition: transform 0.2s ease;
-  overflow: hidden;
-}
-
-#graph-container.expanded + #graph-expand-btn {
-  position: fixed;
-  display: none;
-  top: 7%;
-  right: 12%;
-  z-index: 10001;
-  padding: 8px;
-}
-
-#graph-container.expanded + #graph-expand-btn:after {
-  content: "";
 }
 
 #content {
@@ -391,7 +340,7 @@ body {
 }
 
 #sidebar h2 {
-  font-size: 16px;
+  font-size: 14px;
   margin: 0 0 5px 0;
 }
 
@@ -412,6 +361,225 @@ body {
 
 #sidebar a:hover {
   text-decoration: underline;
+}
+
+/* top bar navigation */
+.topbar {
+  margin: 0 0 24px;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  border-bottom: 1px solid var(--line-color);
+}
+
+.topbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+
+  counter-reset: nav;
+}
+
+.topbar-nav a {
+  counter-increment: nav;
+
+  color: var(--secondary-color);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.topbar-nav a::before {
+  content: "0" counter(nav);
+  margin-right: 6px;
+
+  font-size: 10px;
+  color: var(--line-color);
+}
+
+.topbar-nav a:hover {
+  color: var(--accent-color);
+}
+
+.topbar-nav a:hover::before {
+  color: var(--accent-color);
+}
+
+.topbar-nav a.active {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.topbar-nav a.active::before {
+  color: var(--accent-color);
+}
+
+.topbar-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 4px;
+
+  color: var(--secondary-color);
+
+  cursor: pointer;
+}
+
+.topbar-toggle:hover {
+  color: var(--accent-color);
+}
+
+.topbar-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.topbar-toggle .icon-sun {
+  display: none;
+}
+
+html.darkmode .topbar-toggle .icon-moon {
+  display: none;
+}
+
+html.darkmode .topbar-toggle .icon-sun {
+  display: inline;
+}
+
+.post-tags {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+}
+
+#content .post-head {
+  margin-bottom: 18px;
+}
+
+#content .post-head h1 {
+  margin-bottom: 2px;
+}
+
+#content .post-head p {
+  margin: 0 0 2px;
+}
+
+#content .post-head p:last-child {
+  margin-bottom: 0;
+}
+
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+  margin: 32px 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-color);
+  font-size: 14px;
+}
+
+.post-nav-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.post-nav-side-next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.post-nav-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+
+.post-nav-title {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.post-nav-title:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.post-nav-all {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--secondary-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.post-nav-all:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#toc-sidebar {
+  width: 180px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 16px;
+  align-self: flex-start;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+
+  /* align rail top with the content title below the topbar */
+  margin-top: 48px;
+
+  font-size: 13px;
+}
+
+#toc-sidebar h2 {
+  margin: 0 0 8px;
+
+  color: var(--secondary-color);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#toc-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#toc-sidebar li {
+  margin-bottom: 6px;
+}
+
+#toc-sidebar ul ul {
+  margin-top: 6px;
+  padding-left: 12px;
+}
+
+#toc-sidebar a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+#toc-sidebar a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 #content a {
@@ -1099,6 +1267,10 @@ body {
 }
 
 @media (max-width: 700px) {
+  .topbar {
+    display: none;
+  }
+
   #page {
     flex-direction: column;
     display: block;
@@ -1109,6 +1281,10 @@ body {
     display: none;
   }
 
+  #toc-sidebar {
+    display: none;
+  }
+
   #content {
     width: 100%;
     max-width: 100%;
@@ -1116,10 +1292,6 @@ body {
     min-width: 0;
 
     padding-bottom: 50px;
-  }
-
-  #graph {
-    display: none;
   }
 
   .blog-list li {
@@ -1324,18 +1496,7 @@ body {
   }
 }
 
-/* reading ledger (books page) */
-.graph-tooltip {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 12px;
-}
-
-.post-tags {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-}
-
-/* reading ledger (books page) */
+/* reading ledger (posts page) */
 .reading-ledger {
   max-width: 720px;
 }
