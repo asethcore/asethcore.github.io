@@ -7,6 +7,12 @@
 
   {{ section.content | safe }}
 
+  <h3>micros</h3>
+
+  <div class="micros">
+    <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
+  </div>
+
   <h3>recent posts</h3>
   <div class="blog-list">
     <ul>
@@ -46,12 +52,6 @@
     {% endfor %}
   </div>
   {% endif %}
-
-  <h3>micros</h3>
-
-  <div class="micros">
-  <!-- micros.js will put the micros here -->
-  </div>
 
   {% if section.extra.buttons %}
   <h4 class="button-label">fellers & stuff</h4>
