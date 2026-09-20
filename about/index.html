@@ -9,28 +9,20 @@
   <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://micros.vaeseth.workers.dev">
+  <link rel="preconnect" href="https://unpkg.com">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
-  <script src="https://unpkg.com/force-graph"></script>
-  <script type="text/javascript" src="https://asethcore.github.io/graph.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
   <script src="https://asethcore.github.io/micros.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+
 <div id="page">
   <div id="sidebar">
-    <h2>navigation</h2>
-    <ul>
-      <li><a href="https://asethcore.github.io/">home</a></li>
-      <li><a href="https://asethcore.github.io/about/">about</a></li>
-      <li><a href="https://asethcore.github.io/blog/">posts</a></li>
-      <li><a href="https://asethcore.github.io/photo/">photos</a></li>
-      <li><a href="https://asethcore.github.io/books/">books</a></li>
-      <li id="theme-toggle">light</li>
-    </ul>
 
     
       <h2>about(me)</h2>
@@ -40,20 +32,11 @@
     <h2>hosted by</h2>
     <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
 
-    <div id="graph">
-      <h2>graph view</h2>
-      <div id="graph-wrapper">
-        <div id="graph-container"></div>
-        <button id="graph-expand-btn" aria-label="Expand Graph">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <polyline points="9 21 3 21 3 15"></polyline>
-            <line x1="21" y1="3" x2="14" y2="10"></line>
-            <line x1="3" y1="21" x2="10" y2="14"></line>
-          </svg>
-        </button>
-      </div>
+    <h2>micros</h2>
+    <div class="micros">
+      <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
     </div>
+
     <h2>spotify</h2>
     <div class="music-box">
       <div class="music-background"></div>
@@ -87,6 +70,19 @@
   </div>
 
   <div id="content">
+    <header class="topbar">
+      <nav class="topbar-nav" aria-label="primary">
+        <a href="https://asethcore.github.io/">home</a>
+        <a href="https://asethcore.github.io/about/" class="active" aria-current="page">about</a>
+        <a href="https://asethcore.github.io/blog/">posts</a>
+        <a href="https://asethcore.github.io/photo/">photos</a>
+        <a href="https://asethcore.github.io/books/">books</a>
+      </nav>
+      <button id="theme-toggle" class="topbar-toggle" aria-label="toggle theme">
+    <i data-lucide="moon" class="icon-moon"></i>
+    <i data-lucide="sun" class="icon-sun"></i>
+  </button>
+    </header>
     
   <h1>about(me)</h1>
   <p><strong>last modified on Jan 04, 2026</strong></p>
@@ -136,9 +132,9 @@
   </div>
 
   </div>
+
+  
 </div>
-
-
 
 <div class="mobile-navigation">
 
@@ -190,7 +186,7 @@
 </div>
 
 <script>
-  lucide.createIcons();
+  document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
 </script>
 
 </body>

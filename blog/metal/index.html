@@ -9,28 +9,20 @@
   <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://micros.vaeseth.workers.dev">
+  <link rel="preconnect" href="https://unpkg.com">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
-  <script src="https://unpkg.com/force-graph"></script>
-  <script type="text/javascript" src="https://asethcore.github.io/graph.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
   <script src="https://asethcore.github.io/micros.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+
 <div id="page">
   <div id="sidebar">
-    <h2>navigation</h2>
-    <ul>
-      <li><a href="https://asethcore.github.io/">home</a></li>
-      <li><a href="https://asethcore.github.io/about/">about</a></li>
-      <li><a href="https://asethcore.github.io/blog/">posts</a></li>
-      <li><a href="https://asethcore.github.io/photo/">photos</a></li>
-      <li><a href="https://asethcore.github.io/books/">books</a></li>
-      <li id="theme-toggle">light</li>
-    </ul>
 
     
       <h2>metal</h2>
@@ -40,20 +32,11 @@
     <h2>hosted by</h2>
     <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
 
-    <div id="graph">
-      <h2>graph view</h2>
-      <div id="graph-wrapper">
-        <div id="graph-container"></div>
-        <button id="graph-expand-btn" aria-label="Expand Graph">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <polyline points="9 21 3 21 3 15"></polyline>
-            <line x1="21" y1="3" x2="14" y2="10"></line>
-            <line x1="3" y1="21" x2="10" y2="14"></line>
-          </svg>
-        </button>
-      </div>
+    <h2>micros</h2>
+    <div class="micros">
+      <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
     </div>
+
     <h2>spotify</h2>
     <div class="music-box">
       <div class="music-background"></div>
@@ -87,13 +70,28 @@
   </div>
 
   <div id="content">
+    <header class="topbar">
+      <nav class="topbar-nav" aria-label="primary">
+        <a href="https://asethcore.github.io/">home</a>
+        <a href="https://asethcore.github.io/about/">about</a>
+        <a href="https://asethcore.github.io/blog/" class="active" aria-current="page">posts</a>
+        <a href="https://asethcore.github.io/photo/">photos</a>
+        <a href="https://asethcore.github.io/books/">books</a>
+      </nav>
+      <button id="theme-toggle" class="topbar-toggle" aria-label="toggle theme">
+    <i data-lucide="moon" class="icon-moon"></i>
+    <i data-lucide="sun" class="icon-sun"></i>
+  </button>
+    </header>
     
-  <h1>heavy metal</h1>
-  <p><strong>last modified on sep 02, 2026</strong></p>
-  
-  
-  <p class="post-tags"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;#self-title">#self</a> </p>
-  
+  <header class="post-head">
+    <h1>heavy metal</h1>
+    <p><strong>last modified on sep 02, 2026</strong></p>
+    
+    
+    <p class="post-tags"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;#self-title">#self</a> </p>
+    
+  </header>
 
   <p>hello there dear fellers! hope all is good with y’all. this blog is kind of an update blog of what has been going on in my life. i’ll keep it short cause no one asked for this and no one is much interested in others' lives unless they fall in line with the life they are living.</p>
 <p>so i have once again hopped on the nixos train, second try, i’d say. i still don't think i am using it as it is intended to be used; i am using it like i use just any other distro. before this, i was using fedora because, well, because it kinda feels like home. i have tried quite some distros, and fedora has always been the one i come back to. well, there are some things i find troublesome there as well, but troubles are everywhere ig. one of the problems that i had was that some of the stuff i wanted to use isn't available in official repos. i know, i know copr exists, but for the most of it, i am kinda under the impression that it is not as in sync as it is when it's available in the official repo (i have experienced it, that's why i am saying, though i might be wrong). now, i could have installed nix package manager and installed things from there, but well… things didn't go as i wanted, and well, i gave up (i'm not really experienced with all this stuff).</p>
@@ -114,6 +112,66 @@
 <p>“why not try it all if you only remember it once?” — the strokes (i’ll try anything once)</p>
 <img src="/blogs/images/metal/home.jpeg" alt="home" class="post-image"/>
 
+
+  
+  
+  
+  
+  
+  
+    
+    
+      
+      
+    
+    
+  
+    
+      
+      
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+  
+  <nav class="post-nav" aria-label="more posts">
+    <div class="post-nav-side">
+      <span class="post-nav-label">← previous</span><a class="post-nav-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;wink&#x2F;" rel="prev">wink</a>
+    </div>
+    <a class="post-nav-all" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;">all posts</a>
+    <div class="post-nav-side post-nav-side-next">
+      
+    </div>
+  </nav>
+  
 
   
   
@@ -153,9 +211,9 @@
 
 
   </div>
+
+  
 </div>
-
-
 
 <div class="mobile-navigation">
 
@@ -207,7 +265,7 @@
 </div>
 
 <script>
-  lucide.createIcons();
+  document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
 </script>
 
 </body>

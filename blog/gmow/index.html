@@ -9,28 +9,20 @@
   <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://micros.vaeseth.workers.dev">
+  <link rel="preconnect" href="https://unpkg.com">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
-  <script src="https://unpkg.com/force-graph"></script>
-  <script type="text/javascript" src="https://asethcore.github.io/graph.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
   <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
   <script src="https://asethcore.github.io/micros.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+
 <div id="page">
   <div id="sidebar">
-    <h2>navigation</h2>
-    <ul>
-      <li><a href="https://asethcore.github.io/">home</a></li>
-      <li><a href="https://asethcore.github.io/about/">about</a></li>
-      <li><a href="https://asethcore.github.io/blog/">posts</a></li>
-      <li><a href="https://asethcore.github.io/photo/">photos</a></li>
-      <li><a href="https://asethcore.github.io/books/">books</a></li>
-      <li id="theme-toggle">light</li>
-    </ul>
 
     
       <h2>well</h2>
@@ -40,20 +32,11 @@
     <h2>hosted by</h2>
     <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
 
-    <div id="graph">
-      <h2>graph view</h2>
-      <div id="graph-wrapper">
-        <div id="graph-container"></div>
-        <button id="graph-expand-btn" aria-label="Expand Graph">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 3 21 3 21 9"></polyline>
-            <polyline points="9 21 3 21 3 15"></polyline>
-            <line x1="21" y1="3" x2="14" y2="10"></line>
-            <line x1="3" y1="21" x2="10" y2="14"></line>
-          </svg>
-        </button>
-      </div>
+    <h2>micros</h2>
+    <div class="micros">
+      <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
     </div>
+
     <h2>spotify</h2>
     <div class="music-box">
       <div class="music-background"></div>
@@ -87,13 +70,28 @@
   </div>
 
   <div id="content">
+    <header class="topbar">
+      <nav class="topbar-nav" aria-label="primary">
+        <a href="https://asethcore.github.io/">home</a>
+        <a href="https://asethcore.github.io/about/">about</a>
+        <a href="https://asethcore.github.io/blog/" class="active" aria-current="page">posts</a>
+        <a href="https://asethcore.github.io/photo/">photos</a>
+        <a href="https://asethcore.github.io/books/">books</a>
+      </nav>
+      <button id="theme-toggle" class="topbar-toggle" aria-label="toggle theme">
+    <i data-lucide="moon" class="icon-moon"></i>
+    <i data-lucide="sun" class="icon-sun"></i>
+  </button>
+    </header>
     
-  <h1>trip and fell not in the wishing well</h1>
-  <p><strong>last modified on jul 15, 2026</strong></p>
-  
-  
-  <p class="post-tags"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;#zola-title">#zola</a> <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;#yap-title">#yap</a> </p>
-  
+  <header class="post-head">
+    <h1>trip and fell not in the wishing well</h1>
+    <p><strong>last modified on jul 15, 2026</strong></p>
+    
+    
+    <p class="post-tags"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;#zola-title">#zola</a> <a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;#yap-title">#yap</a> </p>
+    
+  </header>
 
   <p>hello pretty peeps! hope everyone is doing good. so, im back like really back not that i figured out something but if this keeps going future me is gonna take some hard hit. but anyways im not here to yap about that(or maybe i am).</p>
 <p>so these past few months more like since last year vacation i fell into this rabbit hole called gaming. i spent quite some unhealthy amount of time gaming away i still am and i will admit it is fun. i am still yet to see the consequences of this addiction but i know what they can be and i am not fool enough to just wait for them. so, yeah i have started a new game red dead redemption 2 after completing the legends of zelda: breath of the wild (amazing game btw)  you can check out the games i have completed <a href="https://bckl.gg/tDaH" target="_blank" rel="noopener">here</a>.</p>
@@ -165,6 +163,66 @@
 
   
   
+  
+  
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+      
+      
+    
+    
+  
+    
+      
+      
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+  
+  <nav class="post-nav" aria-label="more posts">
+    <div class="post-nav-side">
+      <span class="post-nav-label">← previous</span><a class="post-nav-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;smth&#x2F;" rel="prev">red light</a>
+    </div>
+    <a class="post-nav-all" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;">all posts</a>
+    <div class="post-nav-side post-nav-side-next">
+      <span class="post-nav-label">next →</span><a class="post-nav-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;wink&#x2F;" rel="next">wink</a>
+    </div>
+  </nav>
+  
+
+  
+  
   <h4 class="button-label">fellers & stuff</h4>
   <div class="button-row">
     
@@ -201,9 +259,9 @@
 
 
   </div>
+
+  
 </div>
-
-
 
 <div class="mobile-navigation">
 
@@ -255,7 +313,7 @@
 </div>
 
 <script>
-  lucide.createIcons();
+  document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
 </script>
 
 </body>
