@@ -781,14 +781,14 @@ html:not(.darkmode) .music-box.playing .music-overlay {
 }
 
 .music-box:hover .music-cover {
-  width: 72px;
-  height: 72px;
+  width: 88px;
+  height: 88px;
 
   border-radius: 3px;
 
   box-shadow: 6px 10px 24px rgba(0, 0, 0, 0.35);
 
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
 }
 
 .music-vinyl {
@@ -1077,11 +1077,11 @@ html:not(.darkmode) .music-box.playing .music-overlay {
 }
 
 .music-box.is-expanded .music-cover {
-  width: 72px;
-  height: 72px;
+  width: 88px;
+  height: 88px;
   border-radius: 3px;
   box-shadow: 6px 10px 24px rgba(0, 0, 0, 0.35);
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
 }
 
 .music-box.is-expanded .music-vinyl {
@@ -1102,7 +1102,7 @@ html:not(.darkmode) .music-box.playing .music-overlay {
   max-width: none;
 }
 
-.music-box.is-expanded .music-title {
+#content .music-box.is-expanded .music-title {
   font-size: 16px;
   white-space: normal;
   overflow: visible;
@@ -1116,10 +1116,12 @@ html:not(.darkmode) .music-box.playing .music-overlay {
   will-change: auto;
 }
 
-.music-box.is-expanded .music-artist {
+#content .music-box.is-expanded p.music-artist {
   font-size: 12px;
   margin-top: 6px;
   padding-right: 30px;
+  white-space: normal;
+  overflow: visible;
 }
 
 

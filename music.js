@@ -22,13 +22,7 @@ async function updateMusic() {
 
       if (music.title !== currentSong) {
         currentSong = music.title;
-
-        if (title._stopAnimation) {
-          title._stopAnimation();
-        }
-
-        title.innerHTML = `<span>${music.title}</span>`;
-        animateTitle(title);
+        title.textContent = music.title;
       }
 
       artist.textContent = music.artist;
@@ -44,10 +38,6 @@ async function updateMusic() {
       }
     } else {
       currentSong = "";
-
-      if (title._stopAnimation) {
-        title._stopAnimation();
-      }
 
       box.classList.remove("playing");
 
@@ -68,81 +58,6 @@ async function updateMusic() {
     console.error(err);
   }
 }
-
-function animateTitle(el) {
-  const span = el.querySelector("span");
-
-  if (!span) return;
-
-  // span has right padding for the scroll gap: exclude it or fitting
-  // titles measure as overflowing and the marquee starts too early
-  const spanPad = parseFloat(getComputedStyle(span).paddingRight) || 0;
-  const distance = span.scrollWidth - spanPad - el.clientWidth;
-
-  if (distance <= 0) return;
-
-  let running = true;
-
-  el._stopAnimation = () => {
-    running = false;
-  };
-
-  function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  function transition(duration, transform) {
-    return new Promise((resolve) => {
-      span.style.transition = `transform ${duration}s linear`;
-      span.style.transform = transform;
-
-      span.addEventListener("transitionend", resolve, { once: true });
-    });
-  }
-
-  async function loop() {
-    span.style.transition = "none";
-    span.style.transform = "translateX(0)";
-
-    while (running) {
-      await sleep(2000);
-      if (!running) break;
-
-      await transition(distance / 35, `translateX(-${distance}px)`);
-
-      if (!running) break;
-
-      await sleep(2000);
-      if (!running) break;
-
-      await transition(distance / 50, "translateX(0)");
-    }
-  }
-
-  loop();
-}
-
-(function () {
-  const box = document.querySelector(".music-box");
-  const title = document.querySelector(".music-title");
-
-  if (!box || !title) return;
-
-  box.addEventListener("mouseenter", () => {
-    if (title._stopAnimation) {
-      title._stopAnimation();
-    }
-  });
-
-  box.addEventListener("mouseleave", () => {
-    if (title._stopAnimation) {
-      title._stopAnimation();
-    }
-    setTimeout(() => {
-      animateTitle(title);
-    }, 500);
-  });
-})();
 
 updateMusic();
 setInterval(updateMusic, 5000);
