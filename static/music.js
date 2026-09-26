@@ -74,7 +74,10 @@ function animateTitle(el) {
 
   if (!span) return;
 
-  const distance = span.scrollWidth - el.clientWidth;
+  // span has right padding for the scroll gap: exclude it or fitting
+  // titles measure as overflowing and the marquee starts too early
+  const spanPad = parseFloat(getComputedStyle(span).paddingRight) || 0;
+  const distance = span.scrollWidth - spanPad - el.clientWidth;
 
   if (distance <= 0) return;
 
