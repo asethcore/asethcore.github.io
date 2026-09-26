@@ -4,235 +4,108 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bookshelf</title>
-  <link rel="stylesheet" id="syntax-theme" href="https://asethcore.github.io/giallo-dark.css" />
   <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
-  <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://micros.vaeseth.workers.dev">
-  <link rel="preconnect" href="https://unpkg.com">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://asethcore.github.io/styles.css?v=9" />
+  <link rel="preload" href="https://asethcore.github.io/fonts/inter-normal-var.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="https://asethcore.github.io/fonts/newsreader-normal-var.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <script>
+    try {
+      if ((localStorage.getItem("theme") || "dark") === "dark") document.documentElement.classList.add("darkmode");
+    } catch (e) { document.documentElement.classList.add("darkmode"); }
+  </script>
   <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
-  <script src="https://asethcore.github.io/micros.js"></script>
-  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script type="text/javascript" src="https://asethcore.github.io/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://asethcore.github.io/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://asethcore.github.io/search.js" defer></script>
 </head>
+
 <body>
-
-<div id="page">
-  <div id="sidebar">
-
-    
-      <h2>bookshelf</h2>
-      <p>what i&#x27;m reading, what i&#x27;ve read, and what&#x27;s waiting on the pile.</p>
-    
-
-    <h2>hosted by</h2>
-    <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
-
-    <h2>micros</h2>
-    <div class="micros">
-      <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
-    </div>
-
-    <h2>spotify</h2>
-    <div class="music-box">
-      <div class="music-background"></div>
-      <div class="music-overlay"></div>
-
-      <div class="music-content">
-        <div class="record-stage">
-          <img class="music-cover" src="/blogs/images/cover.jpg" alt="Album cover" />
-          <div class="music-vinyl"></div>
-          <div class="tonearm">
-            <span class="tonearm-pivot"></span>
-            <span class="tonearm-arm"></span>
-            <span class="tonearm-head"></span>
-          </div>
-        </div>
-
-        <div class="music-text">
-          <div class="music-title-wrapper">
-            <a
-              class="music-title-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p class="music-title">Listening to</p>
-            </a>
-          </div>
-          <p class="music-artist">the world around him.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="content">
-    <header class="topbar">
-      <nav class="topbar-nav" aria-label="primary">
-        <a href="https://asethcore.github.io/">home</a>
-        <a href="https://asethcore.github.io/about/">about</a>
-        <a href="https://asethcore.github.io/blog/">posts</a>
-        <a href="https://asethcore.github.io/photo/">photos</a>
-        <a href="https://asethcore.github.io/books/" class="active" aria-current="page">books</a>
-      </nav>
-      <button id="theme-toggle" class="topbar-toggle" aria-label="toggle theme">
-    <i data-lucide="moon" class="icon-moon"></i>
-    <i data-lucide="sun" class="icon-sun"></i>
-  </button>
-    </header>
-    
-  <h1>bookshelf</h1>
-  <p>pull a book off the shelf to see it better.</p>
-
-
+<main id="content">
   
-  
-  <div class="bookshelf">
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#the-odyssey" class="book-spine" style="background-color: var(--book-0);">
-      <span class="book-title">The Odyssey</span>
-      
-      <span class="book-author">HOMER</span>
-      
-    </a>
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#vagabond" class="book-spine" style="background-color: var(--book-1);">
-      <span class="book-title">Vagabond</span>
-      
-      <span class="book-author">TAKEHIKO INOUE</span>
-      
-    </a>
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#running" class="book-spine" style="background-color: var(--book-2);">
-      <span class="book-title">What I Talk About When I Talk About Running</span>
-      
-      <span class="book-author">HARUKI MURAKAMI</span>
-      
-    </a>
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#kafka-on-the-shore" class="book-spine" style="background-color: var(--book-3);">
-      <span class="book-title">Kafka on the Shore</span>
-      
-      <span class="book-author">HARUKI MURAKAMI</span>
-      
-    </a>
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#the-girl-on-the-landing" class="book-spine" style="background-color: var(--book-4);">
-      <span class="book-title">The Girl on the Landing</span>
-      
-      <span class="book-author">PAUL TORDAY</span>
-      
-    </a>
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#desire" class="book-spine" style="background-color: var(--book-5);">
-      <span class="book-title">Desire</span>
-      
-      <span class="book-author">HARUKI MURAKAMI</span>
-      
-    </a>
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#metamorphosis" class="book-spine" style="background-color: var(--book-6);">
-      <span class="book-title">Metamorphosis</span>
-      
-      <span class="book-author">FRANZ KAFKA</span>
-      
-    </a>
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#homo-deus" class="book-spine" style="background-color: var(--book-0);">
-      <span class="book-title">Homo Deus</span>
-      
-      <span class="book-author">YUVAL NOAH HARARI</span>
-      
-    </a>
-    
-    
-    
-    <a href="https://asethcore.github.io/library/#norwegian-wood" class="book-spine" style="background-color: var(--book-1);">
-      <span class="book-title">Norwegian Wood</span>
-      
-      <span class="book-author">HARUKI MURAKAMI</span>
-      
-    </a>
-    
-  </div>
-  
-
-  </div>
-
-  
-</div>
-
-<div class="mobile-navigation">
-
-  <a
-    class="mobile-nav-home "
-    href="https://asethcore.github.io/"
-  >
-    <i data-lucide="house"></i>
-  </a>
-
-  <nav class="mobile-nav">
-
-    <a
-      href="https://asethcore.github.io/about/"
-      
-    >
-      <i data-lucide="user-round"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/blog/"
-      
-    >
-      <i data-lucide="file-text"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/photo/"
-      
-    >
-      <i data-lucide="camera"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/books/"
-      class="active"
-    >
-      <i data-lucide="book-open"></i>
-    </a>
-
+  <nav class="back">
+    <a href="https://asethcore.github.io/">← <em>home</em></a>
   </nav>
+  <h1>bookshelf</h1>
+  <div class="page-desc"><p>every book i've picked up, with when i finished it and how i rated it. click a title for the full review.</p>
+</div>
 
-  <button
-    class="mobile-theme-button"
-    id="mobile-theme-toggle"
-  >
-    <i data-lucide="sun-moon"></i>
+  
+  <div class="book-grid">
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#the-odyssey">The Odyssey</a></div>
+    <div>Homer</div>
+    <div><time>reading</time></div>
+    <div class="book-stars" aria-label="5 out of 5 stars">★★★★★</div>
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#vagabond">Vagabond</a></div>
+    <div>Takehiko Inoue</div>
+    <div><time>2025</time></div>
+    <div class="book-stars" aria-label="5 out of 5 stars">★★★★★</div>
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#running">What I Talk About When I Talk About Running</a></div>
+    <div>Haruki Murakami</div>
+    <div><time>2025</time></div>
+    <div class="book-stars" aria-label="5 out of 5 stars">★★★★★</div>
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#kafka-on-the-shore">Kafka on the Shore</a></div>
+    <div>Haruki Murakami</div>
+    <div><time>2025</time></div>
+    <div class="book-stars" aria-label="5 out of 5 stars">★★★★★</div>
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#the-girl-on-the-landing">The Girl on the Landing</a></div>
+    <div>Paul Torday</div>
+    <div><time>2025</time></div>
+    <div class="book-stars" aria-label="3 out of 5 stars">★★★</div>
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#desire">Desire</a></div>
+    <div>Haruki Murakami</div>
+    <div><time>2024</time></div>
+    <div class="book-stars" aria-label="2 out of 5 stars">★★</div>
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#metamorphosis">Metamorphosis</a></div>
+    <div>Franz Kafka</div>
+    <div><time>2024</time></div>
+    <div class="book-stars" aria-label="4 out of 5 stars">★★★★</div>
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#homo-deus">Homo Deus</a></div>
+    <div>Yuval Noah Harari</div>
+    <div><time>2024</time></div>
+    <div class="book-stars" aria-label="2 out of 5 stars">★★</div>
+    
+    <div class="book-grid-title"><a href="https://asethcore.github.io/library/#norwegian-wood">Norwegian Wood</a></div>
+    <div>Haruki Murakami</div>
+    <div><time>2024</time></div>
+    <div class="book-stars" aria-label="4 out of 5 stars">★★★★</div>
+    
+  </div>
+  
+
+</main>
+
+<footer class="site-footer">
+  <span>© vaeseth</span>
+  <span class="footer-links">
+    <a href="https://github.com/asethcore" target="_blank" rel="noopener">github</a>
+    <span>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a></span>
+    <a href="mailto:asethcore@gmail.com">mail</a>
+    <a href="https://asethcore.github.io/rss.xml">rss</a>
+  </span>
+</footer>
+
+<div class="float-actions">
+  <button id="search-toggle" aria-label="search" aria-expanded="false" aria-controls="search-panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+  </button>
+  <button id="theme-toggle" aria-label="toggle theme">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
   </button>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
-</script>
+<div class="search-panel" id="search-panel" hidden>
+  <input id="search-input" type="search" placeholder="search posts, books, notes…  ( / )" autocomplete="off" aria-label="search site" />
+  <ul id="search-results"></ul>
+</div>
 
 </body>
 </html>

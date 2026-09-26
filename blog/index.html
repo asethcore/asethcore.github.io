@@ -4,401 +4,109 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>posts</title>
-  <link rel="stylesheet" id="syntax-theme" href="https://asethcore.github.io/giallo-dark.css" />
   <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
-  <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://micros.vaeseth.workers.dev">
-  <link rel="preconnect" href="https://unpkg.com">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://asethcore.github.io/styles.css?v=9" />
+  <link rel="preload" href="https://asethcore.github.io/fonts/inter-normal-var.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="https://asethcore.github.io/fonts/newsreader-normal-var.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <script>
+    try {
+      if ((localStorage.getItem("theme") || "dark") === "dark") document.documentElement.classList.add("darkmode");
+    } catch (e) { document.documentElement.classList.add("darkmode"); }
+  </script>
   <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
-  <script src="https://asethcore.github.io/micros.js"></script>
-  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script type="text/javascript" src="https://asethcore.github.io/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://asethcore.github.io/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://asethcore.github.io/search.js" defer></script>
 </head>
+
 <body>
-
-<div id="page">
-  <div id="sidebar">
-
-    
-      <h2>posts</h2>
-      <p>this is where i post all my thoughts that i feel like sharing, my notes stay here aswell.</p>
-    
-
-    <h2>hosted by</h2>
-    <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
-
-    <h2>micros</h2>
-    <div class="micros">
-      <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
-    </div>
-
-    <h2>spotify</h2>
-    <div class="music-box">
-      <div class="music-background"></div>
-      <div class="music-overlay"></div>
-
-      <div class="music-content">
-        <div class="record-stage">
-          <img class="music-cover" src="/blogs/images/cover.jpg" alt="Album cover" />
-          <div class="music-vinyl"></div>
-          <div class="tonearm">
-            <span class="tonearm-pivot"></span>
-            <span class="tonearm-arm"></span>
-            <span class="tonearm-head"></span>
-          </div>
-        </div>
-
-        <div class="music-text">
-          <div class="music-title-wrapper">
-            <a
-              class="music-title-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p class="music-title">Listening to</p>
-            </a>
-          </div>
-          <p class="music-artist">the world around him.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="content">
-    <header class="topbar">
-      <nav class="topbar-nav" aria-label="primary">
-        <a href="https://asethcore.github.io/">home</a>
-        <a href="https://asethcore.github.io/about/">about</a>
-        <a href="https://asethcore.github.io/blog/" class="active" aria-current="page">posts</a>
-        <a href="https://asethcore.github.io/photo/">photos</a>
-        <a href="https://asethcore.github.io/books/">books</a>
-      </nav>
-      <button id="theme-toggle" class="topbar-toggle" aria-label="toggle theme">
-    <i data-lucide="moon" class="icon-moon"></i>
-    <i data-lucide="sun" class="icon-sun"></i>
-  </button>
-    </header>
-    
-<section class="reading-ledger" aria-labelledby="posts-title">
-  <header class="reading-ledger-header">
-    <h1 id="posts-title">posts</h1>
-    <p><strong>9 notes, thoughts, letters, essays that would otherwise disappear into the void</strong></p>
-  </header>
-
-  <div class="book-groups">
-    
-    <section class="book-group book-group-recent" aria-labelledby="recent-title">
-      <div class="book-group-heading">
-        <h2 id="recent-title">recent</h2>
-        <span aria-label="3 posts">03</span>
-      </div>
-      <ul class="reading-list">
-        
-        <li>
-          <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;metal&#x2F;">heavy metal</a>
-          <span class="reading-date">Sep 02, 2026</span>
-        </li>
-        
-        <li>
-          <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;wink&#x2F;">wink</a>
-          <span class="reading-date">Aug 07, 2026</span>
-        </li>
-        
-        <li>
-          <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;gmow&#x2F;">trip and fell not in the wishing well</a>
-          <span class="reading-date">Jul 15, 2026</span>
-        </li>
-        
-      </ul>
-    </section>
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-      
-      <section class="book-group book-group-yap" aria-labelledby="yap-title">
-        <div class="book-group-heading">
-          <h2 id="yap-title">yap</h2>
-          <span aria-label="1 post">01</span>
-        </div>
-        <ul class="reading-list">
-          
-            
-          
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;gmow&#x2F;">trip and fell not in the wishing well</a>
-              <span class="reading-date">Jul 15, 2026</span>
-            </li>
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-        </ul>
-      </section>
-      
-    
-      
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-      
-      <section class="book-group book-group-self" aria-labelledby="self-title">
-        <div class="book-group-heading">
-          <h2 id="self-title">self</h2>
-          <span aria-label="6 posts">06</span>
-        </div>
-        <ul class="reading-list">
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;metal&#x2F;">heavy metal</a>
-              <span class="reading-date">Sep 02, 2026</span>
-            </li>
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;wink&#x2F;">wink</a>
-              <span class="reading-date">Aug 07, 2026</span>
-            </li>
-            
-          
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;smth&#x2F;">red light</a>
-              <span class="reading-date">Jan 14, 2026</span>
-            </li>
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;bigmouth&#x2F;">bigmouth</a>
-              <span class="reading-date">Oct 18, 2025</span>
-            </li>
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;samsara&#x2F;">samsara</a>
-              <span class="reading-date">Mar 27, 2025</span>
-            </li>
-            
-          
-            
-          
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;halo&#x2F;">halo</a>
-              <span class="reading-date">Jan 03, 2025</span>
-            </li>
-            
-          
-        </ul>
-      </section>
-      
-    
-      
-      
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-      
-      <section class="book-group book-group-brain-notes" aria-labelledby="brain-notes-title">
-        <div class="book-group-heading">
-          <h2 id="brain-notes-title">brain-notes</h2>
-          <span aria-label="3 posts">03</span>
-        </div>
-        <ul class="reading-list">
-          
-            
-          
-            
-          
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;smth&#x2F;">red light</a>
-              <span class="reading-date">Jan 14, 2026</span>
-            </li>
-            
-          
-            
-          
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;reality&#x2F;">reality shift</a>
-              <span class="reading-date">Feb 26, 2025</span>
-            </li>
-            
-          
-            
-            <li>
-              <a class="reading-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;chaos&#x2F;">chaos cascade</a>
-              <span class="reading-date">Jan 29, 2025</span>
-            </li>
-            
-          
-            
-          
-        </ul>
-      </section>
-      
-    
-  </div>
-</section>
-
-  </div>
-
+<main id="content">
   
+<nav class="back" data-animate style="--stagger:0">
+  <a href="https://asethcore.github.io/">← <em>home</em></a>
+</nav>
+<h1 data-animate style="--stagger:1">posts</h1>
+<p class="page-desc" data-animate style="--stagger:2">9 notes, thoughts, letters, essays that would otherwise disappear into the void.</p>
+
+<div class="index-tables" data-animate style="--stagger:3">
+  <div class="index-table">
+    <div>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;metal&#x2F;">
+        <p>heavy metal</p>
+        <span class="index-date">Sep 02, 2026 · 7 min</span>
+      </a>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;wink&#x2F;">
+        <p>wink</p>
+        <span class="index-date">Aug 07, 2026 · 4 min</span>
+      </a>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;gmow&#x2F;">
+        <p>trip and fell not in the wishing well</p>
+        <span class="index-date">Jul 15, 2026 · 3 min</span>
+      </a>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;smth&#x2F;">
+        <p>red light</p>
+        <span class="index-date">Jan 14, 2026 · 4 min</span>
+      </a>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;bigmouth&#x2F;">
+        <p>bigmouth</p>
+        <span class="index-date">Oct 18, 2025 · 3 min</span>
+      </a>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;samsara&#x2F;">
+        <p>samsara</p>
+        <span class="index-date">Mar 27, 2025 · 4 min</span>
+      </a>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;reality&#x2F;">
+        <p>reality shift</p>
+        <span class="index-date">Feb 26, 2025 · 3 min</span>
+      </a>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;chaos&#x2F;">
+        <p>chaos cascade</p>
+        <span class="index-date">Jan 29, 2025 · 4 min</span>
+      </a>
+      
+      <a class="index-row" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;halo&#x2F;">
+        <p>halo</p>
+        <span class="index-date">Jan 03, 2025 · 3 min</span>
+      </a>
+      
+    </div>
+  </div>
 </div>
 
-<div class="mobile-navigation">
+</main>
 
-  <a
-    class="mobile-nav-home "
-    href="https://asethcore.github.io/"
-  >
-    <i data-lucide="house"></i>
-  </a>
+<footer class="site-footer">
+  <span>© vaeseth</span>
+  <span class="footer-links">
+    <a href="https://github.com/asethcore" target="_blank" rel="noopener">github</a>
+    <span>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a></span>
+    <a href="mailto:asethcore@gmail.com">mail</a>
+    <a href="https://asethcore.github.io/rss.xml">rss</a>
+  </span>
+</footer>
 
-  <nav class="mobile-nav">
-
-    <a
-      href="https://asethcore.github.io/about/"
-      
-    >
-      <i data-lucide="user-round"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/blog/"
-      class="active"
-    >
-      <i data-lucide="file-text"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/photo/"
-      
-    >
-      <i data-lucide="camera"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/books/"
-      
-    >
-      <i data-lucide="book-open"></i>
-    </a>
-
-  </nav>
-
-  <button
-    class="mobile-theme-button"
-    id="mobile-theme-toggle"
-  >
-    <i data-lucide="sun-moon"></i>
+<div class="float-actions">
+  <button id="search-toggle" aria-label="search" aria-expanded="false" aria-controls="search-panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+  </button>
+  <button id="theme-toggle" aria-label="toggle theme">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
   </button>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
-</script>
+<div class="search-panel" id="search-panel" hidden>
+  <input id="search-input" type="search" placeholder="search posts, books, notes…  ( / )" autocomplete="off" aria-label="search site" />
+  <ul id="search-results"></ul>
+</div>
 
 </body>
 </html>

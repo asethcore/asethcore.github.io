@@ -4,94 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>heavy metal</title>
-  <link rel="stylesheet" id="syntax-theme" href="https://asethcore.github.io/giallo-dark.css" />
   <link rel="icon" type="image/x-icon" href="https://asethcore.github.io/favicon.ico" />
-  <link rel="stylesheet" href="https://asethcore.github.io/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://micros.vaeseth.workers.dev">
-  <link rel="preconnect" href="https://unpkg.com">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://asethcore.github.io/styles.css?v=9" />
+  <link rel="preload" href="https://asethcore.github.io/fonts/inter-normal-var.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="https://asethcore.github.io/fonts/newsreader-normal-var.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <script>
+    try {
+      if ((localStorage.getItem("theme") || "dark") === "dark") document.documentElement.classList.add("darkmode");
+    } catch (e) { document.documentElement.classList.add("darkmode"); }
+  </script>
   <script type="text/javascript" src="https://asethcore.github.io/darkmode.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/shelf.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/code-blocks.js" defer></script>
-  <script type="text/javascript" src="https://asethcore.github.io/music.js" defer></script>
-  <script src="https://asethcore.github.io/micros.js"></script>
-  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script type="text/javascript" src="https://asethcore.github.io/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://asethcore.github.io/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://asethcore.github.io/search.js" defer></script>
 </head>
+
 <body>
-
-<div id="page">
-  <div id="sidebar">
-
-    
-      <h2>metal</h2>
-      <p>im full of heavy metals.</p>
-    
-
-    <h2>hosted by</h2>
-    <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
-
-    <h2>micros</h2>
-    <div class="micros">
-      <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
-    </div>
-
-    <h2>spotify</h2>
-    <div class="music-box">
-      <div class="music-background"></div>
-      <div class="music-overlay"></div>
-
-      <div class="music-content">
-        <div class="record-stage">
-          <img class="music-cover" src="/blogs/images/cover.jpg" alt="Album cover" />
-          <div class="music-vinyl"></div>
-          <div class="tonearm">
-            <span class="tonearm-pivot"></span>
-            <span class="tonearm-arm"></span>
-            <span class="tonearm-head"></span>
-          </div>
-        </div>
-
-        <div class="music-text">
-          <div class="music-title-wrapper">
-            <a
-              class="music-title-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p class="music-title">Listening to</p>
-            </a>
-          </div>
-          <p class="music-artist">the world around him.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="content">
-    <header class="topbar">
-      <nav class="topbar-nav" aria-label="primary">
-        <a href="https://asethcore.github.io/">home</a>
-        <a href="https://asethcore.github.io/about/">about</a>
-        <a href="https://asethcore.github.io/blog/" class="active" aria-current="page">posts</a>
-        <a href="https://asethcore.github.io/photo/">photos</a>
-        <a href="https://asethcore.github.io/books/">books</a>
-      </nav>
-      <button id="theme-toggle" class="topbar-toggle" aria-label="toggle theme">
-    <i data-lucide="moon" class="icon-moon"></i>
-    <i data-lucide="sun" class="icon-sun"></i>
-  </button>
-    </header>
-    
+<main id="content">
+  
+  <nav class="back">
+    <a href="https://asethcore.github.io/">← <em>home</em></a>
+  </nav>
   <header class="post-head">
     <h1>heavy metal</h1>
-    <p><strong>last modified on sep 02, 2026</strong></p>
-    
-    
-    <p class="post-tags"><a href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;#self-title">#self</a> </p>
-    
+    <p><strong>last modified on sep 02, 2026 · 7 min read</strong></p>
   </header>
+  <nav class="crumbs" aria-label="breadcrumb">
+    <a href="https://asethcore.github.io/"><span class="dot" aria-hidden="true"></span><span class="lbl">home</span></a><span class="conn" aria-hidden="true"></span><a href="https://asethcore.github.io/blog/"><span class="dot" aria-hidden="true"></span><span class="lbl">posts</span></a><span class="conn" aria-hidden="true"></span><span aria-current="page"><span class="dot" aria-hidden="true"></span><span class="lbl">heavy metal</span></span>
+  </nav>
 
   <p>hello there dear fellers! hope all is good with y’all. this blog is kind of an update blog of what has been going on in my life. i’ll keep it short cause no one asked for this and no one is much interested in others' lives unless they fall in line with the life they are living.</p>
 <p>so i have once again hopped on the nixos train, second try, i’d say. i still don't think i am using it as it is intended to be used; i am using it like i use just any other distro. before this, i was using fedora because, well, because it kinda feels like home. i have tried quite some distros, and fedora has always been the one i come back to. well, there are some things i find troublesome there as well, but troubles are everywhere ig. one of the problems that i had was that some of the stuff i wanted to use isn't available in official repos. i know, i know copr exists, but for the most of it, i am kinda under the impression that it is not as in sync as it is when it's available in the official repo (i have experienced it, that's why i am saying, though i might be wrong). now, i could have installed nix package manager and installed things from there, but well… things didn't go as i wanted, and well, i gave up (i'm not really experienced with all this stuff).</p>
@@ -113,160 +53,33 @@
 <img src="/blogs/images/metal/home.jpeg" alt="home" class="post-image"/>
 
 
-  
-  
-  
-  
-  
-  
-    
-    
-      
-      
-    
-    
-  
-    
-      
-      
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-  
-  <nav class="post-nav" aria-label="more posts">
-    <div class="post-nav-side">
-      <span class="post-nav-label">← previous</span><a class="post-nav-title" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;wink&#x2F;" rel="prev">wink</a>
-    </div>
-    <a class="post-nav-all" href="https:&#x2F;&#x2F;asethcore.github.io&#x2F;blog&#x2F;">all posts</a>
-    <div class="post-nav-side post-nav-side-next">
-      
-    </div>
-  </nav>
-  
 
-  
-  
-  <h4 class="button-label">fellers & stuff</h4>
-  <div class="button-row">
-    
-    <a href="https:&#x2F;&#x2F;melqtx.com&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;mel.png" alt="feller" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;www.kernel.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;linux.gif" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;neovim.io&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;nvim.png" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;zola.png" alt="stuff" class="webring-button" />
-    </a>
-    
-    <a href="https:&#x2F;&#x2F;ghostty.org&#x2F;" target="_blank" rel="noopener">
-      <img src="&#x2F;blogs&#x2F;images&#x2F;buttons&#x2F;ghostty.png" alt="stuff" class="webring-button" />
-    </a>
-    
-  </div>
-  
+</main>
 
-  <div class="footer">
-    <div class="footer-text">
-    <p>© vaeseth | <a href="https://asethcore.github.io/rss.xml">rss</a></p>
-    <p>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a> and llms</p>
-  </div>
-  <img src="https://asethcore.github.io/footer-cat.gif" alt="cat" class="footer-gif" />
-  </div>
+<footer class="site-footer">
+  <span>© vaeseth</span>
+  <span class="footer-links">
+    <a href="https://github.com/asethcore" target="_blank" rel="noopener">github</a>
+    <span>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a></span>
+    <a href="mailto:asethcore@gmail.com">mail</a>
+    <a href="https://asethcore.github.io/rss.xml">rss</a>
+  </span>
+</footer>
 
-
-  </div>
-
-  
-</div>
-
-<div class="mobile-navigation">
-
-  <a
-    class="mobile-nav-home "
-    href="https://asethcore.github.io/"
-  >
-    <i data-lucide="house"></i>
-  </a>
-
-  <nav class="mobile-nav">
-
-    <a
-      href="https://asethcore.github.io/about/"
-      
-    >
-      <i data-lucide="user-round"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/blog/"
-      class="active"
-    >
-      <i data-lucide="file-text"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/photo/"
-      
-    >
-      <i data-lucide="camera"></i>
-    </a>
-
-    <a
-      href="https://asethcore.github.io/books/"
-      
-    >
-      <i data-lucide="book-open"></i>
-    </a>
-
-  </nav>
-
-  <button
-    class="mobile-theme-button"
-    id="mobile-theme-toggle"
-  >
-    <i data-lucide="sun-moon"></i>
+<div class="float-actions">
+  <button id="search-toggle" aria-label="search" aria-expanded="false" aria-controls="search-panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+  </button>
+  <button id="theme-toggle" aria-label="toggle theme">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
   </button>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
-</script>
+<div class="search-panel" id="search-panel" hidden>
+  <input id="search-input" type="search" placeholder="search posts, books, notes…  ( / )" autocomplete="off" aria-label="search site" />
+  <ul id="search-results"></ul>
+</div>
 
 </body>
 </html>
