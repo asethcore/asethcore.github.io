@@ -1,60 +1,100 @@
 {% extends "base.html" %}
 {% block title %}home{% endblock %}
 {% block content %}
-  <h1>{{ section.title }}</h1>
-  <p><strong>last modified on {{ section.date | default(value=now()) | date(format="%b %d, %Y") }}</strong></p>
-
-  {{ section.content | safe }}
-
-  <h3>recent posts</h3>
-  <div class="blog-list">
-    <ul>
-      {% set blog = get_section(path="blog/_index.md") %}
-      {% for post in blog.pages | slice(end=5) %}
-      <li>
-        <span class="blog-title"><a href="{{ post.permalink }}">{{ post.title }}</a></span>
-        <span class="blog-date">{{ post.date | date(format="%b %d, %Y") }}</span>
-      </li>
-      {% endfor %}
-    </ul>
+<article>
+  <h1 class="site-name" data-animate style="--stagger:0">vaeseth</h1>
+  <div class="intro" data-animate style="--stagger:1">
+    {{ section.content | safe }}
   </div>
 
-  {% set photo_page = get_page(path="photo.md") %}
-  {% if photo_page.extra.images %}
-  <h3><a href="{{ get_url(path="@/photo.md") }}">photos</a></h3>
-  <div class="photo-scroll">
-    {% for img in photo_page.extra.images | slice(end=8) %}
-    <img src="{{ img }}" alt="photo" />
-    {% endfor %}
-  </div>
-  {% endif %}
+  <div class="stack">
+    <div class="column" data-animate style="--stagger:2">
+      <h2>Explore</h2>
+      <div class="rows">
+        <div class="row">
+          <a href="{{ get_url(path="@/blog/_index.md") }}">Posts</a>
+          <p>notes, thoughts, letters, essays that would otherwise disappear into the void.</p>
+        </div>
+        <div class="row">
+          <a href="{{ get_url(path="@/books.md") }}">Books</a>
+          <p>what i'm reading, what i've read, and what's waiting on the pile.</p>
+        </div>
+        <div class="row">
+          <a href="{{ get_url(path="@/about.md") }}">About</a>
+          <p>a little about me, if ye want to know that is.</p>
+        </div>
+      </div>
+    </div>
 
-  {% set library_page = get_page(path="library.md") %}
-  {% if library_page.toc %}
-  <h3><a href="{{ get_url(path="@/books.md") }}">bookshelf</a></h3>
-  <div class="bookshelf bookshelf-preview">
-    {% for h in library_page.toc %}
-    {% set color_index = loop.index0 % 7 %}
-    {% set parts = h.title | split(pat="|") %}
-<a href="{{ get_url(path="@/library.md") }}#{{ h.id }}" class="book-spine" style="background-color: var(--book-{{ color_index }});">
-      <span class="book-title">{{ parts.0 | trim }}</span>
-      {% if parts | length > 1 %}
-      <span class="book-author">{{ parts.1 | trim }}</span>
-      {% endif %}
-    </a>
-    {% endfor %}
-  </div>
-  {% endif %}
+    <div class="column" data-animate style="--stagger:3">
+      <h2>Writing</h2>
+      <div class="rows">
+        {% set blog = get_section(path="blog/_index.md") %}
+        {% for post in blog.pages | slice(end=5) %}
+        <div class="row">
+          <a href="{{ post.permalink }}">{{ post.title }}</a>
+          <p>{{ post.date | date(format="%b %d, %Y") }} · {{ post.reading_time }} min read</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
 
-  {% if section.extra.buttons %}
-  <h4 class="button-label">fellers & stuff</h4>
-  <div class="button-row">
-    {% for btn in section.extra.buttons %}
-    <a href="{{ btn.url }}" target="_blank" rel="noopener">
-      <img src="{{ btn.img }}" alt="{{ btn.alt }}" class="webring-button" />
-    </a>
-    {% endfor %}
+    <div class="column" data-animate style="--stagger:4">
+      <h2>Reading</h2>
+      <div class="rows">
+        {% set library_page = get_page(path="library.md") %}
+        {% for h in library_page.toc | slice(end=5) %}
+        {% set parts = h.title | split(pat="|") %}
+        <div class="row">
+          <a href="{{ get_url(path="@/library.md") }}#{{ h.id }}">{{ parts.0 | trim }}</a>
+          <p>{% if parts | length > 1 %}{{ parts.1 | trim }}{% else %}from the shelf{% endif %}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
-  {% endif %}
 
+  <div class="now-grid" data-animate style="--stagger:5">
+    <div class="column">
+      <h2>Micros</h2>
+      <div class="micros">
+        <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
+      </div>
+    </div>
+    <div class="column">
+      <h2>Listening</h2>
+      <div class="music-box">
+        <div class="music-background"></div>
+        <div class="music-overlay"></div>
+
+        <div class="music-content">
+          <div class="record-stage">
+            <img class="music-cover" src="/blogs/images/cover-idle.jpg" alt="Album cover" />
+            <div class="music-vinyl"></div>
+            <div class="tonearm">
+              <span class="tonearm-pivot"></span>
+              <span class="tonearm-arm"></span>
+              <span class="tonearm-head"></span>
+            </div>
+          </div>
+
+          <div class="music-text">
+            <div class="music-title-wrapper">
+              <a
+                class="music-title-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p class="music-title">Listening to</p>
+              </a>
+            </div>
+            <p class="music-artist">the world around him.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="{{ get_url(path="micros.js") }}"></script>
+  <script type="text/javascript" src="{{ get_url(path="music.js") }}"></script>
+</article>
 {% endblock %}

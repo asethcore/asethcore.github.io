@@ -57,7 +57,7 @@ async function updateMusic() {
       bg.style.backgroundImage = "";
 
       if (cover) {
-        cover.src = "/blogs/images/cover.jpg";
+        cover.src = "/blogs/images/cover-idle.jpg";
       }
 
       if (titleLink) {

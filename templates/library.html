@@ -1,28 +1,15 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
+  <nav class="back">
+    <a href="{{ get_url(path="@/_index.md") }}">← <em>home</em></a>
+  </nav>
   <h1>{{ page.title }}</h1>
+  <p class="page-desc">what i have read so far and what i can think of it</p>
+  <nav class="crumbs" aria-label="breadcrumb">
+    <a href="{{ get_url(path="@/_index.md") }}"><span class="dot" aria-hidden="true"></span><span class="lbl">home</span></a><span class="conn" aria-hidden="true"></span><a href="{{ get_url(path="@/books.md") }}"><span class="dot" aria-hidden="true"></span><span class="lbl">books</span></a><span class="conn" aria-hidden="true"></span><span aria-current="page"><span class="dot" aria-hidden="true"></span><span class="lbl">library</span></span>
+  </nav>
   <div class="library-content">
     {{ page.content | safe }}
-  </div>
-
-  {% set home = get_section(path="_index.md") %}
-  {% if home.extra.buttons %}
-  <h4 class="button-label">fellers & stuff</h4>
-  <div class="button-row">
-    {% for btn in home.extra.buttons %}
-    <a href="{{ btn.url }}" target="_blank" rel="noopener">
-      <img src="{{ btn.img }}" alt="{{ btn.alt }}" class="webring-button" />
-    </a>
-    {% endfor %}
-  </div>
-  {% endif %}
-
-  <div class="footer">
-    <div class="footer-text">
-      <p>© vaeseth | <a href="{{ get_url(path="rss.xml") }}">rss</a></p>
-      <p>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a> and llms</p>
-    </div>
-    <img src="{{ get_url(path="footer-cat.gif") }}" alt="cat" class="footer-gif" />
   </div>
 {% endblock %}

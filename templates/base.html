@@ -4,167 +4,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}asethcore{% endblock %}</title>
-  <link rel="stylesheet" id="syntax-theme" href="{{ get_url(path="giallo-dark.css") }}" />
   <link rel="icon" type="image/x-icon" href="{{ get_url(path="favicon.ico") }}" />
-  <link rel="stylesheet" href="{{ get_url(path="styles.css") }}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://micros.vaeseth.workers.dev">
-  <link rel="preconnect" href="https://unpkg.com">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ get_url(path="styles.css") }}?v=9" />
+  <link rel="preload" href="{{ get_url(path="fonts/inter-normal-var.woff2") }}" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="{{ get_url(path="fonts/newsreader-normal-var.woff2") }}" as="font" type="font/woff2" crossorigin="anonymous" />
+  <script>
+    try {
+      if ((localStorage.getItem("theme") || "dark") === "dark") document.documentElement.classList.add("darkmode");
+    } catch (e) { document.documentElement.classList.add("darkmode"); }
+  </script>
   <script type="text/javascript" src="{{ get_url(path="darkmode.js") }}" defer></script>
-  <script type="text/javascript" src="{{ get_url(path="shelf.js") }}" defer></script>
-  <script type="text/javascript" src="{{ get_url(path="code-blocks.js") }}" defer></script>
-  <script type="text/javascript" src="{{ get_url(path="music.js") }}" defer></script>
-  <script src="{{ get_url(path="micros.js") }}"></script>
-  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") }}" defer></script>
+  <script type="text/javascript" src="{{ get_url(path="search_index.en.js") }}" defer></script>
+  <script type="text/javascript" src="{{ get_url(path="search.js") }}" defer></script>
 </head>
-<body>
 {% set current = current_path | default(value="/404") %}
-<div id="page">
-  <div id="sidebar">
+<body>
+<main id="content">
+  {% block content %}{% endblock %}
+</main>
 
-    {% if page %}
-      <h2>{{ page.extra.sidebar_heading }}</h2>
-      <p>{{ page.extra.sidebar_text }}</p>
-    {% elif section %}
-      <h2>{{ section.extra.sidebar_heading }}</h2>
-      <p>{{ section.extra.sidebar_text }}</p>
-    {% elif term %}
-      <h2>{{ term.name }}</h2>
-      <p>posts filed under {{ term.name }}.</p>
-    {% endif %}
+<footer class="site-footer">
+  <span>© vaeseth</span>
+  <span class="footer-links">
+    <a href="https://github.com/asethcore" target="_blank" rel="noopener">github</a>
+    <span>built with <a href="https://www.getzola.org" target="_blank" rel="noopener">zola</a></span>
+    <a href="mailto:asethcore@gmail.com">mail</a>
+    <a href="{{ get_url(path="rss.xml") }}">rss</a>
+  </span>
+</footer>
 
-    <h2>hosted by</h2>
-    <p>anurag <br><a href="mailto:asethcore@gmail.com">asethcore[at]gmail[dot]com</a></p>
-
-    <h2>micros</h2>
-    <div class="micros">
-      <p class="micros-loading">hol up its loading give it some time <span class="spinner" aria-hidden="true"></span></p>
-    </div>
-
-    <h2>spotify</h2>
-    <div class="music-box">
-      <div class="music-background"></div>
-      <div class="music-overlay"></div>
-
-      <div class="music-content">
-        <div class="record-stage">
-          <img class="music-cover" src="/blogs/images/cover.jpg" alt="Album cover" />
-          <div class="music-vinyl"></div>
-          <div class="tonearm">
-            <span class="tonearm-pivot"></span>
-            <span class="tonearm-arm"></span>
-            <span class="tonearm-head"></span>
-          </div>
-        </div>
-
-        <div class="music-text">
-          <div class="music-title-wrapper">
-            <a
-              class="music-title-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p class="music-title">Listening to</p>
-            </a>
-          </div>
-          <p class="music-artist">the world around him.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="content">
-    <header class="topbar">
-      <nav class="topbar-nav" aria-label="primary">
-        <a href="{{ get_url(path="@/_index.md") }}"{% if current == "/" %} class="active" aria-current="page"{% endif %}>home</a>
-        <a href="{{ get_url(path="@/about.md") }}"{% if current == "/about/" %} class="active" aria-current="page"{% endif %}>about</a>
-        <a href="{{ get_url(path="@/blog/_index.md") }}"{% if current is starting_with("/blog") %} class="active" aria-current="page"{% endif %}>posts</a>
-        <a href="{{ get_url(path="@/photo.md") }}"{% if current == "/photo/" %} class="active" aria-current="page"{% endif %}>photos</a>
-        <a href="{{ get_url(path="@/books.md") }}"{% if current == "/books/" %} class="active" aria-current="page"{% endif %}>books</a>
-      </nav>
-      <button id="theme-toggle" class="topbar-toggle" aria-label="toggle theme">
-    <i data-lucide="moon" class="icon-moon"></i>
-    <i data-lucide="sun" class="icon-sun"></i>
+<div class="float-actions">
+  <button id="search-toggle" aria-label="search" aria-expanded="false" aria-controls="search-panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
   </button>
-    </header>
-    {% block content %}{% endblock %}
-  </div>
-
-  {% if page and page.toc %}
-  <aside id="toc-sidebar" aria-label="contents">
-    <h2>contents</h2>
-    <ul>
-      {% for h in page.toc %}
-      <li>
-        <a href="#{{ h.id }}">{{ h.title | safe }}</a>
-        {% if h.children %}
-        <ul>
-          {% for c in h.children %}
-          <li><a href="#{{ c.id }}">{{ c.title | safe }}</a></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </aside>
-  {% endif %}
-</div>
-
-<div class="mobile-navigation">
-
-  <a
-    class="mobile-nav-home {% if current == "/" %}active{% endif %}"
-    href="{{ get_url(path='@/_index.md') }}"
-  >
-    <i data-lucide="house"></i>
-  </a>
-
-  <nav class="mobile-nav">
-
-    <a
-      href="{{ get_url(path='@/about.md') }}"
-      {% if current == "/about/" %}class="active"{% endif %}
-    >
-      <i data-lucide="user-round"></i>
-    </a>
-
-    <a
-      href="{{ get_url(path='@/blog/_index.md') }}"
-      {% if current is starting_with("/blog") %}class="active"{% endif %}
-    >
-      <i data-lucide="file-text"></i>
-    </a>
-
-    <a
-      href="{{ get_url(path='@/photo.md') }}"
-      {% if current == "/photo/" %}class="active"{% endif %}
-    >
-      <i data-lucide="camera"></i>
-    </a>
-
-    <a
-      href="{{ get_url(path='@/books.md') }}"
-      {% if current == "/books/" %}class="active"{% endif %}
-    >
-      <i data-lucide="book-open"></i>
-    </a>
-
-  </nav>
-
-  <button
-    class="mobile-theme-button"
-    id="mobile-theme-toggle"
-  >
-    <i data-lucide="sun-moon"></i>
+  <button id="theme-toggle" aria-label="toggle theme">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
   </button>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
-</script>
+<div class="search-panel" id="search-panel" hidden>
+  <input id="search-input" type="search" placeholder="search posts, books, notes…  ( / )" autocomplete="off" aria-label="search site" />
+  <ul id="search-results"></ul>
+</div>
 
 </body>
 </html>

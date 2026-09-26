@@ -25,7 +25,7 @@ function toggleTheme() {
 }
 
 // Load saved theme
-applyTheme(localStorage.getItem(STORAGE_KEY) || "light");
+applyTheme(localStorage.getItem(STORAGE_KEY) || "dark");
 
 // Attach to every theme toggle on the page
 document.querySelectorAll("#theme-toggle, #mobile-theme-toggle")

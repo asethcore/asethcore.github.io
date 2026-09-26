@@ -1,56 +1,22 @@
 {% extends "base.html" %}
 {% block title %}posts{% endblock %}
 {% block content %}
-<section class="reading-ledger" aria-labelledby="posts-title">
-  <header class="reading-ledger-header">
-    <h1 id="posts-title">posts</h1>
-    <p><strong>{{ section.pages | length }} notes, thoughts, letters, essays that would otherwise disappear into the void</strong></p>
-  </header>
+<nav class="back" data-animate style="--stagger:0">
+  <a href="{{ get_url(path="@/_index.md") }}">← <em>home</em></a>
+</nav>
+<h1 data-animate style="--stagger:1">posts</h1>
+<p class="page-desc" data-animate style="--stagger:2">{{ section.pages | length }} notes, thoughts, letters, essays that would otherwise disappear into the void.</p>
 
-  <div class="book-groups">
-    {% set recent = section.pages | slice(end=3) %}
-    <section class="book-group book-group-recent" aria-labelledby="recent-title">
-      <div class="book-group-heading">
-        <h2 id="recent-title">recent</h2>
-        <span aria-label="{{ recent | length }} post{% if recent | length != 1 %}s{% endif %}">{% if recent | length < 10 %}0{% endif %}{{ recent | length }}</span>
-      </div>
-      <ul class="reading-list">
-        {% for page in recent %}
-        <li>
-          <a class="reading-title" href="{{ page.permalink }}">{{ page.title }}</a>
-          <span class="reading-date">{{ page.date | date(format="%b %d, %Y") }}</span>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    {% set tags = ["yap", "self", "brain-notes"] %}
-    {% for tag in tags %}
-      {% set_global tag_count = 0 %}
+<div class="index-tables" data-animate style="--stagger:3">
+  <div class="index-table">
+    <div>
       {% for page in section.pages %}
-        {% if page.taxonomies.tags is containing(tag) %}
-          {% set_global tag_count = tag_count + 1 %}
-        {% endif %}
+      <a class="index-row" href="{{ page.permalink }}">
+        <p>{{ page.title }}</p>
+        <span class="index-date">{{ page.date | date(format="%b %d, %Y") }} · {{ page.reading_time }} min</span>
+      </a>
       {% endfor %}
-      {% if tag_count > 0 %}
-      <section class="book-group book-group-{{ tag }}" aria-labelledby="{{ tag }}-title">
-        <div class="book-group-heading">
-          <h2 id="{{ tag }}-title">{{ tag }}</h2>
-          <span aria-label="{{ tag_count }} post{% if tag_count != 1 %}s{% endif %}">{% if tag_count < 10 %}0{% endif %}{{ tag_count }}</span>
-        </div>
-        <ul class="reading-list">
-          {% for page in section.pages %}
-            {% if page.taxonomies.tags is containing(tag) %}
-            <li>
-              <a class="reading-title" href="{{ page.permalink }}">{{ page.title }}</a>
-              <span class="reading-date">{{ page.date | date(format="%b %d, %Y") }}</span>
-            </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </section>
-      {% endif %}
-    {% endfor %}
+    </div>
   </div>
-</section>
+</div>
 {% endblock %}

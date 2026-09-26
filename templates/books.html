@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
+  <nav class="back">
+    <a href="{{ get_url(path="@/_index.md") }}">← <em>home</em></a>
+  </nav>
   <h1>{{ page.title }}</h1>
-  {{ page.content | safe }}
+  <div class="page-desc">{{ page.content | safe }}</div>
 
-  {% set library_page = get_page(path="library.md") %}
-  {% if library_page.toc %}
-  <div class="bookshelf">
-    {% for h in library_page.toc %}
-    {% set color_index = loop.index0 % 7 %}
-    {% set parts = h.title | split(pat="|") %}
-    <a href="{{ get_url(path="@/library.md") }}#{{ h.id }}" class="book-spine" style="background-color: var(--book-{{ color_index }});">
-      <span class="book-title">{{ parts.0 | trim }}</span>
-      {% if parts | length > 1 %}
-      <span class="book-author">{{ parts.1 | trim | upper }}</span>
-      {% endif %}
-    </a>
+  {% if page.extra.books %}
+  <div class="book-grid">
+    {% for b in page.extra.books %}
+    <div class="book-grid-title"><a href="{{ get_url(path="@/library.md") }}#{{ b.id }}">{{ b.title }}</a></div>
+    <div>{{ b.author }}</div>
+    <div><time>{{ b.finished }}</time></div>
+    <div class="book-stars" aria-label="{{ b.rating }} out of 5 stars">{% for i in range(end=b.rating) %}★{% endfor %}</div>
     {% endfor %}
   </div>
   {% endif %}

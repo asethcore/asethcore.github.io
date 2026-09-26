@@ -1,7 +1,7 @@
 +++
 title = "about(me)"
 date = 2026-01-04
-template = "page.html"
+template = "post.html"
 
 [extra]
 sidebar_heading = "about(me)"

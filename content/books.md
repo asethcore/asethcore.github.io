@@ -7,45 +7,67 @@ sidebar_heading = "bookshelf"
 sidebar_text = "what i'm reading, what i've read, and what's waiting on the pile."
 
 [[extra.books]]
-title = "the odyssey"
-author = "homer"
-url = "https://example.com/review-fountainhead"
-height = 240
+title = "The Odyssey"
+author = "Homer"
+id = "the-odyssey"
+finished = "reading"
+rating = 5
 
 [[extra.books]]
-title = "vagabond"
-author = "takehiko inoue"
-url = "https://example.com/review-vagabond"
+title = "Vagabond"
+author = "Takehiko Inoue"
+id = "vagabond"
+finished = "2025"
+rating = 5
 
 [[extra.books]]
-title = "what i talk about when i talk about running"
-author = "haruki murakami"
-url = "https://example.com/review-running"
+title = "What I Talk About When I Talk About Running"
+author = "Haruki Murakami"
+id = "running"
+finished = "2025"
+rating = 5
 
 [[extra.books]]
-title = "kafka on the shore"
-author = "haruki murakami"
-url = "https://example.com/review-fountainhead"
+title = "Kafka on the Shore"
+author = "Haruki Murakami"
+id = "kafka-on-the-shore"
+finished = "2025"
+rating = 5
 
 [[extra.books]]
-title = "the girl on the landing"
-author = "paul torday"
-url = "https://example.com/review-fountainhead"
+title = "The Girl on the Landing"
+author = "Paul Torday"
+id = "the-girl-on-the-landing"
+finished = "2025"
+rating = 3
 
 [[extra.books]]
-title = "desire"
-author = "haruki murakami"
-url = "https://example.com/review-fountainhead"
+title = "Desire"
+author = "Haruki Murakami"
+id = "desire"
+finished = "2024"
+rating = 2
 
 [[extra.books]]
-title = "metamorphosis"
-author = "franz kafka"
-url = "https://example.com/review-fountainhead"
+title = "Metamorphosis"
+author = "Franz Kafka"
+id = "metamorphosis"
+finished = "2024"
+rating = 4
 
 [[extra.books]]
-title = "norwegian wood"
-author = "haruki murakami"
-url = "https://example.com/review-fountainhead"
+title = "Homo Deus"
+author = "Yuval Noah Harari"
+id = "homo-deus"
+finished = "2024"
+rating = 2
+
+[[extra.books]]
+title = "Norwegian Wood"
+author = "Haruki Murakami"
+id = "norwegian-wood"
+finished = "2024"
+rating = 4
 +++
 
-pull a book off the shelf to see it better.
+every book i've picked up, with when i finished it and how i rated it. click a title for the full review.
