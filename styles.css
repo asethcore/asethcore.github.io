@@ -428,8 +428,8 @@ html.darkmode #theme-toggle .icon-sun {
 
 .site-name {
   margin: 0 0 28px 0 !important;
-  font-family: var(--sans) !important;
-  font-size: 16px !important;
+  font-family: var(--serif) !important;
+  font-size: 20px !important;
   font-weight: 500 !important;
   font-style: italic !important;
   line-height: 28px !important;
@@ -993,7 +993,7 @@ html.darkmode #theme-toggle .icon-sun {
 }
 
 #content p.music-artist {
-  margin: 4px 0 0;
+  margin: 0;
 
   font-size: 10px;
   font-weight: 500;
@@ -1620,6 +1620,32 @@ html.darkmode #theme-toggle .icon-sun {
   }
   .book-grid > div:nth-child(4n) {
     padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .now-grid {
+    grid-template-columns: 280px 200px;
+    justify-content: start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .stack {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 640px) {
+  #content {
+    padding: 64px 20px 48px;
+  }
+  .site-footer {
+    margin-bottom: 70px;
   }
 }
 
