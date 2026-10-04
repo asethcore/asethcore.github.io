@@ -3,12 +3,6 @@ title = "trip and fell not in the wishing well"
 date = 2026-07-15
 template = "post.html"
 
-[taxonomies]
-tags = ["zola", "yap"]
-
-[extra]
-sidebar_heading = "well"
-sidebar_text = "about the rabbit hole i fell into and zola."
 +++
 
 hello pretty peeps! hope everyone is doing good. so, im back like really back not that i figured out something but if this keeps going future me is gonna take some hard hit. but anyways im not here to yap about that(or maybe i am).
@@ -65,17 +59,10 @@ so this is the structure of the folder. config.toml is some of zola config that 
 title = ""
 date = 2025-01-01
 template = "post.html"
-
-[taxonomies]
-tags = []
-
-[extra]
-sidebar_heading = ""
-sidebar_text = ""
 +++
 ```
 
-this stays at the very top of the .md file. tags is just the tags i put for my blog and zola automatically creates a index for whatever posts fall under that tag you can play with it in the config.toml i mentioned earlier. extra is well just extra stuff. there is also a little something that i have set up in my .bashrc so i dont have to copy paste this thing on every .md file i create for a blog.
+this stays at the very top of the .md file. there is also a little something that i have set up in my .bashrc so i dont have to copy paste this thing on every .md file i create for a blog.
 
 ```bash
 tem() {

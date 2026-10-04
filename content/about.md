@@ -3,9 +3,6 @@ title = "about(me)"
 date = 2026-09-27
 template = "post.html"
 
-[extra]
-sidebar_heading = "about(me)"
-sidebar_text = "this is where ye know a little about me, if ye want to."
 +++
 
 Hello, people on/of the internet! I’m... well, it’s the internet, so you can call me Seth, Vaeseth, Aseth, or Asethcore—whatever you want to. But my real name is Anurag. All these names mentioned anywhere on this webpage are just me. Not different parts of me, but just me in my entirety; it’s not that each name holds a different aspect of who I am. I don't care what you call me, it’s up to you.

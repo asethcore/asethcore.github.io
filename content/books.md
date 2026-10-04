@@ -2,10 +2,6 @@
 title = "bookshelf"
 template = "books.html"
 
-[extra]
-sidebar_heading = "bookshelf"
-sidebar_text = "what i'm reading, what i've read, and what's waiting on the pile."
-
 [[extra.books]]
 title = "The Odyssey"
 author = "Homer"

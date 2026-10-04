@@ -3,8 +3,6 @@ title = "hello peeps"
 template = "index.html"
 
 [extra]
-sidebar_heading = "vaeseth"
-sidebar_text = "an object or anything(one) which moves through uncertainty and stands apart by choice"
 image = "blogs/images/l/head.jpg"
 
 buttons = [

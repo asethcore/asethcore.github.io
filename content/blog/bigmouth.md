@@ -3,12 +3,6 @@ title = "bigmouth"
 date = 2025-10-18
 template = "post.html"
 
-[taxonomies]
-tags = ["self"]
-
-[extra]
-sidebar_heading = "bigmouth"
-sidebar_text = "this is me yapping about how i am quite fond of the idea of uncertainty with the reason that i give to myself."
 +++
 
 hello folks its me mario(oh, who am i even kidding), so i am aware i havent posted anything in like past 4-5 months i guess, i dont count. anyways i am back with my philosophy lecture 104.

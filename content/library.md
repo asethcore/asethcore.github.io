@@ -2,9 +2,6 @@
 title = "library"
 template = "library.html"
 
-[extra]
-sidebar_heading = "library"
-sidebar_text = "notes on what i'm reading, what i've read, and what stuck with me."
 +++
 
 ### The Odyssey | Homer {#the-odyssey}

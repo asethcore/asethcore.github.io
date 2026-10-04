@@ -3,12 +3,6 @@ title = "heavy metal"
 date = 2026-09-02
 template = "post.html"
 
-[taxonomies]
-tags = ["self"]
-
-[extra]
-sidebar_heading = "metal"
-sidebar_text = "im full of heavy metals."
 +++
 
 hello there dear fellers! hope all is good with y’all. this blog is kind of an update blog of what has been going on in my life. i’ll keep it short cause no one asked for this and no one is much interested in others' lives unless they fall in line with the life they are living.
