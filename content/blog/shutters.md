@@ -17,3 +17,5 @@ There is this book “Physiker” on the bookshelf diagonally across the seat I 
 One of the best things about the library is how I always make my way here. I usually drop off at the usual metro station, from there move around in circles around the whole plaza thing or whatever one might call it. The structures here look all the same, so I/we just keep moving in circles until you see a fountain at the centre of a fourway road, then follow a direction until you see another fountain at the centre of a three-way road with a McDonald’s nearby around there, then go along the road where you see flags of different countries—it’s a visa institute or smth. Keep going straight; after some time, you will find it if that’s where you want to go.
 
 <img src="/blogs/images/shutters/s2.jpeg" alt="fit?" class="post-image" />
+
+"its like you're trying to get to heaven in a hurry, and the queue was shorter than you thought it'd be, and the doorman says , "you need to get a wristband"..." - Alex Turner (its hard to get around the wind)
